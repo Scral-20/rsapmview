@@ -1,0 +1,43 @@
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <h5>{{title}}
+            <!--<small>With custom colors.</small>-->
+        </h5>
+    </div>
+    <div class="row">
+        <div class="col-lg-6" style="text-align: center">
+            <div id="{{_id}}"></div>
+            <div class="m-t-sm small">最小值:{{min_margin}}&nbsp &nbsp 最大值:{{max_margin}}</div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox-content">
+                <div>
+                    <div>
+                        <span>Max Used Percentage</span>
+                        <small class="pull-right">{{maxpercent}}</small>
+                    </div>
+                    <div class="progress progress-small">
+                        <div ng-style="getMaxStyle()" class="progress-bar"></div>
+                    </div>
+
+                    <div>
+                        <span>Min Used Percentage</span>
+                        <small class="pull-right">{{minpercent}}</small>
+                    </div>
+                    <div class="progress progress-small">
+                        <div ng-style="getMinStyle()" class="progress-bar progress-bar-danger"></div>
+                    </div>
+
+                    <div>
+                        <span>Activity</span>
+                        <small class="pull-right">73%</small>
+                    </div>
+                    <div class="progress progress-small">
+                        <div style="width: 40%;" class="progress-bar progress-bar-warning"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

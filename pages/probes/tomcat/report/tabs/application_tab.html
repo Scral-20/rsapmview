@@ -1,0 +1,92 @@
+<div class="col-lg-12 wrapper wrapper-content animated fadeInUp">
+    <!--页面Label-->
+    <div class="widget navy-bg no-padding">
+        <div class="p-m">
+            <h1 class="m-xs">Application Report</h1>
+
+            <h3 class="font-bold no-margins">
+                7 Days data
+            </h3>
+            <small>Income form project Alpha.</small>
+        </div>
+    </div>
+
+    <div class="row">
+        <!--RPC-->
+        <div class="col-lg-12">
+            <line2yaxis-diagram url="/report/rpc/{{key}}/"  localtitle=""  current-period="{{currentPeriod}}"></line2yaxis-diagram>
+        </div>
+
+        <!--Transaction-->
+        <div class="col-lg-6">
+            <line-diagram url="/transaction/{{key}}/" current-period="{{currentPeriod}}"></line-diagram>
+        </div>
+
+        <!--PIE-->
+        <div class="col-lg-6">
+            <pie-diagram url="/jvmgc/{{key}}/" current-period="{{currentPeriod}}"></pie-diagram>
+        </div>
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <donut-diagram url="/report/jvmheap/{{key}}/" current-period="{{currentPeriod}}"></donut-diagram>
+                        </div>
+                        <div class="col-lg-4">
+                            <pie-diagram url="/cpuload/{{key}}/" current-period="{{currentPeriod}}"></pie-diagram>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <ul class="stat-list">
+                                <li>
+                                    <h2 class="no-margins">{{testnum}}</h2>
+                                    <small>Total orders</small>
+                                    <div class="stat-percent">{{percent[3]}} <i class="fa fa-level-up text-navy"></i></div>
+                                    <div class="progress progress-mini">
+                                        <div ng-style="getStyle(3)" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h2 class="no-margins ">4,422</h2>
+                                    <small>Orders in last month</small>
+                                    <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i></div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 60%" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h2 class="no-margins ">9,180</h2>
+                                    <small>Monthly income from orders</small>
+                                    <div class="stat-percent">22% <i class="fa fa-bolt text-navy"></i></div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 22%;" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h2 class="no-margins ">4,422</h2>
+                                    <small>Orders in last month</small>
+                                    <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i></div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 60%;" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h2 class="no-margins ">4,422</h2>
+                                    <small>Orders in last month</small>
+                                    <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i></div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 60%;" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

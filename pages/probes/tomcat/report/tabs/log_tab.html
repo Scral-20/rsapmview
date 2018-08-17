@@ -1,0 +1,96 @@
+<div class="row">
+    <div class="col">
+        <div class="col-lg-9">
+            <div class="wrapper wrapper-content animated fadeInUp">
+                <ul class="notes">
+                    <li>
+                        <div>
+                            <small>12:03:28 12-04-2014</small>
+                            <h4>Long established fact</h4>
+
+                            <p>The years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                            <a href=""><i class="fa fa-trash-o "></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <small>11:08:33 16-04-2014</small>
+                            <h4>Latin professor at Hampden-Sydney </h4>
+
+                            <p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                            <a href=""><i class="fa fa-trash-o "></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <small>9:12:28 10-04-2014</small>
+                            <h4>The standard chunk of Lorem</h4>
+
+                            <p>Ipsum used since the 1500s is reproduced below for those interested.</p>
+                            <a href=""><i class="fa fa-trash-o "></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <small>3:33:12 6-03-2014</small>
+                            <h4>The generated Lorem Ipsum </h4>
+
+                            <p>The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                            <a href=""><i class="fa fa-trash-o "></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <small>5:20:11 4-04-2014</small>
+                            <h4>Contrary to popular belief</h4>
+
+                            <p>Hampden-Sydney College in Virginia, looked up one.</p>
+                            <a href=""><i class="fa fa-trash-o "></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <small>2:10:12 4-05-2014</small>
+                            <h4>There are many variations</h4>
+
+                            <p>All the Lorem Ipsum generators on the Internet .</p>
+                            <a href=""><i class="fa fa-trash-o "></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Progress Bars</h5>
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <h5>Basic ProgressBars</h5>
+
+                    <uib-progressbar value="20"></uib-progressbar>
+                    <uib-progressbar value="25" type="warning"></uib-progressbar>
+                    <uib-progressbar value="60" type="success"></uib-progressbar>
+
+                    <h5>Striped Progressbars</h5>
+
+                    <uib-progressbar value="30" type="warning" class="progress-striped"></uib-progressbar>
+
+                    <h5>Active Progressbars</h5>
+
+                    <uib-progressbar value="60" type="danger" class="progress-striped active"></uib-progressbar>
+
+                    <h5>Stacked Progressbars</h5>
+                    <button class="btn btn-sm btn-sm btn-white" type="button" ng-click="main.randomStacked()">Randomize</button>
+                    <uib-progress><uib-bar ng-repeat="bar in main.stacked track by $index" value="bar.value" type="{{bar.type}}">
+                        <span ng-hide="bar.value < 3">{{bar.value}}%</span>
+                    </uib-bar></uib-progress>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
