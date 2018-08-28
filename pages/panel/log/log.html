@@ -1,7 +1,7 @@
 <div class="wrapper wrapper-content animated fadeInUp">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
-            <h5>关键日志 </h5>
+            <h5>{{title|translate}} </h5>
 
             <div ibox-tools></div>
         </div>
@@ -12,7 +12,7 @@
                                 white-space:normal;
                                 word-break:break-all;
                                 word-wrap:break-word;
-                                 height:270px; width:220px;overflow: auto" id="{{log.id}}">
+                                 height:270px; width:200px;overflow: auto" id="{{log.id}}">
                         <small>日期:{{date(log.timestamp)}}</small>
                         <br>
                         <p><span ng-style="{'color': setLevelColor(log.level)}">等级: {{log.level}}</span></p>

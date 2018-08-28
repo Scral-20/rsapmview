@@ -57,7 +57,7 @@
                         res['x'] = {
                             type: 'timeseries',
                             tick: {
-                                format: '%H:%M:%S %m月%d日'
+                                format: '%H:%M:%S '
                             },
                             padding: {left:0, right:0}
                         };

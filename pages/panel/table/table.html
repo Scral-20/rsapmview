@@ -1,7 +1,7 @@
 <div class="wrapper wrapper-content animated fadeInUp">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
-            <h5>日志模板</h5>
+            <h5>{{title|translate}}</h5>
 
             <div ibox-tools></div>
         </div>
@@ -18,7 +18,7 @@
                     <tr>
                         <th style="width: 70%">内容</th>
                         <th>图例</th>
-                        <th><i ng-click="sort('count')"  class="fa fa-arrow-down"></i><span>响应数</span></th>
+                        <th><i ng-click="sort('count')"  class="fa fa-sort"></i><span>响应数</span></th>
                         <th>占比</th>
                         <th>日志等级</th>
                     </tr>

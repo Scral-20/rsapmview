@@ -34,9 +34,9 @@
                             console.log(response.data);
                             $scope.logData = response.data;
 
-                            if (typeof($scope.logData) != "undefined"){
+                            if (typeof($scope.logData.title) !== "undefined"){
                                 $scope._id = '_' + Math.random().toString(36).substr(2, 9);
-                                $scope.title = $scope.logData;
+                                $scope.title = $scope.logData.title;
                             }
                         }, function () {
                             console.log("logDiagram no data");

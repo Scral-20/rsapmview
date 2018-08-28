@@ -24,13 +24,25 @@ angular.module('inspinia')
                     'JVM (GC 类型)': 'JVM (GC type)',
                     'Service 类型': 'Service type',
                     '运行状态': 'Running state',
-                    '数据图表':'Data chart',
+                    '数据图表': 'Data chart',
 
                     // Gauge Translate
-                    '最大值':'Max Value',
-                    '最小值':'Min Value',
+                    '最大值': 'Max Value',
+                    '最小值': 'Min Value',
+
+                })
+
+                .translations('zh', {
+
+                    //report 中图表标题
+                    'Logger Trend': '日志趋势信息',
+                    'Active Trace': '探针响应数量',
+                    'Agent Response Time': '探针响应时间',
+                    'Template info': '日志模板',
+                    'Hinge Logger': '关键日志',
 
                 });
+
 
             // $translateProvider.preferredLanguage('en');
 

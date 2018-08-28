@@ -1,70 +1,49 @@
 <div class="col-lg-12 wrapper wrapper-content animated fadeInUp">
     <div class="row">
-        <div class="col-lg-8">
-            <div class="widget style1">
-                <div class="row">
-                    <div class="col-xs-2 text-center">
-                        <i class="fa fa-trophy fa-5x"></i>
-                    </div>
-                    <div class="col-xs-8 text-left">
-                        <h2 class="font-bold">{{applicationName}}</h2>
-                    </div>
+        <div class="col-lg-6">
+            <div class="jumbotron text-center">
+                <div class="col-xs-2 text-center">
+                    <i class="fa fa-trophy fa-5x"></i>
                 </div>
+                <div class="col-xs-8 text-center">
+                    <h2 class="font-bold">{{applicationName}}</h2>
+                    <p>探针监测以及相关统计信息</p>
+                </div>
+                <p><a class="btn btn-primary btn-lg " ng-click="reloadRoute()">Reload Reports</a></p>
             </div>
         </div>
-    </div>
-    <!--Active Trace-->
-    <div class="col-lg-10">
-        <line2yaxisagent-diagram url="/report/activetrace/{{key}}/"  localtitle="" current-period="{{currentPeriod}}"></line2yaxisagent-diagram>
+        <div class="col-lg-6">
+
+            <!--<p class="small"><i class="fa fa-hand-o-up"></i> Drag task between list</p>-->
+            <ul ui-sortable="sortableOptions" class="sortable-list connectList agile-list" ng-model="inProgressList">
+                <li class="{{task.statusClass}}-element" ng-repeat="task in inProgressList">
+                    {{task.content}}
+                    <div class="agile-detail">
+                        <a href="#" class="pull-right btn btn-xs btn-white">{{task.tagName}}</a>
+                        <i class="fa fa-clock-o"></i> {{task.date}}
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 
-    <div class="col-lg-2">
-        <ul class="stat-list">
-            <li>
-                <h2 class="no-margins">{{testnum}}</h2>
-                <small>Total orders</small>
-                <div class="stat-percent">{{percent[3]}} <i class="fa fa-level-up text-navy"></i></div>
-                <div class="progress progress-mini">
-                    <div ng-style="getStyle(3)" class="progress-bar"></div>
-                </div>
-            </li>
-            <li>
-                <h2 class="no-margins ">4,422</h2>
-                <small>Orders in last month</small>
-                <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i></div>
-                <div class="progress progress-mini">
-                    <div style="width: 60%" class="progress-bar"></div>
-                </div>
-            </li>
-            <li>
-                <h2 class="no-margins ">9,180</h2>
-                <small>Monthly income from orders</small>
-                <div class="stat-percent">22% <i class="fa fa-bolt text-navy"></i></div>
-                <div class="progress progress-mini">
-                    <div style="width: 22%;" class="progress-bar"></div>
-                </div>
-            </li>
-            <li>
-                <h2 class="no-margins ">4,422</h2>
-                <small>Orders in last month</small>
-                <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i></div>
-                <div class="progress progress-mini">
-                    <div style="width: 60%;" class="progress-bar"></div>
-                </div>
-            </li>
-            <li>
-                <h2 class="no-margins ">4,422</h2>
-                <small>Orders in last month</small>
-                <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i></div>
-                <div class="progress progress-mini">
-                    <div style="width: 60%;" class="progress-bar"></div>
-                </div>
-            </li>
-        </ul>
+
+    <!--Active Trace-->
+    <div class="col-lg-9">
+        <line2yaxisagent-diagram url="/report/activetrace/{{key}}/" localtitle=""
+                                 current-period="{{currentPeriod}}"></line2yaxisagent-diagram>
+    </div>
+
+    <!--ProgressBar-->
+    <div class="col-lg-3">
+        <progressbar-diagram url="/report/activetrace/{{key}}/" localtitle=""
+                             current-period="{{currentPeriod}}"></progressbar-diagram>
     </div>
 
     <!--Agent Response Time-->
     <div class="col-lg-12">
-        <line2yaxis-diagram url="/report/agentresponsetime/{{key}}/"  localtitle="" current-period="{{currentPeriod}}"></line2yaxis-diagram>
+        <line2yaxis-diagram url="/report/agentresponsetime/{{key}}/" localtitle=""
+                            current-period="{{currentPeriod}}"></line2yaxis-diagram>
     </div>
+
 </div>
