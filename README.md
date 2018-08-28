@@ -1,5 +1,5 @@
-# xinbenwei
+﻿# rsapm
 
-前端：
+inspinia前端：
 
-采用requireJs+angularJs框架
+采用angularJs框架
