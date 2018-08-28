@@ -1,0 +1,31 @@
+<div class="col-lg-12 wrapper wrapper-content animated fadeInUp">
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="widget style1">
+                <div class="row">
+                    <div class="col-xs-2 text-center">
+                        <i class="fa fa-trophy fa-5x"></i>
+                    </div>
+                    <div class="col-xs-8 text-left">
+                        <h2 class="font-bold">{{applicationName}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-10">
+        <line2yaxis-diagram url="/report/trend/{{key}}/" localtitle="" current-period="{{currentPeriod}}"></line2yaxis-diagram>
+    </div>
+
+    <div class="col-lg-12">
+        <table-diagram url="/report/template/{{key}}/" localtitle="" current-period="{{currentPeriod}}"></table-diagram>
+    </div>
+
+    <div class="col-lg-12">
+        <log-diagram url="/report/hinge/{{key}}/" localtitle="" current-period="{{currentPeriod}}"></log-diagram>
+    </div>
+
+
+</div>

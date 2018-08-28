@@ -1,0 +1,40 @@
+<div class="wrapper wrapper-content animated fadeInUp">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>日志模板</h5>
+
+            <div ibox-tools></div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="input-group"><input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                        <button type="button" class="btn btn-sm btn-primary"> Go!</button> </span></div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered text-left">
+                    <thead>
+                    <tr>
+                        <th style="width: 70%">内容</th>
+                        <th>图例</th>
+                        <th><i ng-click="sort('count')"  class="fa fa-arrow-down"></i><span>响应数</span></th>
+                        <th>占比</th>
+                        <th>日志等级</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="table in tableData.piechart | orderBy:sortOrder:reservse">
+                        <td>{{table.title}}</td>
+                        <td><pie-chart data="table.data" options="piechartOptions.options"></pie-chart></td>
+                        <td>{{table.count}}</td>
+                        <td>{{table.ratio}}</td>
+                        <td><a href=""><i ng-class="setIconClass(table.level)"> {{table.level}}</i></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,26 @@
+<div class="wrapper wrapper-content animated fadeInUp">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>关键日志 </h5>
+
+            <div ibox-tools></div>
+        </div>
+        <div style="display: inline" class="ibox-content animated fadeIn">
+            <ul class="notes"  ng-repeat="log in logData.hinge">
+                <li>
+                    <div style="
+                                white-space:normal;
+                                word-break:break-all;
+                                word-wrap:break-word;
+                                 height:270px; width:220px;overflow: auto" id="{{log.id}}">
+                        <small>日期:{{date(log.timestamp)}}</small>
+                        <br>
+                        <p><span ng-style="{'color': setLevelColor(log.level)}">等级: {{log.level}}</span></p>
+                        <p>内容:{{log.content}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>

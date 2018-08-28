@@ -1,0 +1,56 @@
+<!--Main view  -->
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>{{'报告生成'|translate}}</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a ui-sref="rs.topview">{{'全景视图'|translate}}</a>
+            </li>
+            <li>
+                <a ui-sref="rs.TOMCAT({key: '{{key}}'})">Tomcat</a>
+            </li>
+            <li class="active">
+                <strong>{{'报告生成'|translate|lowercase}}</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+<!--时间按钮-->
+    <div class="col-lg-12">
+        <form class="navbar-form pull-left">
+            <ul class="nav">
+                <li>
+                    <div>
+                        <div class="btn-group btn-group-sm" style="margin-top:0px;width:360px;float:left;">
+                            <button type="button" class="btn" ng-class="currentPeriod == period ? 'btn btn-primary' : 'btn'" ng-click="setPeriod( period )" ng-repeat="period in ['5m', '30m', '1h', '3h', '6h', '12h', '1d', '2d', '1w']">{{period == "5m" ? "Last " + period : period}}</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="col-lg-12">
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <!--Tabs-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a class="nav-link" data-toggle="tab" ng-click="activeTab('basic')">{{'基本信息'|translate}}</a></li>
+                            <li><a class="nav-link" data-toggle="tab" ng-click="activeTab('application')">{{'应用信息'|translate}}</a></li>
+                            <li><a class="nav-link" data-toggle="tab" ng-click="activeTab('log')">{{'日志信息'|translate}}</a></li>
+                            <li><a class="nav-link" data-toggle="tab" ng-click="activeTab('agent')">{{'探针信息'|translate}}</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <div class="panel-body" ng-include="'pages/probes/tomcat/report/tabs/'+currentTab+'_tab.html'"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

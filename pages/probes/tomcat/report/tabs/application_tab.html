@@ -1,0 +1,55 @@
+<div class="col-lg-12 wrapper wrapper-content animated fadeInUp">
+    <!--页面Label-->
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="widget style1">
+                <div class="row">
+                    <div class="col-xs-2 text-center">
+                        <i class="fa fa-trophy fa-5x"></i>
+                    </div>
+                    <div class="col-xs-8 text-left">
+                        <span> Application Name</span>
+
+                        <h2 class="font-bold">{{applicationName}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!--RPC-->
+        <div class="col-lg-12">
+            <line2yaxis-diagram url="/report/rpc/{{key}}/"  localtitle=""  current-period="{{currentPeriod}}"></line2yaxis-diagram>
+        </div>
+
+        <!--Transaction-->
+        <div class="col-lg-6">
+            <line-diagram url="/transaction/{{key}}/" current-period="{{currentPeriod}}"></line-diagram>
+        </div>
+
+        <!--PIE-->
+        <div class="col-lg-6">
+            <pie-diagram url="/jvmgc/{{key}}/" current-period="{{currentPeriod}}"></pie-diagram>
+        </div>
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <donut-diagram url="/report/jvmheap/{{key}}/" current-period="{{currentPeriod}}"></donut-diagram>
+                        </div>
+                        <div class="col-lg-4">
+                            <pie-diagram url="/cpuload/{{key}}/" current-period="{{currentPeriod}}"></pie-diagram>
+                        </div>
+
+                        <div class="col-lg-1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
