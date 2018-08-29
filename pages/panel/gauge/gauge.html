@@ -13,7 +13,7 @@
             <div class="ibox-content">
                 <div>
                     <div>
-                        <span>Max Used Percentage</span>
+                        <span>{{'资源占用峰值百分比'|translate}}</span>
                         <small class="pull-right">{{maxpercent}}</small>
                     </div>
                     <div class="progress progress-small">
@@ -21,20 +21,20 @@
                     </div>
 
                     <div>
-                        <span>Min Used Percentage</span>
+                        <span>{{'资源占用谷值百分比'|translate}}</span>
                         <small class="pull-right">{{minpercent}}</small>
                     </div>
                     <div class="progress progress-small">
                         <div ng-style="getMinStyle()" class="progress-bar progress-bar-danger"></div>
                     </div>
 
-                    <div>
-                        <span>Activity</span>
-                        <small class="pull-right">73%</small>
-                    </div>
-                    <div class="progress progress-small">
-                        <div style="width: 40%;" class="progress-bar progress-bar-warning"></div>
-                    </div>
+                    <!--<div>-->
+                        <!--<span>Activity</span>-->
+                        <!--<small class="pull-right">73%</small>-->
+                    <!--</div>-->
+                    <!--<div class="progress progress-small">-->
+                        <!--<div style="width: 40%;" class="progress-bar progress-bar-warning"></div>-->
+                    <!--</div>-->
 
                 </div>
             </div>

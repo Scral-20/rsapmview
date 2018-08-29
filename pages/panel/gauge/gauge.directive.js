@@ -47,7 +47,7 @@
 
                             if (typeof($scope.chartData.title) != "undefined"){
                                 $scope._id = '_' + Math.random().toString(36).substr(2, 9);
-                                $scope.title = 'GaugeChart Of '+$scope.chartData.title;
+                                $scope.title = $scope.chartData.title;
                             }
                         }, function () {
                             console.log("gaugeDiagram no data");

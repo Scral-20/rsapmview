@@ -20,7 +20,7 @@
                     $scope._id =  '_id';
                     $scope.title = "";
                     $scope.chartData = {};
-                    $scope.PieData = {
+                    $scope.pieData = {
                         columns: []
                     };
 
@@ -34,10 +34,10 @@
                             console.log(response.data);
                             $scope.chartData = response.data;
                             var data=$scope.chartData;
-                            $scope.PieData=transData(data);
+                            $scope.pieData=transData(data.columns);
                             if (typeof($scope.chartData.title) !== "undefined"){
                                 $scope._id = '_' + Math.random().toString(36).substr(2, 9);
-                                $scope.title = 'Occupation Ratio Of '+$scope.chartData.title;
+                                $scope.title = $scope.chartData.title;
                             }
 
                         }, function () {
@@ -45,42 +45,44 @@
                         });
                     };
 
-                    function transData(chartData) {
+                    // res = {
+                    //     columns: [
+                    //         [chartData.columns[5].key, chartData.columns[5].value[endnum]],
+                    //         ['Heap NonUsed', chartData.columns[3].value[endnum]-chartData.columns[5].value[endnum]]
+                    //     ],
+                    //     type:'pie'
+                    // };
+
+                    // res['x'] = {
+                    //     type: 'timeseries',
+                    //     tick: {
+                    //         format: '%H:%M:%S           %m月%d日'
+                    //     },
+                    //     padding: {left:0, right:0}
+                    // };
+
+                    function transData(pieData) {
+                        var total=0;
+                        var hinge=0;
+
+
                         var res={};
-                        var endnum;
-                        switch(chartData.title)
-                        {
-                            case 'CPU Load':
-                                if (typeof(chartData.columns) === "undefined") {
-                                    return res;
-                                }
-                                 endnum=chartData.columns[1].value.length-1;
-                                 res = {
-                                    columns: [
-                                        [chartData.columns[1].key, chartData.columns[1].value[endnum]],
-                                        [chartData.columns[2].key, chartData.columns[2].value[endnum]]
-                                    ],
-                                    type:'pie'
-                                };
-                                return res;
-                                break;
-                            case 'Memory Used':
-                                if (typeof(chartData.columns) === "undefined") {
-                                    return res;
-                                }
-                                endnum=chartData.columns[3].value.length-1;
-                                 res = {
-                                    columns: [
-                                        [chartData.columns[5].key, chartData.columns[5].value[endnum]],
-                                        ['Heap NonUsed', chartData.columns[3].value[endnum]-chartData.columns[5].value[endnum]]
-                                    ],
-                                    type:'pie'
-                                };
-                                return res;
-                                break;
-                            default:
-                                return res;
+                        for (var i=0; i<pieData.total.value.length;i++){
+                            total += pieData.total.value[i]
                         }
+                        for (var j=0;i<pieData.hinge.value.length;j++){
+                            hinge += pieData.hinge.value[i];
+                            alert('长度'+ hinge);
+                        }
+
+                        res = {
+                            columns: [
+                                ['关键日志',hinge],
+                                ['常规日志',total]
+                            ],
+                            type:'pie'
+                        };
+                        return res
                     }
                 },
 
@@ -96,7 +98,7 @@
                         console.log("data");
                         c3.generate({
                             bindto: '#'+ scope._id,
-                            data: scope.PieData,
+                            data: scope.pieData,
                             color:{
                                 pattern: ['#1ab394','#90c0ff']
                             }

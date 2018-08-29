@@ -52,15 +52,22 @@
                             case 'INFO':
                                 return 'color: #1AB394';
                                 break;
-                            // case 'POST':
-                            //     return 'color: #FF8C00';
-                            //     break;
+                             case 'ERROR':
+                                return 'color: #FF0000';
+                                 break;
                             case 'GET':
                                 return 'color: #FF1F3D';
                                 break;
                             default:
                                 return 'color: #0e9aef';
                         }
+                    };
+
+                    $scope.setLevel = function (level) {
+                        if (level==null){
+                            return '— —'
+                        }
+                        return level;
                     };
 
 

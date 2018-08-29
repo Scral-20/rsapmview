@@ -1,22 +1,33 @@
-<div class="col-lg-12 wrapper wrapper-content animated fadeInUp">
+
     <!--页面Label-->
 
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="widget style1">
-                <div class="row">
+    <div class="col-lg-12 wrapper wrapper-content animated fadeInUp">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="jumbotron text-center">
                     <div class="col-xs-2 text-center">
                         <i class="fa fa-trophy fa-5x"></i>
                     </div>
-                    <div class="col-xs-8 text-left">
-                        <span> Application Name</span>
-
+                    <div class="col-xs-8 text-center">
                         <h2 class="font-bold">{{applicationName}}</h2>
+                        <p>App应用以及相关统计信息</p>
                     </div>
+                    <p><a class="btn btn-primary btn-lg " ng-click="reloadRoute()">Reload Reports</a></p>
                 </div>
             </div>
+            <div class="col-lg-6">
+                <ul ui-sortable="sortableOptions" class="sortable-list connectList agile-list" ng-model="inProgressList">
+
+                    <li class="{{task.statusClass}}-element" ng-repeat="task in helpText_agent">
+                        <i class="fa fa-circle-o"></i> {{task.title}}<br>
+                        {{task.content}}
+                        <div class="agile-detail">
+                            <a href="#" class="pull-right btn btn-xs btn-white">{{task.tagName}}</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
 
     <div class="row">
         <!--RPC-->

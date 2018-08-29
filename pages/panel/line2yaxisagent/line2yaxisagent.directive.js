@@ -60,12 +60,12 @@
                         res['x'] = {
                             type: 'timeseries',
                             tick: {
-                                format: '%H:%M %m月%d日'
+                                format: '%H:%M:%S           %m月%d日'
                             },
                             padding: {left:0, right:0}
                         };
 
-                        var y = {}, y2 = {};
+                        var y = {};
                         if (typeof(chartData.yLabel) !== "undefined") {
                             y['label'] = $scope.chartData.yLabel;
                         }
@@ -78,18 +78,7 @@
                         y['padding'] = {top:0, bottom:0};
                         res['y'] = y;
 
-                        y2['show'] = true;
-                        if (typeof(chartData.y2Label) !== "undefined") {
-                            y2['label'] = $scope.chartData.y2Label;
-                        }
-                        if (typeof(chartData.min2) !== "undefined") {
-                            y2['min'] = $scope.chartData.min2;
-                        }
-                        if (typeof(chartData.max2) !== "undefined") {
-                            y2['max'] = $scope.chartData.max2;
-                        }
-                        y2['padding'] = {top:0, bottom:0};
-                        res['y2'] = y2;
+
                         return res;
                     }
 
