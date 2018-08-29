@@ -48,9 +48,6 @@
                     $state.reload()
                 };
 
-                //控制表格中勾选框
-                $scope.check = true;
-                $scope.uncheck = false;
 
                 //表格中小型pie图的配色设置
                 $scope.piechartOptions = {
@@ -171,13 +168,11 @@
                     }
                 };
 
-
                 $scope.activeTab = function (tab) {
                     $scope.currentTab = tab;
                 };
 
                 $scope.getData();
-
 
             }
         ]);

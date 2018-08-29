@@ -1,38 +1,36 @@
-
-    <!--页面Label-->
-
-    <div class="col-lg-12 wrapper wrapper-content animated fadeInUp">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="jumbotron text-center">
-                    <div class="col-xs-2 text-center">
-                        <i class="fa fa-trophy fa-5x"></i>
-                    </div>
-                    <div class="col-xs-8 text-center">
-                        <h2 class="font-bold">{{applicationName}}</h2>
-                        <p>App应用以及相关统计信息</p>
-                    </div>
-                    <p><a class="btn btn-primary btn-lg " ng-click="reloadRoute()">Reload Reports</a></p>
+<div class="col-lg-12 wrapper wrapper-content animated fadeInUp">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="jumbotron text-center">
+                <div class="col-xs-2 text-center">
+                    <i class="fa fa-trophy fa-5x"></i>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <ul ui-sortable="sortableOptions" class="sortable-list connectList agile-list" ng-model="inProgressList">
-
-                    <li class="{{task.statusClass}}-element" ng-repeat="task in helpText_agent">
-                        <i class="fa fa-circle-o"></i> {{task.title}}<br>
-                        {{task.content}}
-                        <div class="agile-detail">
-                            <a href="#" class="pull-right btn btn-xs btn-white">{{task.tagName}}</a>
-                        </div>
-                    </li>
-                </ul>
+                <div class="col-xs-8 text-center">
+                    <h2 class="font-bold">{{applicationName}}</h2>
+                    <p>App应用以及相关统计信息</p>
+                </div>
+                <p><a class="btn btn-primary btn-lg " ng-click="reloadRoute()">Reload Reports</a></p>
             </div>
         </div>
+        <div class="col-lg-6">
+            <ul ui-sortable="sortableOptions" class="sortable-list connectList agile-list" ng-model="inProgressList">
+
+                <li class="{{task.statusClass}}-element" ng-repeat="task in helpText_agent">
+                    <i class="fa fa-circle-o"></i> {{task.title}}<br>
+                    {{task.content}}
+                    <div class="agile-detail">
+                        <a href="#" class="pull-right btn btn-xs btn-white">{{task.tagName}}</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <div class="row">
         <!--RPC-->
         <div class="col-lg-12">
-            <line2yaxis-diagram url="/report/rpc/{{key}}/"  localtitle=""  current-period="{{currentPeriod}}"></line2yaxis-diagram>
+            <line2yaxis-diagram url="/report/rpc/{{key}}/" localtitle=""
+                                current-period="{{currentPeriod}}"></line2yaxis-diagram>
         </div>
 
         <!--Transaction-->
@@ -49,7 +47,8 @@
                 <div class="ibox-content">
                     <div class="row">
                         <div class="col-lg-6">
-                            <donut-diagram url="/report/jvmheap/{{key}}/" current-period="{{currentPeriod}}"></donut-diagram>
+                            <donut-diagram url="/report/jvmheap/{{key}}/"
+                                           current-period="{{currentPeriod}}"></donut-diagram>
                         </div>
                         <div class="col-lg-4">
                             <pie-diagram url="/cpuload/{{key}}/" current-period="{{currentPeriod}}"></pie-diagram>
