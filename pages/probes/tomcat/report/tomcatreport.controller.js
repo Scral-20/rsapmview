@@ -4,12 +4,12 @@
      * chaizq-neu
      * 2018.08.23
      * @group Controller
-     * @name ReportCtrl
+     * @name TomcatreportCtrl
      * @class
      */
     angular
         .module('inspinia')
-        .controller("ReportCtrl", ['$scope', '$http', '$filter', '$state', '$stateParams', '$window', 'AuthService',
+        .controller("TomcatreportCtrl", ['$scope', '$http', '$filter', '$state', '$stateParams', '$window', 'AuthService',
             function ReportCtrl($scope, $http, $filter, $state, $stateParams, $window, authService) {
                 $scope.key = $stateParams.key;
                 console.log('key值：'+$scope.key);
