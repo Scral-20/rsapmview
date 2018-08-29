@@ -1,8 +1,8 @@
 (function() {
     'use strict';
     /**
-     * wub-neu
-     * 2018.07.30
+     * chaizq-neu
+     * 2018.08.28
      * @group directive
      * @name line2yaxisagentDiagram
      * @class
@@ -60,7 +60,7 @@
                         res['x'] = {
                             type: 'timeseries',
                             tick: {
-                                format: '%H:%M:%S %m月%d日'
+                                format: '%H:%M %m月%d日'
                             },
                             padding: {left:0, right:0}
                         };

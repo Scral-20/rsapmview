@@ -62,7 +62,7 @@
                                 return 'fa fa-envelope-o text-warning';
                                 break;
                             case 'HEAD':
-                                return 'fa fa-envelope-o text-warning';
+                                return 'fa fa-star text-error';
                                 break;
                             default:
                                 return 'fa fa-minus-circle';

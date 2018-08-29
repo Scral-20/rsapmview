@@ -1,42 +1,50 @@
-<ul class="stat-list">
-    <li>
-        <h2 class="no-margins">{{testnum}}</h2>
-        <small>Total orders</small>
-        <div class="stat-percent">{{percent[3]}} <i class="fa fa-level-up text-navy"></i></div>
-        <div class="progress progress-mini">
-            <div ng-style="getStyle(3)" class="progress-bar"></div>
-        </div>
-    </li>
-    <li>
-        <h2 class="no-margins ">4,422</h2>
-        <small>Orders in last month</small>
-        <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i></div>
-        <div class="progress progress-mini">
-            <div style="width: 60%" class="progress-bar"></div>
-        </div>
-    </li>
-    <li>
-        <h2 class="no-margins ">9,180</h2>
-        <small>Monthly income from orders</small>
-        <div class="stat-percent">22% <i class="fa fa-bolt text-navy"></i></div>
-        <div class="progress progress-mini">
-            <div style="width: 22%;" class="progress-bar"></div>
-        </div>
-    </li>
-    <li>
-        <h2 class="no-margins ">4,422</h2>
-        <small>Orders in last month</small>
-        <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i></div>
-        <div class="progress progress-mini">
-            <div style="width: 60%;" class="progress-bar"></div>
-        </div>
-    </li>
-    <li>
-        <h2 class="no-margins ">4,422</h2>
-        <small>Orders in last month</small>
-        <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i></div>
-        <div class="progress progress-mini">
-            <div style="width: 60%;" class="progress-bar"></div>
-        </div>
-    </li>
-</ul>
+<div class="ibox">
+    <div class="ibox-title">
+        <h5>统计响应数
+
+        </h5>
+    </div>
+    <div class="ibox-content">
+        <ul class="stat-list">
+            <li>
+                <h2 class="no-margins">{{progressbarData.FastCount}}</h2>
+                <small>快速响应数量</small>
+                <div class="stat-percent">{{getPercentage(progressbarData.FastCount)}}<i class="fa fa-level-up text-navy"></i></div>
+                <div class="progress progress-mini">
+                    <div ng-style="getStyle(progressbarData.FastCount)" class="progress-bar"></div>
+                </div>
+            </li>
+            <li>
+                <h2 class="no-margins">{{progressbarData.NormalCount}}</h2>
+                <small>标准响应数量</small>
+                <div class="stat-percent">{{getPercentage(progressbarData.NormalCount)}}<i class="fa fa-level-down text-danger"></i></div>
+                <div class="progress progress-mini">
+                    <div ng-style="getStyle(progressbarData.NormalCount)" class="progress-bar"></div>
+                </div>
+            </li>
+            <li>
+                <h2 class="no-margins">{{progressbarData.SlowCount}}</h2>
+                <small>缓慢响应数量</small>
+                <div class="stat-percent">{{getPercentage(progressbarData.SlowCount)}}<i class="fa fa-level-down text-danger"></i></div>
+                <div class="progress progress-mini">
+                    <div ng-style="getStyle(progressbarData.SlowCount)" class="progress-bar"></div>
+                </div>
+            </li>
+            <li>
+                <h2 class="no-margins">{{progressbarData.VerySlowCount}}</h2>
+                <small>极慢响应数量</small>
+                <div class="stat-percent">{{getPercentage(progressbarData.VerySlowCount)}}<i class="fa fa-level-down text-danger"></i></div>
+                <div class="progress progress-mini">
+                    <div ng-style="getStyle(progressbarData.VerySlowCount)" class="progress-bar"></div>
+                </div>
+            </li>
+            <li>
+                <br>
+            </li>
+            <li>
+                <h3 class="no-margins">Total Counts:{{progressbarData.Total}}</h3><br>
+            </li>
+        </ul>
+    </div>
+
+</div>

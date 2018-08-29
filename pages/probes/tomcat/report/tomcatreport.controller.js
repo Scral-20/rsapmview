@@ -20,6 +20,35 @@
                     return $filter("date")(timestamp, "HH:mm:ss yyyy-MM-dd ");
                 };
 
+                //本地的说明文本
+                $scope.inProgressList = [
+                    {
+                        content: '探针响应时间：按照时间序列监测并记录各个探针的响应时间',
+                        date: 'tips 1',
+                        statusClass: 'success',
+                    },
+                    {
+                        content: '探针响应数量：按照各个探针的响应速度，将探针响应速度分为快速，标准，缓慢与极慢四种，并记录每种探针的数量',
+                        date: 'tips 2',
+                        statusClass: 'warning',
+
+                    },
+                    {
+                        content: '探针响应数统计：记录四种探针的数量与占比',
+                        date: 'tips 3',
+                        statusClass: 'info',
+                    }
+                ];
+
+                $scope.sortableOptions = {
+                    connectWith: ".connectList"
+                };
+
+                $scope.reloadRoute = function () {
+                    // $window.location.reload();
+                    $state.reload()
+                };
+
                 //用于测试功能的本地数据
                 $scope.testnum = "2,413";
                 $scope.percent = ["74%", "24%", "14%", "55%", "100%", "90%"];
@@ -38,61 +67,61 @@
                 };
 
                 //logData数据
-                $scope.logData = [
-                    {
-                        id: '1',
-                        title: 'First Item',
-                        level: 'error',
-                        pieChart: {
-                            data: [120, 120],
-                            ratio: '20%'
-                        },
-                        logText: {
-                            timestamp: '1533009871000',
-                            content: 'Log content1'
-                        }
-                    },
-                    {
-                        id: '2',
-                        title: 'Second Item',
-                        level: 'warning',
-                        pieChart: {
-                            data: [40, 120],
-                            ratio: '70%'
-                        },
-                        logText: {
-                            timestamp: '1533019871000',
-                            content: 'Log content2'
-                        }
-                    },
-                    {
-                        id: '3',
-                        title: 'Third Item',
-                        level: 'normal',
-                        pieChart: {
-                            data: [120, 70],
-                            ratio: '66%'
-                        },
-                        logText: {
-                            timestamp: '1532009871000',
-                            content: 'Lorem ipsum eget urna mollis ornare vel eu leo. Cum penatibus et magnis dis parturient montes, code nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. ' +
-                            'Sed euismod aliquet sapien consequat tincidunt.'
-                        }
-                    },
-                    {
-                        id: '4',
-                        title: 'Fourth Item',
-                        level: '',
-                        pieChart: {
-                            data: [66, 70],
-                            ratio: '45%'
-                        },
-                        logText: {
-                            timestamp: '1533002871000',
-                            content: 'Log content4'
-                        }
-                    }
-                ];
+                // $scope.logData = [
+                //     {
+                //         id: '1',
+                //         title: 'First Item',
+                //         level: 'error',
+                //         pieChart: {
+                //             data: [120, 120],
+                //             ratio: '20%'
+                //         },
+                //         logText: {
+                //             timestamp: '1533009871000',
+                //             content: 'Log content1'
+                //         }
+                //     },
+                //     {
+                //         id: '2',
+                //         title: 'Second Item',
+                //         level: 'warning',
+                //         pieChart: {
+                //             data: [40, 120],
+                //             ratio: '70%'
+                //         },
+                //         logText: {
+                //             timestamp: '1533019871000',
+                //             content: 'Log content2'
+                //         }
+                //     },
+                //     {
+                //         id: '3',
+                //         title: 'Third Item',
+                //         level: 'normal',
+                //         pieChart: {
+                //             data: [120, 70],
+                //             ratio: '66%'
+                //         },
+                //         logText: {
+                //             timestamp: '1532009871000',
+                //             content: 'Lorem ipsum eget urna mollis ornare vel eu leo. Cum penatibus et magnis dis parturient montes, code nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. ' +
+                //             'Sed euismod aliquet sapien consequat tincidunt.'
+                //         }
+                //     },
+                //     {
+                //         id: '4',
+                //         title: 'Fourth Item',
+                //         level: '',
+                //         pieChart: {
+                //             data: [66, 70],
+                //             ratio: '45%'
+                //         },
+                //         logText: {
+                //             timestamp: '1533002871000',
+                //             content: 'Log content4'
+                //         }
+                //     }
+                // ];
 
                 $scope.getData = function () {
                     $http.get(

@@ -31,7 +31,7 @@
                         $scope.serverMetaData = data.serverMetaData;
                         $scope.status = data.status;
                         $scope.currentServiceInfo = [];
-                        $scope.currentPeriod = '30m';
+                        $scope.currentPeriod = '1h';
                         for (var i = 0; i < data.serverMetaData.serviceInfos.length; i++) {
                             if (data.serverMetaData.serviceInfos[i].serviceLibs.length > 0) {
                                 $scope.currentServiceInfo = data.serverMetaData.serviceInfos[i];
