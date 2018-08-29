@@ -93,9 +93,9 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         })
         .state('rs.TOMCATbasicinfo', {
             url: "/TOMCATbasicinfo/:key",
-            templateUrl: "pages/probes/tomcat/basicinfo/basicinfo.html",
+            templateUrl: "pages/probes/tomcat/basicinfo/tomcatbasicinfo.html",
             data: { pageTitle: 'basicinfo' },
-            controller: 'BasicinfoCtrl',
+            controller: 'TomcatbasicinfoCtrl',
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
@@ -109,9 +109,9 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         })
         .state('rs.TOMCATcalltree', {
             url: "/TOMCATcalltree/:key",
-            templateUrl: "pages/probes/tomcat/calltree/calltree.html",
+            templateUrl: "pages/probes/tomcat/calltree/tomcatcalltree.html",
             data: { pageTitle: 'calltree' },
-            controller: 'CalltreeCtrl',
+            controller: 'TomcatcalltreeCtrl',
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
@@ -132,16 +132,16 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         })
         .state('rs.TOMCATalertmanagement', {
             url: "/TOMCATalertmanagement",
-            templateUrl: "pages/probes/tomcat/alertmanagement/alertmanagement.html",
+            templateUrl: "pages/probes/tomcat/alertmanagement/tomcatalertmanagement.html",
             data: { pageTitle: 'Alertmanagement' }
 
         })
         // 报告生成Report
         .state('rs.TOMCATreport', {
             url: "/TOMCATreport/:key",
-            templateUrl: "pages/probes/tomcat/report/report.html",
+            templateUrl: "pages/probes/tomcat/report/tomcatreport.html",
             data: { pageTitle: 'Report' },
-            controller:'ReportCtrl',
+            controller:'TomcatreportCtrl',
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([

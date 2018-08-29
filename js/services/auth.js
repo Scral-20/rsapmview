@@ -6,7 +6,8 @@ angular.module('inspinia')
         var getURL = function () {
             // return "http://10.4.45.169:8001";
             // return "http://localhost:8080";
-            return "http://10.0.67.14:8000";
+            // return "http://10.0.67.14:8000";
+            return "http://10.0.67.38:8000";
         };
 
         var getJwtToken = function () {
