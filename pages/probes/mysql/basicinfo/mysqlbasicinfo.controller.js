@@ -2,16 +2,15 @@
     'use strict';
     /**
      * wub-neu
-     * 2018.07.23
+     * 2018.08.28
      * @group Controller
-     * @name TomcatbasicinfoCtrl
+     * @name MysqlbasicinfoCtrl
      * @class
      */
     angular.module('inspinia')
-        .controller( 'TomcatbasicinfoCtrl', ['$scope', '$http', '$state', '$stateParams', '$window', 'AuthService',
+        .controller( 'MysqlbasicinfoCtrl', ['$scope', '$http', '$state', '$stateParams', '$window', 'AuthService',
             function ($scope, $http, $state, $stateParams, $window, authService) {
-                $scope.title = $stateParams.title;
-                $scope.route = $stateParams.route;
+
                 $scope.key = $stateParams.key;
                 $scope.getData = function () {
                     $http.get(
@@ -33,7 +32,7 @@
                         $scope.serverMetaData = data.serverMetaData;
                         $scope.status = data.status;
                         $scope.currentServiceInfo = [];
-                        $scope.currentPeriod = '1h';
+                        $scope.currentPeriod = '30m';
                         for (var i = 0; i < data.serverMetaData.serviceInfos.length; i++) {
                             if (data.serverMetaData.serviceInfos[i].serviceLibs.length > 0) {
                                 $scope.currentServiceInfo = data.serverMetaData.serviceInfos[i];
@@ -56,6 +55,7 @@
                 $scope.setPeriod = function ( period ) {
                     $scope.currentPeriod = period;
                 };
+
                 $scope.getData();
 
             }

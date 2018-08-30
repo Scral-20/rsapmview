@@ -150,9 +150,7 @@
                 }
 
                 function clickApp(type, key) {
-                    // alert(type + ": " + key);
-                    if (typeof(scope.path[type]) === "undefined" || type === "USER") return;
-                    // alert("#/rs/" + type + "/" + key);
+                    // if (typeof(scope.path[type]) === "undefined" || type === "USER") return;
                     self.location.href = "#/rs/" + type + "/" + key;
                 }
 

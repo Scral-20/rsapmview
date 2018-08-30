@@ -3,7 +3,7 @@
         <h2>{{pageTitle}}</h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a ui-sref="rs.topview">{{'全景视图'|translate}}</a>
+                <a ui-sref="rs.topview">全景视图</a>
             </li>
             <li class="breadcrumb-item active">
                 <strong>{{pageTitle}}</strong>
@@ -18,11 +18,11 @@
 <div class="wrapper wrapper-content animated fadeInRight">
 
     <div class="row">
-        <a ui-sref="rs.TOMCATbasicinfo({key: '{{key}}', title: '{{pageTitle}}', route: '{{routeName}}'})">
+        <a ui-sref="rs.MYSQLbasicinfo({key: '{{key}}'})">
             <div class="col-lg-3">
                 <div class="ibox">
                     <div class="ibox-content">
-                        <h5 class="m-b-md">{{'基本信息'|translate}}</h5>
+                        <h5 class="m-b-md">基本信息</h5>
                         <h2 class="text-navy">
                             <i class="fa fa-bar-chart-o"></i> Info
                         </h2>
@@ -32,11 +32,11 @@
             </div>
         </a>
 
-        <a ui-sref="rs.TOMCATcalltree({key: '{{key}}', title: '{{pageTitle}}', route: '{{routeName}}'})">
+        <!--<a ui-sref="rs.TOMCATcalltree({key: '{{key}}'})">-->
         <div class="col-lg-3">
             <div class="ibox">
                 <div class="ibox-content ">
-                    <h5 class="m-b-md">{{'代码定位'|translate}}</h5>
+                    <h5 class="m-b-md">指标预测</h5>
                     <h2 class="text-danger">
                         <i class="fa fa-sitemap fa-rotate-270"></i> Code
                     </h2>
@@ -44,12 +44,12 @@
                 </div>
             </div>
         </div>
-        </a>
+        <!--</a>-->
 
         <div class="col-lg-3">
             <div class="ibox">
                 <div class="ibox-content">
-                    <h5 class="m-b-md">{{'日志分析'|translate}}</h5>
+                    <h5 class="m-b-md">告警管理</h5>
                     <h2 class="text-danger">
                         <i class="fa fa-play fa-rotate-90"></i> Down
                     </h2>
@@ -60,7 +60,7 @@
         <div class="col-lg-3">
             <div class="ibox">
                 <div class="ibox-content">
-                    <h5 class="m-b-md">{{'指标预测'|translate}}</h5>
+                    <h5 class="m-b-md">报告生成</h5>
                     <h2 class="text-danger">
                         <i class="fa fa-play fa-rotate-90"></i> Down
                     </h2>
@@ -69,35 +69,6 @@
             </div>
         </div>
 
-    </div>
-
-    <div class="row">
-        <!--<a ui-sref="rs.TOMCATalertmanagement">-->
-            <div class="col-lg-3">
-                <div class="ibox">
-                    <div class="ibox-content">
-                        <h5 class="m-b-md">{{'告警管理'|translate}}</h5>
-                        <h2 class="text-danger">
-                            <i class="fa fa-warning"></i> Alert
-                        </h2>
-                        <small>告警信息</small>
-                    </div>
-                </div>
-            </div>
-        <!--</a>-->
-        <a ui-sref="rs.TOMCATreport({key: '{{key}}'})">
-        <div class="col-lg-3">
-            <div class="ibox">
-                <div class="ibox-content">
-                    <h5 class="m-b-md">{{'报告生成'|translate}}</h5>
-                    <h2 class="text-navy">
-                        <i class="fa fa-file"></i> Report
-                    </h2>
-                    <small>APM监控报告总结</small>
-                </div>
-            </div>
-        </div>
-        </a>
     </div>
 
 </div>

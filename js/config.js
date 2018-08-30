@@ -12,7 +12,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
     IdleProvider.idle(5); // in seconds
     IdleProvider.timeout(120); // in seconds
 
-    $urlRouterProvider.otherwise("/landing");
+    $urlRouterProvider.otherwise("/topview");
 
     $ocLazyLoadProvider.config({
         // Set to true if you want to see what and when is dynamically loaded
@@ -20,8 +20,8 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
     });
 
     $stateProvider
-        .state('landing', {
-            url: "/landing",
+        .state('index', {
+            url: "",
             templateUrl: "pages/home/landing.html",
             data: { pageTitle: 'Landing page', specialClass: 'landing-page' },
             resolve: {
@@ -64,7 +64,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('rs.TOMCAT', {
             url: "/TOMCAT/:key",
             templateUrl: "pages/probes/tomcat/tomcatoverview.html",
-            data: { pageTitle: 'Tomcat' },
+            data: { pageTitle: 'Tomcat', routeName: 'TOMCAT'},
             controller: 'TomcatoverviewCtrl',
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
@@ -79,7 +79,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('rs.SPRING_BOOT', {
             url: "/SPRING_BOOT/:key",
             templateUrl: "pages/probes/tomcat/tomcatoverview.html",
-            data: { pageTitle: 'Spring Boot' },
+            data: { pageTitle: 'Spring Boot', routeName: 'SPRING_BOOT'},
             controller: 'TomcatoverviewCtrl',
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
@@ -92,7 +92,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             }
         })
         .state('rs.TOMCATbasicinfo', {
-            url: "/TOMCATbasicinfo/:key",
+            url: "/TOMCATbasicinfo/:key/:title/:route",
             templateUrl: "pages/probes/tomcat/basicinfo/tomcatbasicinfo.html",
             data: { pageTitle: 'basicinfo' },
             controller: 'TomcatbasicinfoCtrl',
@@ -108,7 +108,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             }
         })
         .state('rs.TOMCATcalltree', {
-            url: "/TOMCATcalltree/:key",
+            url: "/TOMCATcalltree/:key/:title/:route",
             templateUrl: "pages/probes/tomcat/calltree/tomcatcalltree.html",
             data: { pageTitle: 'calltree' },
             controller: 'TomcatcalltreeCtrl',
@@ -218,15 +218,24 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
+        /*** MYSQL ***/
         .state('rs.MYSQL', {
-            url: "/mysql",
-            templateUrl: "pages/probes/mysql/tomcatoverview.html",
+            url: "/MYSQL/:key",
+            templateUrl: "pages/probes/mysql/mysqloverview.html",
             data: { pageTitle: 'Mysql' },
+            controller: 'MysqloverviewCtrl'
+        })
+        .state('rs.MYSQLbasicinfo', {
+            url: "/MYSQLbasicinfo/:key",
+            templateUrl: "pages/probes/mysql/basicinfo/mysqlbasicinfo.html",
+            data: { pageTitle: 'basicinfo' },
+            controller: 'MysqlbasicinfoCtrl',
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
                         {
-                            files: ['js/plugins/sparkline/jquery.sparkline.min.js']
+                            serie: true,
+                            files: ['css/plugins/c3/c3.min.css', 'js/plugins/d3/d3.min.js', 'js/plugins/c3/c3.min.js']
                         }
                     ]);
                 }

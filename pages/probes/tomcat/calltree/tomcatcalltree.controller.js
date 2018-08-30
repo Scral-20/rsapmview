@@ -10,7 +10,8 @@
     angular.module('inspinia')
         .controller( 'TomcatcalltreeCtrl', ['$scope', '$http', '$state', '$stateParams', '$window', 'AuthService',
             function ($scope, $http, $state, $stateParams, $window, authService) {
-
+                $scope.title = $stateParams.title;
+                $scope.route = $stateParams.route;
                 $scope.key = $stateParams.key;
                 // alert($scope.key);
                 $scope.currentTab = "duration";
