@@ -7,6 +7,24 @@ function config($translateProvider) {
     $translateProvider
         .translations('en', {
 
+            // Navigation Translate
+            '全景视图': 'Top View',
+            '探针管理': 'Probe Management',
+            '探针添加': 'Probe Add',
+            '探针概览': 'Probes Overview',
+            '配置': 'Config',
+            '报表': 'Report',
+
+            //TomcatOverview Label Translate
+            '全景视图': 'Top View',
+            'Tomcat':   'Tomcat',
+            '代码定位': 'Code Location',
+            '日志分析': 'Log Analysis',
+            '指标预测': 'Index Prediction',
+            '告警管理': 'Alarm Management',
+            '报告生成': 'Report Generation',
+
+
             // Define all menu elements
             DASHBOARD: 'Dashboard',
             GRAPHS: 'Graphs',
@@ -67,7 +85,6 @@ function config($translateProvider) {
     //$translateProvider.preferredLanguage('en');
 
 }
-
 angular
     .module('inspinia')
     .config(config);

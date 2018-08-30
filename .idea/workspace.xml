@@ -2,16 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d2f094d-a627-442b-8468-99446ffa522d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/panel/card/card.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/panel/card/card.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/translation.controller.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/panel/lineangent/lineagent.directive.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/panel/lineangent/lineagent.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/probes/tomcat/tomcatoverview.translation.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/gauge/gauge.directive.js" afterPath="$PROJECT_DIR$/pages/panel/gauge/gauge.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/translations.js" afterPath="$PROJECT_DIR$/js/translations.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/gauge/gauge.html" afterPath="$PROJECT_DIR$/pages/panel/gauge/gauge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/line/line.directive.js" afterPath="$PROJECT_DIR$/pages/panel/line/line.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js" afterPath="$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/progressbar/progressbar.directive.js" afterPath="$PROJECT_DIR$/pages/panel/progressbar/progressbar.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/table/table.directive.js" afterPath="$PROJECT_DIR$/pages/panel/table/table.directive.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/basicinfo/tomcatbasicinfo.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/basicinfo/tomcatbasicinfo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/log_tab.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/log_tab.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/basic_tab.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/basic_tab.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pages/panel/line2yaxisagent/line2yaxisagent.directive.js" afterPath="$PROJECT_DIR$/pages/panel/lineangent/lineagent.directive.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pages/panel/line2yaxisagent/line2yaxisagent.html" afterPath="$PROJECT_DIR$/pages/panel/lineangent/lineagent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/common/navigation.html" afterPath="$PROJECT_DIR$/views/common/navigation.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.translation.js" afterPath="$PROJECT_DIR$/pages/probes/tomcat/tomcat.translation.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,28 +38,78 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="log_tab.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/log_tab.html">
+      <file leaf-file-name="card.directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/card/card.directive.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="50" column="6" lean-forward="true" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+            <state relative-caret-position="469">
+              <caret line="83" column="22" lean-forward="true" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agent_tab.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html">
+      <file leaf-file-name="application_tab.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+            <state relative-caret-position="374">
+              <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lineagent.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/panel/lineangent/lineagent.html">
+      <file leaf-file-name="card.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/card/card.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gauge.directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/gauge/gauge.directive.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2835">
+              <caret line="105" column="21" lean-forward="true" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="line2yaxis.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="line2yaxis.directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="682">
+              <caret line="111" column="67" lean-forward="false" selection-start-line="111" selection-start-column="67" selection-end-line="111" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log.directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/log/log.directive.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="67" column="38" lean-forward="false" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pie.directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/pie/pie.directive.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -55,61 +118,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="table.directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/table/table.directive.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="101" column="52" lean-forward="true" selection-start-line="101" selection-start-column="52" selection-end-line="101" selection-end-column="52" />
+            <state relative-caret-position="-216">
+              <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lineagent.directive.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/panel/lineangent/lineagent.directive.js">
+      <file leaf-file-name="progressbar.directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/progressbar/progressbar.directive.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="92" column="42" lean-forward="true" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tomcatbasicinfo.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/basicinfo/tomcatbasicinfo.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1053">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="line.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/panel/line/line.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tomcatbasicinfo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/basicinfo/tomcatbasicinfo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2407">
-              <caret line="29" column="232" lean-forward="false" selection-start-line="29" selection-start-column="232" selection-end-line="29" selection-end-column="232" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="line.directive.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/panel/line/line.directive.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1944">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-206">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,10 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rs.Tomcat</find>
-      <find>$attrs.columns</find>
-      <find>TOMCAT</find>
-      <find>translate</find>
       <find>Main</find>
       <find>main</find>
       <find>check</find>
@@ -152,17 +171,17 @@
       <find>key</find>
       <find>log.id</find>
       <find>log</find>
-      <find>tableDiagram</find>
-      <find>logData</find>
       <find>agileBoard</find>
       <find>PieData</find>
       <find>lineDiagram</find>
+      <find>translate</find>
+      <find>List</find>
+      <find>tableData</find>
+      <find>tableDiagram</find>
+      <find>logData</find>
+      <find>case</find>
     </findStrings>
     <replaceStrings>
-      <replace>DonutData</replace>
-      <replace>a[i]</replace>
-      <replace>columns[2]</replace>
-      <replace>_HeapId</replace>
       <replace>_NonheapId</replace>
       <replace>result</replace>
       <replace>result[i]</replace>
@@ -189,6 +208,10 @@
       <replace>progressbarData</replace>
       <replace>pieData</replace>
       <replace>lineagentDiagram</replace>
+      <replace>cardDiagram</replace>
+      <replace>cardData</replace>
+      <replace>tablesmallDiagram</replace>
+      <replace>situation</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\webstormspace\inspinia-rs</dir>
@@ -200,19 +223,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/tomcatoverview.html" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/tomcatoverview.translate.js" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/report.translate.js" />
-        <option value="$PROJECT_DIR$/js/translations.js" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/tomcatoverview.translation.js" />
-        <option value="$PROJECT_DIR$/pages/rs/content.html" />
-        <option value="$PROJECT_DIR$/js/translation.controller.js" />
-        <option value="$PROJECT_DIR$/views/common/topnavbar.html" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/report.html" />
-        <option value="$PROJECT_DIR$/js/plugins/peity/angular-peity.js" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/logcontent/logcontent.html" />
-        <option value="$PROJECT_DIR$/js/config.js" />
-        <option value="$PROJECT_DIR$/pages/panel/table/log.directive.js" />
         <option value="$PROJECT_DIR$/pages/rs/rs.controller.js" />
         <option value="$PROJECT_DIR$/js/services/auth.js" />
         <option value="$PROJECT_DIR$/pages/probes/tomcat/basicinfo/basicinfo.html" />
@@ -222,7 +232,6 @@
         <option value="$PROJECT_DIR$/pages/line2yaxis_agent/line2yaxisagent.directive.js" />
         <option value="$PROJECT_DIR$/pages/panel/line2yaxis_agent/line2yaxis_agent.html" />
         <option value="$PROJECT_DIR$/pages/panel/line2yaxis_agent/line2yaxis_agent.directive.js" />
-        <option value="$PROJECT_DIR$/pages/panel/progressbar/progressbar.directive.js" />
         <option value="$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.html" />
         <option value="$PROJECT_DIR$/pages/panel/line2yaxisagent/line2yaxisagent.html" />
         <option value="$PROJECT_DIR$/pages/panel/line/line.html" />
@@ -231,26 +240,40 @@
         <option value="$PROJECT_DIR$/pages/panel/pie/pie.html" />
         <option value="$PROJECT_DIR$/pages/panel/progressbar/progressbar.html" />
         <option value="$PROJECT_DIR$/pages/panel/pie/pie.directive.js" />
-        <option value="$PROJECT_DIR$/pages/panel/table/table.directive.js" />
         <option value="$PROJECT_DIR$/pages/panel/table/table.html" />
         <option value="$PROJECT_DIR$/pages/panel/log/log.html" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/basic_tab.html" />
         <option value="$PROJECT_DIR$/pages/probes/tomcat/report/report.controller.js" />
         <option value="$PROJECT_DIR$/pages/panel/log/log.directive.js" />
-        <option value="$PROJECT_DIR$/pages/panel/gauge/gauge.html" />
         <option value="$PROJECT_DIR$/pages/probes/tomcat/report/report.translation.js" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html" />
         <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.translation.js" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js" />
         <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.html" />
         <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/log_tab.html" />
         <option value="$PROJECT_DIR$/pages/panel/gauge/gauge.directive.js" />
-        <option value="$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/basicinfo/tomcatbasicinfo.html" />
         <option value="$PROJECT_DIR$/pages/panel/line2yaxisagent/line2yaxisagent.directive.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html" />
+        <option value="$PROJECT_DIR$/pages/probes/tomcat/tomcat.translation.js" />
+        <option value="$PROJECT_DIR$/js/translations.js" />
+        <option value="$PROJECT_DIR$/pages/topview/topview.controller.js" />
+        <option value="$PROJECT_DIR$/views/common/topnavbar.html" />
+        <option value="$PROJECT_DIR$/pages/rs/content.translate.js" />
+        <option value="$PROJECT_DIR$/views/common/navigation.html" />
+        <option value="$PROJECT_DIR$/js/translation.controller.js" />
+        <option value="$PROJECT_DIR$/pages/probes/tomcat/basicinfo/tomcatbasicinfo.html" />
         <option value="$PROJECT_DIR$/pages/panel/lineangent/lineagent.directive.js" />
+        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html" />
+        <option value="$PROJECT_DIR$/pages/panel/progressbar/progressbar.directive.js" />
+        <option value="$PROJECT_DIR$/pages/panel/line/line.directive.js" />
+        <option value="$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js" />
+        <option value="$PROJECT_DIR$/pages/panel/table/table.directive.js" />
+        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/basic_tab.html" />
+        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js" />
+        <option value="$PROJECT_DIR$/pages/panel/tablesmall/table.directive.js" />
+        <option value="$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.directive.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.html" />
+        <option value="$PROJECT_DIR$/pages/panel/gauge/gauge.html" />
+        <option value="$PROJECT_DIR$/pages/panel/card/card.html" />
+        <option value="$PROJECT_DIR$/pages/panel/card/card.directive.js" />
+        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html" />
       </list>
     </option>
   </component>
@@ -260,7 +283,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1460" />
@@ -281,8 +304,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -311,6 +332,13 @@
               <item name="rsapm-suite-view" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="card" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rsapm-suite-view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rsapm-suite-view" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
               <item name="gauge" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -326,13 +354,6 @@
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="panel" type="462c0819:PsiDirectoryNode" />
               <item name="line2yaxis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rsapm-suite-view" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rsapm-suite-view" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="panel" type="462c0819:PsiDirectoryNode" />
-              <item name="lineangent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rsapm-suite-view" type="b2602c69:ProjectViewProjectNode" />
@@ -361,6 +382,13 @@
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="panel" type="462c0819:PsiDirectoryNode" />
               <item name="table" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rsapm-suite-view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rsapm-suite-view" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="tablesmall" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rsapm-suite-view" type="b2602c69:ProjectViewProjectNode" />
@@ -410,6 +438,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,19 +448,20 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="nav&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/views/common/navigation.html&#10;top&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/views/common/topnavbar.html&#10;auth&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/js/services/auth.js&#10;sortable-list&#9;null&#9;null&#10;agileBoard&#9;null&#9;null&#10;translate&#9;null&#9;null&#10;trans&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/js/translation.controller.js&#10;notes&#9;null&#9;null&#10;au&#9;FILE&#9;file://F:/inspinia-rs/js/services/auth.js&#10;rs&#9;FILE&#9;file://F:/inspinia-rs/pages/rs/rs.controller.js&#10;authService&#9;null&#9;null&#10;na&#9;FILE&#9;file://F:/inspinia-rs/views/common/navigation.html&#10;topview&#9;FILE&#9;file://F:/inspinia-rs/pages/topview/topview.controller.js&#10;topv&#9;FILE&#9;file://F:/inspinia-rs/pages/topview/topview.html&#10;login&#9;null&#9;null&#10;facep&#9;null&#9;null&#10;ng-mode&#9;null&#9;null&#10;checkbox&#9;null&#9;null&#10;piechar&#9;null&#9;null&#10;piec&#9;null&#9;null&#10;main&#9;FILE&#9;file://F:/inspinia-rs/js/plugins/nggrid/workbench/main.js&#10;piechart&#9;null&#9;null&#10;buildChartDirective&#9;null&#9;null&#10;main.PieChart5.data&#9;null&#9;null&#10;main.&#9;FILE&#9;file://F:/inspinia-rs/js/plugins/oclazyload/examples/complexExample/partials/main.html&#10;option&#9;null&#9;null&#10;Piechart&#9;null&#9;null&#10;topnavbar.html&#9;FILE&#9;file://F:/inspinia-rs/views/common/topnavbar.html&#10;navi&#9;FILE&#9;file://F:/inspinia-rs/views/common/navigation.html&#10;tabs&#9;FILE&#9;file://F:/inspinia-rs/views/tabs.html&#10;report&#9;FILE&#9;file://F:/inspinia-rs/pages/probes/tomcat/report/report.html&#10;bower&#9;FILE&#9;file://F:/inspinia-rs/js/plugins/oclazyload/examples/complexExample/bower.json&#10;Tomcat&#9;null&#9;null&#10;button&#9;FILE&#9;file://F:/inspinia-rs/views/buttons.html&#10;uibtab&#9;null&#9;null&#10;uib-tab&#9;null&#9;null&#10;uib-t&#9;null&#9;null&#10;tab&#9;null&#9;null&#10;progressbar&#9;null&#9;null&#10;dragg&#9;null&#9;null&#10;Uibpro&#9;null&#9;null&#10;progress.&#9;null&#9;null&#10;uib-pro&#9;null&#9;null&#10;uib-pr&#9;null&#9;null&#10;rs.&#9;FILE&#9;file://F:/inspinia-rs/pages/rs/rs.controller.js&#10;key&#9;null&#9;null&#10;aut&#9;FILE&#9;file://F:/inspinia-rs/js/services/auth.js&#10;gau&#9;null&#9;null&#10;drag&#9;null&#9;null&#10;dra&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="aut&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/js/services/auth.js&#10;na&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/views/common/navigation.html&#10;top&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/views/common/topnavbar.html&#10;Top&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/pages/topview/topview.controller.js&#10;pref&#9;null&#9;null&#10;langua&#9;null&#9;null&#10;TopviewCtrl&#9;null&#9;null&#10;topv&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/pages/topview/topview.html&#10;nav&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/views/common/navigation.html&#10;auth&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/js/services/auth.js&#10;sortable-list&#9;null&#9;null&#10;agileBoard&#9;null&#9;null&#10;translate&#9;null&#9;null&#10;trans&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/js/translation.controller.js&#10;notes&#9;null&#9;null&#10;au&#9;FILE&#9;file://F:/inspinia-rs/js/services/auth.js&#10;rs&#9;FILE&#9;file://F:/inspinia-rs/pages/rs/rs.controller.js&#10;authService&#9;null&#9;null&#10;topview&#9;FILE&#9;file://F:/inspinia-rs/pages/topview/topview.controller.js&#10;login&#9;null&#9;null&#10;facep&#9;null&#9;null&#10;ng-mode&#9;null&#9;null&#10;checkbox&#9;null&#9;null&#10;piechar&#9;null&#9;null&#10;piec&#9;null&#9;null&#10;main&#9;FILE&#9;file://F:/inspinia-rs/js/plugins/nggrid/workbench/main.js&#10;piechart&#9;null&#9;null&#10;buildChartDirective&#9;null&#9;null&#10;main.PieChart5.data&#9;null&#9;null&#10;main.&#9;FILE&#9;file://F:/inspinia-rs/js/plugins/oclazyload/examples/complexExample/partials/main.html&#10;option&#9;null&#9;null&#10;Piechart&#9;null&#9;null&#10;topnavbar.html&#9;FILE&#9;file://F:/inspinia-rs/views/common/topnavbar.html&#10;navi&#9;FILE&#9;file://F:/inspinia-rs/views/common/navigation.html&#10;tabs&#9;FILE&#9;file://F:/inspinia-rs/views/tabs.html&#10;report&#9;FILE&#9;file://F:/inspinia-rs/pages/probes/tomcat/report/report.html&#10;bower&#9;FILE&#9;file://F:/inspinia-rs/js/plugins/oclazyload/examples/complexExample/bower.json&#10;Tomcat&#9;null&#9;null&#10;button&#9;FILE&#9;file://F:/inspinia-rs/views/buttons.html&#10;uibtab&#9;null&#9;null&#10;uib-tab&#9;null&#9;null&#10;uib-t&#9;null&#9;null&#10;tab&#9;null&#9;null&#10;progressbar&#9;null&#9;null&#10;dragg&#9;null&#9;null&#10;Uibpro&#9;null&#9;null&#10;progress.&#9;null&#9;null&#10;uib-pro&#9;null&#9;null&#10;uib-pr&#9;null&#9;null&#10;rs.&#9;FILE&#9;file://F:/inspinia-rs/pages/rs/rs.controller.js" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\inspinia-rs\pages\panel" />
-      <recent name="D:\webstormspace\Angular_Full_Version\pages\layouts" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\angularworkspace\rsapm-suite-view\pages\panel\tablesmall" />
+      <recent name="E:\angularworkspace\rsapm-suite-view\pages\panel\card" />
       <recent name="E:\angularworkspace\rsapm-suite-view\pages\panel" />
       <recent name="E:\angularworkspace\rsapm-suite-view\pages\probes\tomcat\basicinfo" />
       <recent name="F:\inspinia-rs\pages" />
-      <recent name="F:\inspinia-rs\pages\panel\progressbar" />
-      <recent name="F:\inspinia-rs\img\topview-pictures" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\angularworkspace\rsapm-suite-view\pages\probes\tomcat" />
+      <recent name="F:\inspinia-rs\pages\panel" />
+      <recent name="D:\webstormspace\Angular_Full_Version\pages\layouts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -510,15 +541,16 @@
       <workItem from="1535332920285" duration="33604000" />
       <workItem from="1535418247955" duration="24985000" />
       <workItem from="1535445446924" duration="15288000" />
-      <workItem from="1535505516819" duration="21940000" />
+      <workItem from="1535505516819" duration="25502000" />
+      <workItem from="1535593549808" duration="22100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="757781000" />
+    <option name="totallyTimeSpent" value="783443000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20833333" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -552,244 +584,56 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/calltree/calltree.html">
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/report.translation.js" />
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/log_tab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="50" column="6" lean-forward="true" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxisagent/line2yaxisagent.html" />
+    <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxisagent/line2yaxisagent.directive.js" />
+    <entry file="file://$PROJECT_DIR$/pages/topview/topview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/tomcatoverview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/nggrid/src/navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2272">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/calltree/calltree.controller.js">
+    <entry file="file://$PROJECT_DIR$/pages/topview/topview.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="91">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/topview/topview.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="50" column="43" lean-forward="false" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/angular-translate/angular-translate.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="5" column="10843" lean-forward="false" selection-start-line="5" selection-start-column="10843" selection-end-line="5" selection-end-column="10843" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="2327" column="0" lean-forward="false" selection-start-line="2327" selection-start-column="0" selection-end-line="2479" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!block;n#agileBoard#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/basicinfo/basicinfo.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="33" column="50" lean-forward="false" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/basicinfo/basicinfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-193">
-          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/progressbar/progressbar.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1402">
-          <caret line="5444" column="1" lean-forward="true" selection-start-line="5444" selection-start-column="1" selection-end-line="5444" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/pie/pie.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/progressbar/progressbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="112" lean-forward="false" selection-start-line="19" selection-start-column="112" selection-end-line="19" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/pie/pie.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/table/table.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="64" column="63" lean-forward="false" selection-start-line="64" selection-start-column="63" selection-end-line="64" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/table/table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="20" column="86" lean-forward="false" selection-start-line="20" selection-start-column="86" selection-end-line="20" selection-end-column="86" />
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#a#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/report.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/log/log.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/log/log.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="67" column="38" lean-forward="false" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/report.translation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="48" column="57" lean-forward="true" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/translations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/translation.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-139">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="139" column="35" lean-forward="true" selection-start-line="139" selection-start-column="35" selection-end-line="139" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/rs/rs.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/services/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/common/topnavbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="61" lean-forward="true" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/tomcatoverview.translation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.translation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/tomcatoverview.translation.js" />
     <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/tomcatoverview.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -798,154 +642,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/tomcatoverview.html">
+    <entry file="file://$PROJECT_DIR$/views/common/topnavbar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1907">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        <state relative-caret-position="432">
+          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/rs/content.translate.js" />
+    <entry file="file://$PROJECT_DIR$/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2934">
+          <caret line="3556" column="49" lean-forward="true" selection-start-line="3556" selection-start-column="49" selection-end-line="3556" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!block;n#agileBoard#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/translation.controller.js" />
+    <entry file="file://$PROJECT_DIR$/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="37" column="18" lean-forward="false" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/rs/content.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="108">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/rs/rs.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/common/navigation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-625">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="968">
+          <caret line="44" column="101" lean-forward="false" selection-start-line="44" selection-start-column="101" selection-end-line="44" selection-end-column="101" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js">
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/tomcat.translation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="36" column="39" lean-forward="false" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/basic_tab.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="87" column="56" lean-forward="false" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="56" />
-          <folding>
-            <element signature="n#div#0;n#div#3;n#div#2;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/gauge/gauge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-          <folding>
-            <marker date="1535526731063" expanded="false" signature="1554:1565" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/gauge/gauge.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="66" column="42" lean-forward="false" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2669">
-          <caret line="162" column="47" lean-forward="true" selection-start-line="162" selection-start-column="47" selection-end-line="162" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/basicinfo/basic.translation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state relative-caret-position="945">
+          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/basicinfo/tomcatbasicinfo.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1053">
+        <state relative-caret-position="-1084">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/log_tab.html">
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/basicinfo/basic.translation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="50" column="6" lean-forward="true" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxisagent/line2yaxisagent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="101" column="52" lean-forward="true" selection-start-line="101" selection-start-column="52" selection-end-line="101" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxisagent/line2yaxisagent.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/basicinfo/tomcatbasicinfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2407">
-          <caret line="29" column="232" lean-forward="false" selection-start-line="29" selection-start-column="232" selection-end-line="29" selection-end-column="232" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/lineangent/lineagent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="361">
+          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -958,9 +723,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/line/line.directive.js">
+    <entry file="file://$PROJECT_DIR$/pages/panel/lineangent/lineagent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1944">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -968,8 +733,220 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/panel/lineangent/lineagent.directive.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="92" column="42" lean-forward="true" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
+        <state relative-caret-position="513">
+          <caret line="94" column="41" lean-forward="false" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/progressbar/progressbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/services/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/basicinfo/tomcatbasicinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="132" column="47" lean-forward="false" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/translations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-638">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/basic_tab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+          <folding>
+            <element signature="n#div#0;n#div#3;n#div#2;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/log/log.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/pie/pie.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/line/line.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1097">
+          <caret line="100" column="34" lean-forward="false" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="31" column="112" lean-forward="false" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/table/table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="107" column="60" lean-forward="false" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/gauge/gauge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/gauge/gauge.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2835">
+          <caret line="105" column="21" lean-forward="true" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="111" column="67" lean-forward="false" selection-start-line="111" selection-start-column="67" selection-end-line="111" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/log/log.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="67" column="38" lean-forward="false" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/pie/pie.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/progressbar/progressbar.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-206">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/table/table.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="67" column="54" lean-forward="false" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/card/card.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="83" column="22" lean-forward="true" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/card/card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
           <folding />
         </state>
       </provider>

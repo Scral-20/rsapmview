@@ -28,16 +28,14 @@
 
 
     <!--Active Trace-->
-    <!--<div class="col-lg-9">-->
-        <!--<line2yaxisagent-diagram url="/report/activetrace/{{key}}/" localtitle="" current-period="{{currentPeriod}}"></line2yaxisagent-diagram>-->
-    <!--</div>-->
     <div class="col-lg-9">
-        <lineagent-diagram url="/report/activetrace/{{key}}/" current-period="{{currentPeriod}}"></lineagent-diagram>
+        <line-diagram url="/report/activetrace/{{key}}/count/" tickcount="14" current-period="{{currentPeriod}}"></line-diagram>
     </div>
+
 
     <!--ProgressBar-->
     <div class="col-lg-3">
-        <progressbar-diagram url="/report/activetrace/{{key}}/" localtitle="" current-period="{{currentPeriod}}"></progressbar-diagram>
+        <progressbar-diagram url="/report/activetrace/{{key}}/stats/" current-period="{{currentPeriod}}"></progressbar-diagram>
     </div>
 
 </div>

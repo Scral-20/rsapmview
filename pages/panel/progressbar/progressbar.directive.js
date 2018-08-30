@@ -19,7 +19,6 @@
                 controller: function ($scope, $http, $filter, $element, $attrs, AuthService) {
                     $scope._id = '_id';
                     $scope.title = "";
-                    $scope.type = "/stats";
                     $scope.progressbarData = {
                         title: "",
                         FastCount: '',
@@ -32,7 +31,7 @@
 
                     $scope.getData = function (period) {
                         $http.get(
-                            AuthService.getURL() + $attrs.url + period + $scope.type
+                            AuthService.getURL() + $attrs.url + period
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
                             console.log(response.data);

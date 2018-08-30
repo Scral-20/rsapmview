@@ -19,6 +19,8 @@
                 controller: function ($scope, $http, $element, $attrs, AuthService) {
                     $scope._id =  '_' + Math.random().toString(36).substr(2, 9);
                     $scope.title = "";
+                    $scope.columnsSelected = $attrs.columnsSelected;   //在属性columns中选择需要显示的折线
+                    $scope.tickcount = $attrs.tickcount; //x轴显示标签数量设置
                     $scope.chartData = {};
                     $scope.c3Axis = {};
                     $scope.c3Data = {
@@ -38,55 +40,24 @@
                                 $scope._id = $scope.chartData.title.replace(/ /g, "_")+$scope._id;
                                 $scope.title = $scope.chartData.title;
                             }
+
+                            $scope.List = getList($scope.chartData);
                             $scope.c3Axis = transAxis($scope.chartData);
-                            $scope.c3Data = transData($scope.chartData);
+                            $scope.c3Data = transData($scope.chartData,$scope.List);
                         }, function () {
                             console.log("lineDiagram no data");
                         });
                     };
 
-                    // $scope.getData('30m');
-
-                    // $scope.chartData = {
-                    //     title: "CPU Load",
-                    //     yLabel: "Used(%)",
-                    //     max: 500,
-                    //     min: 0,
-                    //     columns: [
-                    //         {
-                    //             key: 'x',
-                    //             value: [1533009871000, 1533009872000, 1533009873000, 1533009874000, 1533009875000]
-                    //         },
-                    //         {
-                    //             key: 'CPU',
-                    //             value: [ 40, 100, 100, 400, 150, 250],
-                    //             type: 'area'
-                    //         },
-                    //         {
-                    //             key: 'CPU_2',
-                    //             value: [ 30, 400, 10, 300, 250, 350],
-                    //             type: 'area'
-                    //         }
-                    //     ],
-                    //     groups: [
-                    //         ['CPU','CPU_2']
-                    //     ]
-                    // };
-
-                    // if (typeof($scope.chartData.title) != "undefined"){
-                    //     $scope._id = $scope.chartData.title.replace(" ", "_")+$scope._id;
-                    //     $scope.title = $scope.chartData.title;
-                    // }
-
-                    // $scope.c3Axis = transAxis($scope.chartData);
-                    // $scope.c3Data = transData($scope.chartData);
-
                     function transAxis(chartData) {
                         var res = {};
                         res['x'] = {
                             type: 'timeseries',
+                            height: 40,
                             tick: {
-                                format: '%H:%M:%S'
+                                format: '%H:%M:%S     %Y/%m/%d',
+                                //周报count：14/2=7
+                                count: tickCount($scope.tickcount)
                             },
                             padding: {left:0, right:0}
                         };
@@ -105,7 +76,7 @@
                         return res;
                     }
 
-                    function transData(chartData) {
+                    function transData(chartData,List) {
                         if (typeof(chartData.columns) === "undefined") {
                             return res;
                         }
@@ -116,10 +87,18 @@
                             groups: []
                         };
                         for (var i = 0; i < chartData.columns.length; i++) {
+                            if( !ifItemInList(chartData.columns[i].key,List)){
+                                continue;
+                            }
                             var tmp = [];
                             tmp.push(chartData.columns[i].key);
                             for (var j = 0; j < chartData.columns[i].value.length; j++) {
-                                tmp.push(chartData.columns[i].value[j]);
+                                if(chartData.columns[i].key === 'x'){
+                                    tmp.push(chartData.columns[i].value[j]);
+                                }else {
+                                    tmp.push(chartData.columns[i].value[j].toFixed(2));
+                                }
+                                //tmp.push(chartData.columns[i].value[j]);
                             }
                             res.columns.push(tmp);
 
@@ -133,10 +112,40 @@
                         return res;
                     }
 
+                    //list列的即为所选的数据key值
+                    function ifItemInList(item,list) {
+                        for(var i = 0; i < list.length; i++){
+                            if(item === list[i]){
+                                return true
+                            }
+                        }
+                        return false
+                    }
+
+                    //若标签columns属性未写，则默认获取全部key与value,否则按columns属性获取数据
+                    function getList(chartData) {
+                        var List=[];
+                        if (typeof ($scope.columnsSelected)==="undefined" || $scope.columnsSelected===""){
+                            for(var i =0; i< chartData.columns.length; i++){
+                                List[i]= chartData.columns[i].key;
+                            }
+                        }else {
+                            List=$scope.columnsSelected.split(',');
+                        }
+                        return List;
+                    }
+
+                    //获取x轴坐标显示数量限制
+                    function tickCount(tickCount) {
+                        if(tickCount === "undefined" || tickCount === ""){
+                            return ''
+                        }
+                        return tickCount
+                    }
+
                 },
                 link: function(scope, element, attrs) {
                     // console.log(scope._id);
-
                     scope.$watch('currentPeriod', function () {
                         // alert(scope.currentPeriod === "");
                         if (scope.currentPeriod === "") return;
