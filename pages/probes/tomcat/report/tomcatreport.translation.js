@@ -44,9 +44,9 @@ angular.module('inspinia')
                     'Hinge Logger': '关键日志',
 
                     // Gauge Translate
-                    'CPU Used Report':'CPU资源占比',
-                    'JVM HEAP Used Report':'JVM堆内存占比',
-                    'JVM NonHEAP Used Report':'JVM非堆内存占比'
+                    'CPU Used Report':'CPU资源使用报告',
+                    'JVM HEAP Used Report':'JVM堆内存使用报告',
+                    'JVM NonHEAP Used Report':'JVM非堆内存使用报告'
 
                 });
 

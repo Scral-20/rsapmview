@@ -23,18 +23,18 @@
                 //本地的说明文本
                 $scope.helpText_agent = [
                     {
-                        content: '监测内容：监测探针对CPU资源的消耗情况，量化探针对系统性能的影响',
-                        title: 'Tips 1:',
+                        content: '监测探针对CPU资源的消耗情况，量化探针对系统性能的影响',
+                        title: '监测内容:',
                         statusClass: 'success',
                     },
                     {
-                        content: '具体指标：监测不同时刻各个探针的响应数量与响应速度，记录两者随时间的变化情况',
-                        title: 'Tips 2:',
+                        content: '监测不同时刻各个探针的响应数量与响应速度，记录两者随时间的变化情况',
+                        title: '具体指标：',
                         statusClass: 'warning',
                     },
                     {
-                        content: '响应速度分级：<1s:快速响应; 1s~3s:正常响应; 3s~5s:缓慢响应; >5s:极慢响应',
-                        title: 'Tips 3:',
+                        content: '<1s:快速响应; 1s~3s:正常响应; 3s~5s:缓慢响应; >5s:极慢响应',
+                        title: '响应速度分级：',
                         statusClass: 'info',
                     }
                 ];
@@ -48,9 +48,6 @@
                     $state.reload()
                 };
 
-                //控制表格中勾选框
-                $scope.check = true;
-                $scope.uncheck = false;
 
                 //表格中小型pie图的配色设置
                 $scope.piechartOptions = {
@@ -171,13 +168,11 @@
                     }
                 };
 
-
                 $scope.activeTab = function (tab) {
                     $scope.currentTab = tab;
                 };
 
                 $scope.getData();
-
 
             }
         ]);

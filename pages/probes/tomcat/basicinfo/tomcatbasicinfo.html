@@ -18,9 +18,8 @@
 
     </div>
 </div>
-
+<!--时间按钮-->
 <div class="row">
-
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="col-lg-12">
             <form class="navbar-form pull-left">
@@ -28,7 +27,7 @@
                     <li>
                         <div>
                             <div class="btn-group btn-group-sm" style="margin-top:0px;width:100%;float:left;">
-                                <button type="button" class="btn" ng-class="currentPeriod == period ? 'btn btn-primary' : 'btn'" ng-click="setPeriod( period )" ng-repeat="period in ['5m', '30m', '1h', '3h', '6h', '12h', '1d', '2d']">{{period == "5m" ? "Last " + period : period}}</button>
+                                <button type="button" class="btn" ng-class="currentPeriod == period ? 'btn btn-primary' : 'btn'" ng-click="setPeriod( period )" ng-repeat="period in ['5m', '30m', '1h', '3h', '6h', '12h', '1d', '2d', '1w']">{{period == "5m" ? "Last " + period : period}}</button>
                             </div>
                         </div>
                     </li>

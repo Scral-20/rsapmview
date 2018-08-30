@@ -22,7 +22,7 @@
             <ul class="nav">
                 <li>
                     <div>
-                        <div class="btn-group btn-group-sm" style="margin-top:0px;width:360px;float:left;">
+                        <div class="btn-group btn-group-sm" style="margin-top:0px;width:200%;float:left;">
                             <button type="button" class="btn" ng-class="currentPeriod == period ? 'btn btn-primary' : 'btn'" ng-click="setPeriod( period )" ng-repeat="period in ['5m', '30m', '1h', '3h', '6h', '12h', '1d', '2d', '1w']">{{period == "5m" ? "Last " + period : period}}</button>
                         </div>
                     </div>
