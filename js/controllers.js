@@ -2983,33 +2983,33 @@ function datatablesCtrl($scope,DTOptionsBuilder){
     /**
      * persons - Data used in Tables view for Data Tables plugin
      */
-    $scope.persons = [
-        {
-            id: '1',
-            firstName: 'Monica',
-            lastName: 'Smith'
-        },
-        {
-            id: '2',
-            firstName: 'Sandra',
-            lastName: 'Jackson'
-        },
-        {
-            id: '3',
-            firstName: 'John',
-            lastName: 'Underwood'
-        },
-        {
-            id: '4',
-            firstName: 'Chris',
-            lastName: 'Johnatan'
-        },
-        {
-            id: '5',
-            firstName: 'Kim',
-            lastName: 'Rosowski'
-        }
-    ];
+    // $scope.persons = [
+    //     {
+    //         id: '1',
+    //         firstName: 'Monica',
+    //         lastName: 'Smith'
+    //     },
+    //     {
+    //         id: '2',
+    //         firstName: 'Sandra',
+    //         lastName: 'Jackson'
+    //     },
+    //     {
+    //         id: '3',
+    //         firstName: 'John',
+    //         lastName: 'Underwood'
+    //     },
+    //     {
+    //         id: '4',
+    //         firstName: 'Chris',
+    //         lastName: 'Johnatan'
+    //     },
+    //     {
+    //         id: '5',
+    //         firstName: 'Kim',
+    //         lastName: 'Rosowski'
+    //     }
+    // ];
 
 }
 

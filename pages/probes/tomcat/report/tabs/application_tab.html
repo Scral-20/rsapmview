@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="col-lg-6">
-            <ul ui-sortable="sortableOptions" class="sortable-list connectList agile-list" ng-model="inProgressList">
+            <ul ui-sortable="sortableOptions" class="sortable-list agile-list">
 
                 <li class="{{task.statusClass}}-element" ng-repeat="task in helpText_agent">
                     <i class="fa fa-circle-o"></i> {{task.title}}<br>
@@ -25,47 +25,35 @@
             </ul>
         </div>
     </div>
-    <div class="jumbotron col-lg-12">
+    <div class="jumbotron col-lg-12" style="padding-top: 20px ;padding-bottom: 5px; padding-left: 20px ; padding-right: 20px">
         <div class="col-lg-3">
-            <card-diagram url="/report/rpcstats/{{key}}/accept/" situation="accept" totaltype="count" localtitle="Total Count" current-period="{{currentPeriod}}"></card-diagram>
+            <card-diagram url="/report/rpcstats/{{key}}/accept/" situation="accept" totaltype="count" localtitle="Total Normal Count" current-period="{{currentPeriod}}"></card-diagram>
         </div>
         <div class="col-lg-3">
-            <card-diagram url="/report/rpcstats/{{key}}/accept/" situation="accept" totaltype="duration" localtitle="Total Duration" current-period="{{currentPeriod}}"></card-diagram>
+            <card-diagram url="/report/rpcstats/{{key}}/accept/" situation="accept" totaltype="duration" localtitle="Total Normal Duration" current-period="{{currentPeriod}}"></card-diagram>
         </div>
         <div class="col-lg-3">
-            <card-diagram url="/report/rpcstats/{{key}}/exception/" situation="exception" totaltype="count" localtitle="Total Count" current-period="{{currentPeriod}}"></card-diagram>
+            <card-diagram url="/report/rpcstats/{{key}}/exception/" situation="exception" totaltype="count" localtitle="Total Exception Count" current-period="{{currentPeriod}}"></card-diagram>
         </div>
         <div class="col-lg-3">
-            <card-diagram url="/report/rpcstats/{{key}}/exception/" situation="exception" totaltype="duration" localtitle="Total Duration" current-period="{{currentPeriod}}"></card-diagram>
+            <card-diagram url="/report/rpcstats/{{key}}/exception/" situation="exception" totaltype="duration" localtitle="Total Exception Duration" current-period="{{currentPeriod}}"></card-diagram>
         </div>
     </div>
-
-
-        <!--<div class="col-lg-3">-->
-            <!--<div class="ibox float-e-margins">-->
-                <!--<div class="ibox-title">-->
-                    <!--<span class="label label-danger pull-right">Low value</span>-->
-                    <!--<h5>User activity</h5>-->
-                <!--</div>-->
-                <!--<div class="ibox-content">-->
-                    <!--<h2 class="no-margins">80,600</h2>-->
-
-                    <!--<div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i></div>-->
-                    <!--<small>In first month</small>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-
 
     <div class="row">
         <!--RPC-->
         <div class="col-lg-12">
             <line2yaxis-diagram url="/report/rpc/{{key}}/accept/" localtitle="" current-period="{{currentPeriod}}"></line2yaxis-diagram>
         </div>
-        
+
         <div class="col-lg-12">
             <tablesmall-diagram url="/report/rpcstats/{{key}}/accept/"  current-period="{{currentPeriod}}"></tablesmall-diagram>
         </div>
+
+        <div class="col-lg-12">
+            <tablesnew-diagram url="/report/rpcstats/{{key}}/accept/"  current-period="{{currentPeriod}}"></tablesnew-diagram>
+        </div>
+
     </div>
 
 </div>

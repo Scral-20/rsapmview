@@ -4,19 +4,38 @@
      * chaizq-neu
      * 2018.08.24
      * @group directive
-     * @name  tablesmallDiagram
+     * @name  tablesnewDiagram
      * @class
      */
     angular.module('inspinia')
-        .directive('tablesmallDiagram', [function() {
+        .directive('tablesnewDiagram', [function() {
             return {
                 restrict: 'E',
-                templateUrl: 'pages/panel/tablesmall/tablesmall.html',
+                templateUrl: 'pages/panel/tablenew/tablenew.html',
                 replace: true,
                 scope: {
                     currentPeriod: "@"
                 },
-                controller: function ($scope,$http, $filter, $element, $attrs, AuthService) {
+                controller: function ($scope,$http, $filter, $element, $attrs, AuthService,DTOptionsBuilder) {
+                    $scope.dtOptions = DTOptionsBuilder.newOptions()
+                        .withDOM('<"html5buttons"B>lTfgitp')
+                        .withButtons([
+                            {extend: 'copy'},
+                            {extend: 'csv'},
+                            {extend: 'excel', title: 'ExampleFile'},
+                            {extend: 'pdf', title: 'ExampleFile'},
+
+                            {extend: 'print',
+                                customize: function (win){
+                                    $(win.document.body).addClass('white-bg');
+                                    $(win.document.body).css('font-size', '10px');
+
+                                    $(win.document.body).find('table')
+                                        .addClass('compact')
+                                        .css('font-size', 'inherit');
+                                }
+                            }
+                        ]);
                     $scope._id =  '_id';
                     $scope.title = "";
                     $scope.tableData = {
@@ -44,6 +63,32 @@
                         });
                     };
 
+                    $scope.persons = [
+                        {
+                            firstName: 'Monica',
+                            lastName: 'Smith'
+                        },
+                        {
+                            firstName: 'Sandra',
+                            lastName: 'Jackson'
+                        },
+                        {
+                            firstName: 'John',
+                            lastName: 'Underwood'
+                        },
+                        {
+                            firstName: 'Chris',
+                            lastName: 'Johnatan'
+                        },
+                        {
+                            firstName: 'Kim',
+                            lastName: 'Rosowski'
+                        },
+                        {
+                            firstName: 'Niko',
+                            lastName: 'GO'
+                        }
+                    ];
                     //排序
                     $scope.sortOrder = "id";
                     $scope.reservse = true;
