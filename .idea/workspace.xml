@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d2f094d-a627-442b-8468-99446ffa522d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/Angular_Full_Version.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/gauge/gauge.directive.js" afterPath="$PROJECT_DIR$/pages/panel/gauge/gauge.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/basicinfo/tomcatbasicinfo.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/basicinfo/tomcatbasicinfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/log_tab.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/log_tab.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.translation.js" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.translation.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pages/panel/line2yaxisagent/line2yaxisagent.directive.js" afterPath="$PROJECT_DIR$/pages/panel/lineangent/lineagent.directive.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pages/panel/line2yaxisagent/line2yaxisagent.html" afterPath="$PROJECT_DIR$/pages/panel/lineangent/lineagent.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,18 +19,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="97" column="46" lean-forward="false" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
+            <state relative-caret-position="260">
+              <caret line="98" column="32" lean-forward="true" selection-start-line="98" selection-start-column="32" selection-end-line="98" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -302,7 +278,6 @@
         <option value="$PROJECT_DIR$/pages/probes/tomcat/report/report.translation.js" />
         <option value="$PROJECT_DIR$/js/services/auth.js" />
         <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/pages/topview/topview.directive.js" />
         <option value="$PROJECT_DIR$/pages/common/topnavbar.html" />
         <option value="$PROJECT_DIR$/pages/probes/tomcat/basicinfo/tomcatbasicinfo.controller.js" />
@@ -312,6 +287,7 @@
         <option value="$PROJECT_DIR$/pages/probes/tomcat/calltree/tomcatcalltree.html" />
         <option value="$PROJECT_DIR$/js/config.js" />
         <option value="$PROJECT_DIR$/pages/probes/tomcat/calltree/tomcatcalltree.controller.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -324,8 +300,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1911" />
     <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="width" value="1618" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -392,7 +368,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views" />
+    <property name="last_opened_file_path" value="F:/备份/WB0R5L90S/inspinia_v2.8/Angular_Full_Version" />
     <property name="nodejs_interpreter_path" value="D:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -495,12 +471,12 @@
       <workItem from="1535531831245" duration="872000" />
       <workItem from="1535591057506" duration="14819000" />
       <workItem from="1535615593720" duration="51000" />
-      <workItem from="1535615774354" duration="2380000" />
+      <workItem from="1535615774354" duration="6429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="770270000" />
+    <option name="totallyTimeSpent" value="774319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1911" y="-9" width="1938" height="1048" extended-state="6" />
@@ -873,14 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="97" column="46" lean-forward="false" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/calltree/tomcatcalltree.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -905,10 +873,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="96" column="29" lean-forward="true" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        <state relative-caret-position="260">
+          <caret line="98" column="32" lean-forward="true" selection-start-line="98" selection-start-column="32" selection-end-line="98" selection-end-column="32" />
           <folding />
         </state>
       </provider>
