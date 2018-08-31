@@ -25,17 +25,36 @@
                     {
                         content: '监测探针对CPU资源的消耗情况，量化探针对系统性能的影响',
                         title: '监测内容:',
-                        statusClass: 'success',
+                        statusClass: 'success'
                     },
                     {
                         content: '监测不同时刻各个探针的响应数量与响应速度，记录两者随时间的变化情况',
                         title: '具体指标：',
-                        statusClass: 'warning',
+                        statusClass: 'warning'
                     },
                     {
                         content: '<1s:快速响应; 1s~3s:正常响应; 3s~5s:缓慢响应; >5s:极慢响应',
                         title: '响应速度分级：',
-                        statusClass: 'info',
+                        statusClass: 'info'
+                    }
+                ];
+
+
+                $scope.helpText_app = [
+                    {
+                        content: '监测RPC请求次数与请求时间',
+                        title: '监测内容:',
+                        statusClass: 'success'
+                    },
+                    {
+                        content: '统计正常和异常状态的链接请求，记录各链接请求时间和请求次数，并统计总数',
+                        title: '具体指标：',
+                        statusClass: 'warning'
+                    },
+                    {
+                        content: '在RPC请求信息表格中的Search栏：输入"accept" 可查询正常状态的链接请求，输入"exception"可查询异常状态的链接请求',
+                        title: 'RPC请求状态查询：',
+                        statusClass: 'info'
                     }
                 ];
 

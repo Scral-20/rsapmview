@@ -92,9 +92,6 @@
                     }
 
                     function transData(chartData,List) {
-                        if (typeof(chartData.columns) === "undefined") {
-                            return res;
-                        }
                         var res = {
                             x: 'x',
                             columns: [],
@@ -102,6 +99,10 @@
                             groups: [],
                             axes: {}
                         };
+                        if (typeof(chartData.columns) === "undefined") {
+                            return res;
+                        }
+
                         for (var i = 0; i < chartData.columns.length; i++) {
                             if( !ifItemInList(chartData.columns[i].key,List)){
                                 continue;
@@ -109,10 +110,10 @@
                             var tmp = [];
                             tmp.push(chartData.columns[i].key);
                             for (var j = 0; j < chartData.columns[i].value.length; j++) {
-                                if(chartData.columns[i].key === 'x'|| chartData.columns[i].key === 'NonHeap Max'){
+                                if(chartData.columns[i].key === 'x'){
                                     tmp.push(chartData.columns[i].value[j]);
                                 }else {
-                                    tmp.push(chartData.columns[i].value[j].toFixed(2));
+                                    tmp.push(Number(chartData.columns[i].value[j]).toFixed(2));
                                 }
                                 //tmp.push(chartData.columns[i].value[j]);
                             }

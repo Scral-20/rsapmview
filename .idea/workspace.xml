@@ -2,22 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afa33c04-319a-4ace-b2de-83d9e55cc76f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/rsapm-suite-view.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/panel/tablenew/tablenew.directive.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/panel/tablenew/tablenew.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/panel/table/table_bak.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.directive.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/config.js" afterPath="$PROJECT_DIR$/js/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers.js" afterPath="$PROJECT_DIR$/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/card/card.directive.js" afterPath="$PROJECT_DIR$/pages/panel/card/card.directive.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/card/card.html" afterPath="$PROJECT_DIR$/pages/panel/card/card.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.directive.js" afterPath="$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.html" afterPath="$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/gauge/gauge.directive.js" afterPath="$PROJECT_DIR$/pages/panel/gauge/gauge.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/gauge/gauge.html" afterPath="$PROJECT_DIR$/pages/panel/gauge/gauge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/line/line.directive.js" afterPath="$PROJECT_DIR$/pages/panel/line/line.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js" afterPath="$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/log/log.html" afterPath="$PROJECT_DIR$/pages/panel/log/log.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/pie/pie.directive.js" afterPath="$PROJECT_DIR$/pages/panel/pie/pie.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/table/table.directive.js" afterPath="$PROJECT_DIR$/pages/panel/table/table.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/table/table.html" afterPath="$PROJECT_DIR$/pages/panel/table/table.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/tablenew/tablenew.directive.js" afterPath="$PROJECT_DIR$/pages/panel/tablenew/tablenew.directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/panel/tablenew/tablenew.html" afterPath="$PROJECT_DIR$/pages/panel/tablenew/tablenew.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/basic_tab.html" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/basic_tab.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js" afterPath="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/probes/tomcat/tomcat.translation.js" afterPath="$PROJECT_DIR$/pages/probes/tomcat/tomcat.translation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/common/topnavbar.html" afterPath="$PROJECT_DIR$/views/common/topnavbar.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,97 +36,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application_tab.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html">
+      <file leaf-file-name="line2yaxis.directive.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controllers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="2964" column="22" lean-forward="true" selection-start-line="2964" selection-start-column="22" selection-end-line="2964" selection-end-column="22" />
+            <state relative-caret-position="648">
+              <caret line="117" column="74" lean-forward="true" selection-start-line="117" selection-start-column="74" selection-end-line="117" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tablenew.directive.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/panel/tablenew/tablenew.directive.js">
+      <file leaf-file-name="line.directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/line/line.directive.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="466">
+              <caret line="99" column="51" lean-forward="false" selection-start-line="99" selection-start-column="51" selection-end-line="99" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="line2yaxis.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="111" column="57" lean-forward="false" selection-start-line="111" selection-start-column="57" selection-end-line="111" selection-end-column="57" />
+            <state relative-caret-position="0">
+              <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tablenew.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/panel/tablenew/tablenew.html">
+      <file leaf-file-name="tomcatreport.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-81">
-              <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-              <folding>
-                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="card.directive.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/panel/card/card.directive.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="-405">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/panel/card/card.html">
+      <file leaf-file-name="table.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/table/table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+            <state relative-caret-position="-85">
+              <caret line="8" column="56" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tablesmall.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.html">
+      <file leaf-file-name="table.directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/table/table.directive.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1566">
+              <caret line="58" column="45" lean-forward="true" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="progressbar.directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/progressbar/progressbar.directive.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="progressbar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/progressbar/progressbar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="40" column="16" lean-forward="true" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pie.directive.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/pie/pie.directive.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
-              <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="22" />
-              <folding>
-                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tablesmall.directive.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.directive.js">
+      <file leaf-file-name="pie.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/panel/pie/pie.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,23 +156,33 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js" />
         <option value="$PROJECT_DIR$/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/tomcat.translation.js" />
-        <option value="$PROJECT_DIR$/pages/panel/card/card.html" />
         <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html" />
         <option value="$PROJECT_DIR$/js/config.js" />
         <option value="$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.html" />
         <option value="$PROJECT_DIR$/js/controllers.js" />
         <option value="$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.directive.js" />
         <option value="$PROJECT_DIR$/pages/panel/tablenew/tablesmall.directive.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js" />
-        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html" />
         <option value="$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.html" />
-        <option value="$PROJECT_DIR$/pages/panel/tablenew/tablenew.html" />
-        <option value="$PROJECT_DIR$/pages/panel/tablenew/tablenew.directive.js" />
         <option value="$PROJECT_DIR$/pages/panel/card/card.directive.js" />
+        <option value="$PROJECT_DIR$/pages/panel/card/card.html" />
+        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/basic_tab.html" />
+        <option value="$PROJECT_DIR$/pages/panel/gauge/gauge.html" />
+        <option value="$PROJECT_DIR$/pages/panel/gauge/gauge.directive.js" />
+        <option value="$PROJECT_DIR$/pages/probes/tomcat/tomcat.translation.js" />
+        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js" />
+        <option value="$PROJECT_DIR$/pages/panel/tablenew/tablenew.directive.js" />
+        <option value="$PROJECT_DIR$/pages/panel/table/table.directive.js" />
+        <option value="$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/pages/panel/table/table.html" />
+        <option value="$PROJECT_DIR$/pages/panel/log/log.html" />
+        <option value="$PROJECT_DIR$/pages/panel/log/log.directive.js" />
+        <option value="$PROJECT_DIR$/pages/panel/tablenew/tablenew.html" />
+        <option value="$PROJECT_DIR$/views/common/topnavbar.html" />
+        <option value="$PROJECT_DIR$/pages/panel/pie/pie.directive.js" />
+        <option value="$PROJECT_DIR$/pages/panel/line/line.directive.js" />
+        <option value="$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js" />
       </list>
     </option>
   </component>
@@ -230,6 +249,20 @@
               <item name="rsapm-suite-view" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="gauge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rsapm-suite-view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rsapm-suite-view" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="line" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rsapm-suite-view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rsapm-suite-view" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
               <item name="line2yaxis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -237,14 +270,35 @@
               <item name="rsapm-suite-view" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="panel" type="462c0819:PsiDirectoryNode" />
-              <item name="tablenew" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rsapm-suite-view" type="b2602c69:ProjectViewProjectNode" />
               <item name="rsapm-suite-view" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="panel" type="462c0819:PsiDirectoryNode" />
-              <item name="tablesmall" type="462c0819:PsiDirectoryNode" />
+              <item name="pie" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rsapm-suite-view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rsapm-suite-view" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="progressbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rsapm-suite-view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rsapm-suite-view" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="table" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rsapm-suite-view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rsapm-suite-view" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="tablenew" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rsapm-suite-view" type="b2602c69:ProjectViewProjectNode" />
@@ -286,10 +340,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="tablectrl&#9;null&#9;null&#10;config&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/js/config.js&#10;datatablec&#9;null&#9;null&#10;dtOptions&#9;null&#9;null&#10;dataTables&#9;null&#9;null&#10;jumbotron&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="nav&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/views/common/navigation.html&#10;top&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/views/common/topnavbar.html&#10;tablectrl&#9;null&#9;null&#10;config&#9;FILE&#9;file://E:/angularworkspace/rsapm-suite-view/js/config.js&#10;datatablec&#9;null&#9;null&#10;dtOptions&#9;null&#9;null&#10;dataTables&#9;null&#9;null&#10;jumbotron&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\angularworkspace\rsapm-suite-view\pages\panel\table" />
       <recent name="E:\angularworkspace\rsapm-suite-view\pages\panel\tablenew" />
     </key>
   </component>
@@ -318,12 +373,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535678232840</updated>
-      <workItem from="1535678235041" duration="12348000" />
+      <workItem from="1535678235041" duration="28543000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12348000" />
+    <option name="totallyTimeSpent" value="28543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -366,26 +421,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/tomcat.translation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="51" column="56" lean-forward="false" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/agent_tab.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="90" lean-forward="false" selection-start-line="15" selection-start-column="90" selection-end-line="15" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -398,42 +437,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/log_tab.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2603">
           <caret line="1479" column="45" lean-forward="true" selection-start-line="1479" selection-start-column="45" selection-end-line="1479" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1330">
-          <caret line="151" column="31" lean-forward="true" selection-start-line="151" selection-start-column="31" selection-end-line="151" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="111" column="57" lean-forward="false" selection-start-line="111" selection-start-column="57" selection-end-line="111" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -446,34 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.directive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
@@ -482,36 +461,250 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/tablenew/tablenew.html">
+    <entry file="file://$PROJECT_DIR$/pages/panel/card/card.directive.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/tablenew/tablenew.directive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="81">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/panel/card/card.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+        <state relative-caret-position="297">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/translations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1489">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/panel/card/card.directive.js">
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/basic_tab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="128" column="22" lean-forward="false" selection-start-line="128" selection-start-column="22" selection-end-line="128" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/gauge/gauge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/gauge/gauge.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/line/line.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/tablesmall/tablesmall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="22" column="80" lean-forward="false" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/tomcat.translation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="54" column="54" lean-forward="false" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/table/table_bak.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/log_tab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="50" column="6" lean-forward="true" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tabs/application_tab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/log/log.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/log/log.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/tablenew/tablenew.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1917">
+          <caret line="71" column="27" lean-forward="false" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/tablenew/tablenew.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="113" column="32" lean-forward="false" selection-start-line="113" selection-start-column="32" selection-end-line="113" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/common/topnavbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/common/navigation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-868">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/probes/tomcat/report/tomcatreport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/table/table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="8" column="56" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/table/table.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1566">
+          <caret line="58" column="45" lean-forward="true" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/progressbar/progressbar.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/progressbar/progressbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="40" column="16" lean-forward="true" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/pie/pie.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/pie/pie.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/line/line.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="99" column="51" lean-forward="false" selection-start-line="99" selection-start-column="51" selection-end-line="99" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/panel/line2yaxis/line2yaxis.directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="117" column="74" lean-forward="true" selection-start-line="117" selection-start-column="74" selection-end-line="117" selection-end-column="74" />
           <folding />
         </state>
       </provider>

@@ -36,8 +36,9 @@
                             $scope.chartData = response.data;
                             var data=$scope.chartData;
                             $scope.avg=data.avg;
-                            $scope.min_margin=data.min_margin;
-                            $scope.max_margin=data.max_margin;
+                            $scope.min_margin=data.min_margin.toFixed(2);
+                            $scope.max_margin=data.max_margin.toFixed(2);
+                            $scope.max=data.max;
                             $scope.title=data.title;
 
                             $scope.maxpercent=maxPercent(data);
@@ -56,18 +57,18 @@
 
                     function transData(chartData) {
                         var res={};
-                        if (typeof(chartData) == "undefined") {
+                        if (typeof(chartData) === "undefined") {
                             return res;
                         }
                         var res = {
                             columns: [
-                                ['max_margin', Number(chartData.max_margin)],
-                                ['min_margin', Number(chartData.min_margin)],
+                                ['max_margin',chartData.max_margin.toFixed(2)],
+                                ['min_margin',chartData.min_margin.toFixed(2)]
                             ],
-                            type: 'gauge',
+                            type: 'gauge'
                         };
                         return res;
-                    };
+                    }
 
                     function drawGauge(chartData) {
                         var res={};
@@ -90,7 +91,7 @@
                     }
 
                     function maxPercent(chartData) {
-                        if (typeof(chartData) == "undefined") {
+                        if (typeof(chartData) === "undefined") {
                             return ;
                         }
                         return (100 * parseFloat(chartData.max_margin/chartData.max).toFixed(4)).toFixed(2)+'%';
@@ -99,7 +100,7 @@
 
 
                     function minPercent(chartData) {
-                        if (typeof(chartData) == "undefined") {
+                        if (typeof(chartData) === "undefined") {
                             return ;
                         }
                         return (100 * parseFloat(chartData.min_margin/chartData.max).toFixed(4)).toFixed(2)+'%';

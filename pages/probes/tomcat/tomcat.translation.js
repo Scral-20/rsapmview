@@ -28,8 +28,9 @@ angular.module('inspinia')
                     '数据图表': 'Data chart',
 
                     // Gauge Translate
-                    '最大值': 'Max Value',
-                    '最小值': 'Min Value',
+                    '峰值': 'Peak Value',
+                    '谷值': 'Valley value',
+                    '总资源值':'Total Resources',
                     '资源占用峰值百分比': 'Max Used Percentage',
                     '资源占用谷值百分比': 'Min Used Percentage'
 
@@ -43,7 +44,7 @@ angular.module('inspinia')
                     'Agent Response Time': '探针响应时间',
                     'Template info': '日志模板',
                     'Hinge Logger': '关键日志',
-                    'RPC Info Report': 'RPC请求时间与数量',
+                    'RPC Info Report': 'RPC请求信息',
                     'accept': '正常',
                     'exception': '异常',
                     'Total Normal Count':'正常请求数统计',
@@ -55,7 +56,8 @@ angular.module('inspinia')
                     // Gauge Translate
                     'CPU Used Report':'CPU资源使用报告',
                     'JVM HEAP Used Report':'JVM堆内存使用报告',
-                    'JVM NonHEAP Used Report':'JVM非堆内存使用报告'
+                    'JVM NonHEAP Used Report':'JVM非堆内存使用报告',
+
 
 
                 });

@@ -1,7 +1,7 @@
 <div class="col-lg-12">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
-            <h5>链接请求信息<strong>(URL Message)</strong></h5>
+            <h5>{{title|translate}}<small>(请求时间与请求次数)</small></h5>
 
             <div ibox-tools></div>
         </div>
@@ -12,14 +12,16 @@
                 <tr>
                     <th style="width: 1%">NO.</th>
                     <th>链接URL</th>
-                    <th>链接请求数</th>
+                    <th>请求时间 (ms)</th>
+                    <th>请求数 (times)</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="person in persons">
+                <tr ng-repeat="rpc in tableData.rpcs">
                     <td ng-bind="$index+1"></td>
-                    <td>{{ person.firstName }}</td>
-                    <td>{{ person.lastName }}</td>
+                    <td>{{rpc.name}}</td>
+                    <td>{{rpc.duration}}</td>
+                    <td>{{rpc.count}}</td>
                 </tr>
                 </tbody>
             </table>

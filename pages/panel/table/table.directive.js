@@ -16,13 +16,20 @@
                 scope: {
                     currentPeriod: "@"
                 },
-                controller: function ($scope,$http, $filter, $element, $attrs, AuthService) {
+                controller: function ($scope,$http, $filter, $element, $attrs, AuthService, DTOptionsBuilder) {
                     $scope._id =  '_id';
                     $scope.title = "";
                     $scope.logData = {
                         title:"",
-                        piechart: []
-
+                        piechart:[
+                            {
+                                title: "",
+                                count: '',
+                                level: "",
+                                ratio: "",
+                                data: []
+                            }
+                        ]
                     };
 
                     console.log("URL: " + AuthService.getURL() + $attrs.url);
@@ -44,13 +51,31 @@
                         });
                     };
 
+                    $scope.dtOptions = DTOptionsBuilder.newOptions()
+                        .withDOM('<"html5buttons"B>lTfgitp')
+                        .withButtons([
+                            {extend: 'copy'},
+                            {extend: 'csv'},
+                            {extend: 'excel', title: 'ExampleFile'},
+                            {extend: 'pdf', title: 'ExampleFile'},
+
+                            {extend: 'print',
+                                customize: function (win){
+                                    $(win.document.body).addClass('white-bg');
+                                    $(win.document.body).css('font-size', '10px');
+
+                                    $(win.document.body).find('table')
+                                        .addClass('compact')
+                                        .css('font-size', 'inherit');
+                                }
+                            }
+                        ]);
                     //表格中小型pie图的配色设置
                     $scope.piechartOptions = {
                         options: {
                             fill: ["#1ab394","#d7d7d7", "#d71a60"]
                         }
                     };
-
 
                     $scope.setIconClass = function (level) {
                         switch(level)
@@ -71,31 +96,6 @@
                                 return 'fa fa-minus-circle';
                         }
                     };
-
-
-                    //排序
-                    $scope.sortOrder = "id";
-                    $scope.reservse = true;
-                    $scope.sort = function (ziduan) {
-                        console.log(ziduan);
-                        if (ziduan == $scope.sortOrder) {
-                            $scope.reservse = !$scope.reservse;
-                        } else {
-                            $scope.reservse = false;
-                        }
-                        $scope.sortOrder = ziduan;
-                    };
-
-                    $scope.getClass = function (field) {
-                        if ($scope.sortOrder == field) {
-                            if ($scope.reservse == true) {
-                                return 'top';
-                            } else {
-                                return 'bot';
-                            }
-                        }
-                    }
-
                 },
 
                 link: function(scope, element, attrs) {

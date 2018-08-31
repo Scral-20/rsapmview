@@ -17,31 +17,19 @@
                     currentPeriod: "@"
                 },
                 controller: function ($scope,$http, $filter, $element, $attrs, AuthService,DTOptionsBuilder) {
-                    $scope.dtOptions = DTOptionsBuilder.newOptions()
-                        .withDOM('<"html5buttons"B>lTfgitp')
-                        .withButtons([
-                            {extend: 'copy'},
-                            {extend: 'csv'},
-                            {extend: 'excel', title: 'ExampleFile'},
-                            {extend: 'pdf', title: 'ExampleFile'},
-
-                            {extend: 'print',
-                                customize: function (win){
-                                    $(win.document.body).addClass('white-bg');
-                                    $(win.document.body).css('font-size', '10px');
-
-                                    $(win.document.body).find('table')
-                                        .addClass('compact')
-                                        .css('font-size', 'inherit');
-                                }
-                            }
-                        ]);
                     $scope._id =  '_id';
                     $scope.title = "";
                     $scope.tableData = {
                         title: "",
-                        count: [],
-                        duration: []
+                        rpcs:[
+                            {
+                                name: "",
+                                duration: '',
+                                count: ''
+                            }
+                        ],
+                        'total count': '',
+                        'total duration': ''
                     };
 
                     console.log("URL: " + AuthService.getURL() + $attrs.url);
@@ -63,55 +51,25 @@
                         });
                     };
 
-                    $scope.persons = [
-                        {
-                            firstName: 'Monica',
-                            lastName: 'Smith'
-                        },
-                        {
-                            firstName: 'Sandra',
-                            lastName: 'Jackson'
-                        },
-                        {
-                            firstName: 'John',
-                            lastName: 'Underwood'
-                        },
-                        {
-                            firstName: 'Chris',
-                            lastName: 'Johnatan'
-                        },
-                        {
-                            firstName: 'Kim',
-                            lastName: 'Rosowski'
-                        },
-                        {
-                            firstName: 'Niko',
-                            lastName: 'GO'
-                        }
-                    ];
-                    //排序
-                    $scope.sortOrder = "id";
-                    $scope.reservse = true;
-                    $scope.sort = function (ziduan) {
-                        console.log(ziduan);
-                        if (ziduan == $scope.sortOrder) {
-                            $scope.reservse = !$scope.reservse;
-                        } else {
-                            $scope.reservse = false;
-                        }
-                        $scope.sortOrder = ziduan;
-                    };
+                    $scope.dtOptions = DTOptionsBuilder.newOptions()
+                        .withDOM('<"html5buttons"B>lTfgitp')
+                        .withButtons([
+                            {extend: 'copy'},
+                            {extend: 'csv'},
+                            {extend: 'excel', title: 'ExampleFile'},
+                            {extend: 'pdf', title: 'ExampleFile'},
 
-                    $scope.getClass = function (field) {
-                        if ($scope.sortOrder == field) {
-                            if ($scope.reservse == true) {
-                                return 'top';
-                            } else {
-                                return 'bot';
+                            {extend: 'print',
+                                customize: function (win){
+                                    $(win.document.body).addClass('white-bg');
+                                    $(win.document.body).css('font-size', '10px');
+
+                                    $(win.document.body).find('table')
+                                        .addClass('compact')
+                                        .css('font-size', 'inherit');
+                                }
                             }
-                        }
-                    }
-
+                        ]);
                 },
 
                 link: function(scope, element, attrs) {
