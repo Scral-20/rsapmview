@@ -11,6 +11,7 @@ angular.module('inspinia')
 
             $translateProvider
                 .translations('en', {
+
                     // Tabs Label Translate
                     '基本信息': 'Basic Info',
                     '应用信息': 'Application',

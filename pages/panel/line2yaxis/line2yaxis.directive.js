@@ -14,8 +14,7 @@
                 templateUrl: 'pages/panel/line2yaxis/line2yaxis.html',
                 replace: true,
                 scope: {
-                    currentPeriod: "@",
-                    // currentStats:"@"
+                    currentPeriod: "@"
                 },
                 controller: function ($scope, $http, $element, $attrs, AuthService) {
                     $scope._id = '_id';
@@ -56,8 +55,10 @@
                         var res = {};
                         res['x'] = {
                             type: 'timeseries',
+                            height: 40,
                             tick: {
-                                format: '%H:%M:%S '
+                                format: '%H:%M:%S         %Y.%m.%d',
+                                count: ''
                             },
                             padding: {left:0, right:0}
                         };
@@ -108,7 +109,12 @@
                             var tmp = [];
                             tmp.push(chartData.columns[i].key);
                             for (var j = 0; j < chartData.columns[i].value.length; j++) {
-                                tmp.push(chartData.columns[i].value[j]);
+                                if(chartData.columns[i].key === 'x'|| chartData.columns[i].key === 'NonHeap Max'){
+                                    tmp.push(chartData.columns[i].value[j]);
+                                }else {
+                                    tmp.push(chartData.columns[i].value[j].toFixed(2));
+                                }
+                                //tmp.push(chartData.columns[i].value[j]);
                             }
                             res.columns.push(tmp);
 
@@ -139,7 +145,7 @@
                     //若标签columns属性未写，则默认获取全部key与value,否则按columns属性获取数据
                     function getList(chartData) {
                         var List=[];
-                        if (typeof ($scope.columnsSelected)==="undefined"){
+                        if (typeof ($scope.columnsSelected)==="undefined" || $scope.columnsSelected===""){
                             for(var i =0; i< chartData.columns.length; i++){
                                 List[i]= chartData.columns[i].key;
                             }

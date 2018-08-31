@@ -14,7 +14,7 @@
                 $scope.key = $stateParams.key;
                 console.log('key值：' + $scope.key);
                 $scope.currentTab = "basic";
-                $scope.currentPeriod = '2d';
+                $scope.currentPeriod = '1w';
 
                 $scope.date = function (timestamp) {
                     return $filter("date")(timestamp, "HH:mm:ss yyyy-MM-dd ");

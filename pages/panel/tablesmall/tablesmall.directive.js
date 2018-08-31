@@ -4,14 +4,14 @@
      * chaizq-neu
      * 2018.08.24
      * @group directive
-     * @name  tableDiagram
+     * @name  tablesmallDiagram
      * @class
      */
     angular.module('inspinia')
-        .directive('tableDiagram', [function() {
+        .directive('tablesmallDiagram', [function() {
             return {
                 restrict: 'E',
-                templateUrl: 'pages/panel/table/table.html',
+                templateUrl: 'pages/panel/tablesmall/tablesmall.html',
                 replace: true,
                 scope: {
                     currentPeriod: "@"
@@ -19,10 +19,10 @@
                 controller: function ($scope,$http, $filter, $element, $attrs, AuthService) {
                     $scope._id =  '_id';
                     $scope.title = "";
-                    $scope.logData = {
-                        title:"",
-                        piechart: []
-
+                    $scope.tableData = {
+                        title: "",
+                        count: [],
+                        duration: []
                     };
 
                     console.log("URL: " + AuthService.getURL() + $attrs.url);
@@ -44,33 +44,8 @@
                         });
                     };
 
-                    //表格中小型pie图的配色设置
-                    $scope.piechartOptions = {
-                        options: {
-                            fill: ["#1ab394","#d7d7d7", "#d71a60"]
-                        }
-                    };
 
 
-                    $scope.setIconClass = function (level) {
-                        switch(level)
-                        {
-                            case 'INFO':
-                                return 'fa fa-check text-navy';
-                                break;
-                            case 'POST':
-                                return 'fa fa-envelope-o text-warning';
-                                break;
-                            case 'HEAD':
-                                return 'fa fa-star text-warning';
-                                break;
-                            case 'GET':
-                                return 'fa fa-bookmark text-warning';
-                                break;
-                            default:
-                                return 'fa fa-minus-circle';
-                        }
-                    };
 
 
                     //排序
