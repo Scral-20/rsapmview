@@ -47,7 +47,11 @@
         </div>
 
         <div class="col-lg-12">
-            <tablesnew-diagram url="/report/rpcstats/{{key}}/accept/"  current-period="{{currentPeriod}}"></tablesnew-diagram>
+            <tablesnew-diagram url="/report/rpcstats/{{key}}/accept/" localtitle="正常" current-period="{{currentPeriod}}"></tablesnew-diagram>
+        </div>
+
+        <div class="col-lg-12">
+            <tablesnew-diagram url="/report/rpcstats/{{key}}/exception/" localtitle="异常" current-period="{{currentPeriod}}"></tablesnew-diagram>
         </div>
 
     </div>

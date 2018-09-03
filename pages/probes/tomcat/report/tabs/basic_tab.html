@@ -1,22 +1,32 @@
-<div class="row wrapper wrapper-content animated fadeInUp">
+<div class="col-lg-12 wrapper wrapper-content animated fadeInUp">
     <!--页面Label-->
     <div class="row">
-        <div class="col-lg-8">
-            <div class="widget">
-                <div class="row">
-                    <div class="col-xs-2 text-center">
-                        <i class="fa fa-home fa-5x"></i>
-                    </div>
-                    <div class="col-xs-8 text-left">
+        <div class="col-lg-12">
+            <div class="jumbotron text-center">
 
-                        <h2 class="font-bold">报表页  <small>Report</small></h2>
-                        <p></p>
-                        <span> {{applicationName}}</span>
-
-                    </div>
-                </div>
+                <h2 class="font-bold"><i class="fa fa-home fa-5x mid-icon"></i>报表页<small>Report</small></h2>
+                <p></p>
+                <span> <h2>{{applicationName}}</h2></span>
+                <p>基本信息</p>
             </div>
+
         </div>
+    <!--<div class="col-lg-4">-->
+        <!--<div class="widget">-->
+            <!--<div class="row">-->
+                <!--<div class="col-xs-2 text-center">-->
+                    <!--<i class="fa fa-home fa-5x"></i>-->
+                <!--</div>-->
+                <!--<div class="col-xs-8 text-left">-->
+
+                    <!--<h2 class="font-bold">报表页  <small>Report</small></h2>-->
+                    <!--<p></p>-->
+                    <!--<span> {{applicationName}}</span>-->
+
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
     </div>
 
     <!--基本信息-->
@@ -78,69 +88,118 @@
         <!--分为三列-->
         <div class="col-lg-6">
             <div class="row">
-                <gauge-diagram  url="/report/cpuload/{{key}}/" current-period="{{currentPeriod}}"></gauge-diagram>
+                <gauge-diagram  url="/report/cpuload/{{key}}/" unittype="%" current-period="{{currentPeriod}}"></gauge-diagram>
             </div>
             <div class="row">
-                <gauge-diagram  url="/report/jvmheap/{{key}}/" current-period="{{currentPeriod}}"></gauge-diagram>
+                <gauge-diagram  url="/report/jvmheap/{{key}}/" unittype="MB" current-period="{{currentPeriod}}"></gauge-diagram>
             </div>
             <div class="row">
-                <gauge-diagram  url="/report/jvmnonheap/{{key}}/" current-period="{{currentPeriod}}"></gauge-diagram>
+                <gauge-diagram  url="/report/jvmnonheap/{{key}}/" unittype="MB" current-period="{{currentPeriod}}"></gauge-diagram>
             </div>
         </div>
+        <div class="col-lg-1"></div>
 
         <div class="col-lg-4 m-b-lg">
             <div id="vertical-timeline" class="vertical-container light-timeline no-margins">
                 <div class="vertical-timeline-block">
-                    <div class="vertical-timeline-icon navy-bg">
-                        <i class="fa fa-briefcase"></i>
+                    <div class="vertical-timeline-icon red-bg">
+                        <i class="fa fa-warning"></i>
                     </div>
 
                     <div class="vertical-timeline-content">
-                        <h2>告警信息</h2>
-                        <p>在这里添加Alarm告警信息，Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products. Below please find the current status of the sale.
-                        </p>
+                        <!--<h2>告警数量</h2>-->
+                        <!--<p>Alarm告警数量：23.-->
+                        <!--</p>-->
+                        <!--<p><br></p>-->
+                        <br>
 
-                        <span class="vertical-date">Today <br><small>Dec 24</small>
+                        <div class="row widget red-bg p-lg text-center">
+                            <div class="m-b-md">
+                                <i class="fa fa-warning fa-4x"></i>
+                                <h1 class="m-xs">23</h1>
+                                <h3 class="font-bold no-margins">告警总量</h3>
+                                <small>Total</small>
+                            </div>
+                        </div>
+
+                        <span class="chat-date">Today <small>{{date(localtime)}}</small>
                         </span>
                     </div>
                 </div>
 
                 <div class="vertical-timeline-block">
-                    <div class="vertical-timeline-icon blue-bg">
-                        <i class="fa fa-file-text"></i>
-                    </div>
-
-                    <div class="vertical-timeline-content">
-                        <h2>Send documents to Mike</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-
-                        <span class="vertical-date">Today <br><small>Dec 24</small></span>
-                    </div>
-                </div>
-
-                <div class="vertical-timeline-block">
-                    <div class="vertical-timeline-icon lazur-bg">
-                        <i class="fa fa-coffee"></i>
-                    </div>
-
-                    <div class="vertical-timeline-content">
-                        <h2>Coffee Break</h2>
-                        <p>Go to shop and find some products. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
-                        <!--<a href="#" class="btn btn-sm btn-info">Read more</a>-->
-                        <span class="vertical-date"> Yesterday <br><small>Dec 23</small></span>
-                    </div>
-                </div>
-
-
-                <div class="vertical-timeline-block">
                     <div class="vertical-timeline-icon navy-bg">
-                        <i class="fa fa-comments"></i>
+                        <i class="fa fa-check"></i>
                     </div>
 
                     <div class="vertical-timeline-content">
-                        <h2>Chat with Monica and Sandra</h2>
-                        <p>Web sites still in their infancy. </p>
-                        <span class="vertical-date">Yesterday <br><small>Dec 23</small></span>
+                        <!--<h2>已处理告警数量</h2>-->
+                        <!--<p>已处理告警数量：18</p>-->
+                        <!--<p><br></p>-->
+                        <br>
+
+                        <div class="row widget navy-bg p-lg text-center">
+                            <div class="m-b-md">
+                                <i class="fa fa-shield fa-4x"></i>
+                                <h1 class="m-xs">18</h1>
+                                <h3 class="font-bold no-margins">
+                                    已处理告警数
+                                </h3>
+                                <small>Processed</small>
+                            </div>
+                        </div>
+                        <span class="chat-date">Today <small>{{date(localtime)}}</small></span>
+                    </div>
+                </div>
+
+                <div class="vertical-timeline-block">
+                    <div class="vertical-timeline-icon yellow-bg">
+                        <i class="fa fa-bell"></i>
+                    </div>
+
+                    <!--<div class="vertical-timeline-content">-->
+                        <!--<h2>未处理告警数量</h2>-->
+                        <!--<p>未处理告警数量：5 </p>-->
+                        <!--<p><br></p>-->
+                        <!--<br>-->
+                        <!--<div class="row widget  yellow-bg p-lg text-center">-->
+                            <!--<div class="m-b-md">-->
+                                <!--<i class="fa fa-bell fa-4x"></i>-->
+
+                                <!--<h1 class="m-xs">5</h1>-->
+
+                                <!--<h3 class="font-bold no-margins">-->
+                                    <!--未处理告警数-->
+                                <!--</h3>-->
+                                <!--<small>Untreated</small>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<span class="chat-date"> Today <br><small>{{date(localtime)}}</small></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <div class="vertical-timeline-block">
+                    <div class="vertical-timeline-icon blue-bg">
+                        <i class="fa fa-flag"></i>
+                    </div>
+
+                    <div class="vertical-timeline-content">
+                        <!--<h2>智能识别告警数量</h2>-->
+                        <!--<p>智能识别告警数量：12 </p>-->
+                        <br>
+                        <div class="row widget blue-bg p-lg text-center">
+                            <div class="m-b-md">
+                                <i class="fa fa-flag fa-4x"></i>
+
+                                <h1 class="m-xs">12</h1>
+
+                                <h3 class="font-bold no-margins">
+                                    智能识别告警数
+                                </h3>
+                                <small>Recognised</small>
+                            </div>
+                        </div>
+                        <span class="chat-date">Today <small>{{date(localtime)}}</small></span>
                     </div>
                 </div>
             </div>
@@ -148,41 +207,60 @@
         </div>
 
 
-        <div class="col-lg-2">
-            <div class="row widget yellow-bg p-lg text-center">
-                <div class="m-b-md">
-                    <i class="fa fa-warning fa-4x"></i>
+        <!--<div class="col-lg-2">-->
+            <!--<div class="row widget yellow-bg p-lg text-center">-->
+                <!--<div class="m-b-md">-->
+                    <!--<i class="fa fa-warning fa-4x"></i>-->
+                    <!--<h1 class="m-xs">23</h1>-->
+                    <!--<h3 class="font-bold no-margins">告警总量</h3>-->
+                    <!--<small>total</small>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row widget navy-bg p-lg text-center">-->
+                <!--<div class="m-b-md">-->
+                    <!--<i class="fa fa-shield fa-4x"></i>-->
+                    <!--<h1 class="m-xs">18</h1>-->
+                    <!--<h3 class="font-bold no-margins">-->
+                        <!--已处理告警数-->
+                    <!--</h3>-->
+                    <!--<small>processed</small>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row widget  red-bg p-lg text-center">-->
+                <!--<div class="m-b-md">-->
+                    <!--<i class="fa fa-shield fa-4x"></i>-->
 
-                    <h1 class="m-xs">Alarm</h1>
+                    <!--<h1 class="m-xs">5</h1>-->
 
-                    <h3 class="font-bold no-margins">
-                        Do
-                    </h3>
-                    <small>something</small>
-                </div>
-            </div>
-            <div class="row widget navy-bg p-lg text-center">
-                <div class="m-b-md">
-                    <i class="fa fa-shield fa-4x"></i>
+                    <!--<h3 class="font-bold no-margins">-->
+                        <!--未处理告警数-->
+                    <!--</h3>-->
+                    <!--<small>Untreated</small>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row widget blue-bg p-lg text-center">-->
+                <!--<div class="m-b-md">-->
+                    <!--<i class="fa fa-shield fa-4x"></i>-->
 
-                    <h1 class="m-xs">456</h1>
+                    <!--<h1 class="m-xs">12</h1>-->
 
-                    <h3 class="font-bold no-margins">
-                        Shield
-                    </h3>
-                    <small>power</small>
-                </div>
-            </div>
-            <div class="row">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        Default Panel
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <!--<h3 class="font-bold no-margins">-->
+                        <!--智能识别告警数-->
+                    <!--</h3>-->
+                    <!--<small>recognised</small>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="panel panel-success">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="panel-heading">&ndash;&gt;-->
+                        <!--&lt;!&ndash;Default Panel&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="panel-body">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
     </div>
 </div>

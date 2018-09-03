@@ -10,9 +10,9 @@
                 <thead>
                 <tr>
                     <th style="width: 70%">内容</th>
-                    <th>图例</th>
-                    <th>响应数</th>
+                    <th>占比图</th>
                     <th>占比</th>
+                    <th>日志数</th>
                     <th>日志等级</th>
                 </tr>
                 </thead>
@@ -20,8 +20,8 @@
                 <tr ng-repeat="table in tableData.piechart">
                     <td>{{table.title}}</td>
                     <td><pie-chart data="table.data" options="piechartOptions.options"></pie-chart></td>
-                    <td>{{table.count}}</td>
                     <td>{{table.ratio}}</td>
+                    <td>{{table.count}}</td>
                     <td><i ng-class="setIconClass(table.level)"> {{table.level}}</i></a></td>
                 </tr>
                 </tbody>

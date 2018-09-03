@@ -17,6 +17,7 @@
                     currentPeriod: "@"
                 },
                 controller: function ($scope,$http, $element, $attrs, AuthService) {
+                    $scope.unit=$attrs.unittype;
                     $scope._id =  '_id';
                     $scope.title = "";
                     $scope.chartData = {};
@@ -40,6 +41,7 @@
                             $scope.max_margin=data.max_margin.toFixed(2);
                             $scope.max=data.max;
                             $scope.title=data.title;
+
 
                             $scope.maxpercent=maxPercent(data);
                             $scope.minpercent=minPercent(data);

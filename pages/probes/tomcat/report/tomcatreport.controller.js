@@ -12,10 +12,12 @@
         .controller("TomcatreportCtrl", ['$scope', '$http', '$filter', '$state', '$stateParams', '$window', 'AuthService',
             function ReportCtrl($scope, $http, $filter, $state, $stateParams, $window, authService) {
                 $scope.key = $stateParams.key;
+                $scope.route = $stateParams.route;
                 console.log('key值：' + $scope.key);
                 $scope.currentTab = "basic";
                 $scope.currentPeriod = '1w';
 
+                $scope.localtime = Date.parse(new Date());
                 $scope.date = function (timestamp) {
                     return $filter("date")(timestamp, "HH:mm:ss yyyy-MM-dd ");
                 };
@@ -52,7 +54,7 @@
                         statusClass: 'warning'
                     },
                     {
-                        content: '在RPC请求信息表格中的Search栏：输入"accept" 可查询正常状态的链接请求，输入"exception"可查询异常状态的链接请求',
+                        content: '在RPC请求信息表格中的Search栏：输入日志信息可查询URL链接请求，正常请求和异常请求信息分为两个列表显示',
                         title: 'RPC请求状态查询：',
                         statusClass: 'info'
                     }
@@ -74,63 +76,6 @@
                         fill: ["#1ab394", "#d7d7d7", "#d71a60"]
                     }
                 };
-
-                //logData数据
-                // $scope.logData = [
-                //     {
-                //         id: '1',
-                //         title: 'First Item',
-                //         level: 'error',
-                //         pieChart: {
-                //             data: [120, 120],
-                //             ratio: '20%'
-                //         },
-                //         logText: {
-                //             timestamp: '1533009871000',
-                //             content: 'Log content1'
-                //         }
-                //     },
-                //     {
-                //         id: '2',
-                //         title: 'Second Item',
-                //         level: 'warning',
-                //         pieChart: {
-                //             data: [40, 120],
-                //             ratio: '70%'
-                //         },
-                //         logText: {
-                //             timestamp: '1533019871000',
-                //             content: 'Log content2'
-                //         }
-                //     },
-                //     {
-                //         id: '3',
-                //         title: 'Third Item',
-                //         level: 'normal',
-                //         pieChart: {
-                //             data: [120, 70],
-                //             ratio: '66%'
-                //         },
-                //         logText: {
-                //             timestamp: '1532009871000',
-                //             content: 'Lorem ipsum eget urna mollis ornare vel eu leo. Cum penatibus et magnis dis parturient montes, code nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. ' +
-                //             'Sed euismod aliquet sapien consequat tincidunt.'
-                //         }
-                //     },
-                //     {
-                //         id: '4',
-                //         title: 'Fourth Item',
-                //         level: '',
-                //         pieChart: {
-                //             data: [66, 70],
-                //             ratio: '45%'
-                //         },
-                //         logText: {
-                //             timestamp: '1533002871000',
-                //             content: 'Log content4'
-                //         }
-                //     }
-                // ];
 
                 $scope.getData = function () {
                     $http.get(

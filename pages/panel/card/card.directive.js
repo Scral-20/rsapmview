@@ -67,7 +67,7 @@
                         switch (totaltype) {
                             case 'count':
                                 $scope.number = cardData['total count'];
-                                $scope.unit = 'times';
+                                $scope.unit = '次';
                                 break;
 
                             case 'duration':

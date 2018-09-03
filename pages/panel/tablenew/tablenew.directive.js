@@ -19,6 +19,7 @@
                 controller: function ($scope,$http, $filter, $element, $attrs, AuthService,DTOptionsBuilder) {
                     $scope._id =  '_id';
                     $scope.title = "";
+                    $scope.localtitle =  $attrs.localtitle;
                     $scope.tableData = {
                         title: "",
                         rpcs:[
