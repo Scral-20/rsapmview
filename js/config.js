@@ -138,7 +138,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         })
         // 报告生成Report
         .state('rs.TOMCATreport', {
-            url: "/TOMCATreport/:key",
+            url: "/TOMCATreport/:key/:title/:route",
             templateUrl: "pages/probes/tomcat/report/tomcatreport.html",
             data: { pageTitle: 'Report' },
             controller:'TomcatreportCtrl',
