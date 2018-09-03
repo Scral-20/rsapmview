@@ -12,6 +12,7 @@
         .controller("TomcatreportCtrl", ['$scope', '$http', '$filter', '$state', '$stateParams', '$window', 'AuthService',
             function ReportCtrl($scope, $http, $filter, $state, $stateParams, $window, authService) {
                 $scope.key = $stateParams.key;
+                $scope.title = $stateParams.title;
                 $scope.route = $stateParams.route;
                 console.log('key值：' + $scope.key);
                 $scope.currentTab = "basic";
