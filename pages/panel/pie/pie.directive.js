@@ -45,22 +45,6 @@
                         });
                     };
 
-                    // res = {
-                    //     columns: [
-                    //         [chartData.columns[5].key, chartData.columns[5].value[endnum]],
-                    //         ['Heap NonUsed', chartData.columns[3].value[endnum]-chartData.columns[5].value[endnum]]
-                    //     ],
-                    //     type:'pie'
-                    // };
-
-                    // res['x'] = {
-                    //     type: 'timeseries',
-                    //     tick: {
-                    //         format: '%H:%M:%S           %m月%d日'
-                    //     },
-                    //     padding: {left:0, right:0}
-                    // };
-
                     function transData(pieData) {
                         var total=0;
                         var hinge=0;

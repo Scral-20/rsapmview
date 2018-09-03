@@ -1,13 +1,11 @@
-<div class="ibox float-e-margins">
+<div class="ibox float-e-margins" style="width: 105%">
     <div class="ibox-title">
-        <span ng-class="getClass('{{situation}}')">{{situation}}</span>
-        <h5>{{localtitle}}</h5>
+        <span ng-class="getClass('{{situation}}')">{{situation|translate}}</span>
+        <h5>{{localtitle|translate}}</h5>
     </div>
     <div class="ibox-content">
-        <h2 class="no-margins">{{number}}</h2>
+        <h2 class="no-margins">{{number}}&nbsp<small>{{unit}}</small></h2>
 
         <!--<div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div>-->
-        <small>Total count</small>
     </div>
 </div>
-
