@@ -4,11 +4,11 @@
      * chaizq-neu
      * 2018.08.24
      * @group directive
-     * @name  tablesnewDiagram
+     * @name  tablenewDiagram
      * @class
      */
     angular.module('inspinia')
-        .directive('tablesnewDiagram', [function() {
+        .directive('tablenewDiagram', [function() {
             return {
                 restrict: 'E',
                 templateUrl: 'pages/panel/tablenew/tablenew.html',

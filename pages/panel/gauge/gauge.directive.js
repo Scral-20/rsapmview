@@ -36,13 +36,12 @@
                             console.log(response.data);
                             $scope.chartData = response.data;
                             var data=$scope.chartData;
-                            $scope.avg=data.avg;
                             $scope.min_margin=data.min_margin.toFixed(2);
                             $scope.max_margin=data.max_margin.toFixed(2);
                             $scope.max=data.max;
                             $scope.title=data.title;
 
-
+                            $scope.avg=ifnoAvg(data.avg);
                             $scope.maxpercent=maxPercent(data);
                             $scope.minpercent=minPercent(data);
                             $scope.gaugeData=transData(data);
@@ -56,6 +55,13 @@
                             console.log("gaugeDiagram no data");
                         });
                     };
+
+                    function ifnoAvg(avg) {
+                        if (typeof(avg) === "undefined") {
+                            return '----';
+                        }
+                        return Number(avg*100).toFixed(2)+"%";
+                    }
 
                     function transData(chartData) {
                         var res={};
