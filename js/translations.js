@@ -22,7 +22,7 @@ function config($translateProvider) {
             '日志分析': 'Log Analysis',
             '指标预测': 'Index Prediction',
             '告警管理': 'Alarm Management',
-            '报告生成': 'Report Generation',
+            '报告': 'Report',
 
 
             // Define all menu elements

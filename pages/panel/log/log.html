@@ -5,14 +5,26 @@
 
             <div ibox-tools></div>
         </div>
+        <!--<div class="ibox-content animated fadeIn">-->
+            <!--<ul class="notes"  ng-repeat="log in logData.hinge ">-->
+                <!--<li>-->
+                    <!--<div style="-->
+                                <!--white-space:normal;-->
+                                <!--word-break:break-all;-->
+                                <!--word-wrap:break-word;-->
+                                 <!--height:250px; width:233px;overflow: auto" id="{{log.id}}">-->
+                        <!--<small>日期:{{date(log.timestamp)}}</small>-->
+                        <!--<br>-->
+                        <!--<p><span ng-style="{'color': setLevelColor(log.level)}">等级: {{setLevel(log.level)}}</span></p>-->
+                        <!--<p>内容:{{log.content}}</p>-->
+                    <!--</div>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
         <div class="ibox-content animated fadeIn">
-            <ul class="notes"  ng-repeat="log in logData.hinge ">
+            <ul class="note-dialog"  ng-repeat="log in logData.hinge ">
                 <li>
-                    <div style="
-                                white-space:normal;
-                                word-break:break-all;
-                                word-wrap:break-word;
-                                 height:250px; width:233px;overflow: auto" id="{{log.id}}">
+                    <div id="{{log.id}}">
                         <small>日期:{{date(log.timestamp)}}</small>
                         <br>
                         <p><span ng-style="{'color': setLevelColor(log.level)}">等级: {{setLevel(log.level)}}</span></p>

@@ -51,12 +51,15 @@ angular.module('inspinia')
                     'Total Normal Duration':'正常请求时间统计',
                     'Total Exception Count':'异常请求数统计',
                     'Total Exception Duration':'异常请求时间统计',
+                    //button
+                    'Reload Report':'刷新报表',
 
 
                     // Gauge Translate
                     'CPU Used Report':'CPU资源使用报告',
                     'JVM HEAP Used Report':'JVM堆内存使用报告',
                     'JVM NonHEAP Used Report':'JVM非堆内存使用报告',
+
 
 
 
