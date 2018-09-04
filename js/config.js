@@ -136,7 +136,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             data: { pageTitle: 'Alertmanagement' }
 
         })
-        // 报告生成Report
+        /*** Report ***/
         .state('rs.TOMCATreport', {
             url: "/TOMCATreport/:key/:title/:route",
             templateUrl: "pages/probes/tomcat/report/tomcatreport.html",
@@ -188,6 +188,33 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                             files: ['js/plugins/dataTables/angular-datatables.buttons.min.js']
                         }
 
+                    ]);
+                }
+            }
+        })
+        /*** Agent ***/
+        .state('rs.AGENT', {
+            url: "/agent",
+            templateUrl: "pages/probes/agent/agentlist.html",
+            data: { pageTitle: 'Agentlist' },
+            controller: 'AgentCtrl',
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            serie: true,
+                            files: ['js/plugins/dataTables/datatables.min.js','css/plugins/dataTables/datatables.min.css']
+                        },
+                        {
+                            serie: true,
+                            name: 'datatables',
+                            files: ['js/plugins/dataTables/angular-datatables.min.js']
+                        },
+                        {
+                            serie: true,
+                            name: 'datatables.buttons',
+                            files: ['js/plugins/dataTables/angular-datatables.buttons.min.js']
+                        }
                     ]);
                 }
             }
