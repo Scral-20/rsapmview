@@ -194,7 +194,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         })
         /*** Agent ***/
         .state('rs.AGENT', {
-            url: "/agent",
+            url: "/agent/:key",
             templateUrl: "pages/probes/agent/agentlist.html",
             data: { pageTitle: 'Agentlist' },
             controller: 'AgentCtrl',
