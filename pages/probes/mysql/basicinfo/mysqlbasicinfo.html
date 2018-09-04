@@ -36,19 +36,19 @@
         </div>
 
         <div class="col-lg-3">
-            <card-prometheus-diagram url="/metric/point/{{key}}/" names='mysql_global_status_uptime{instance="$host"}' unit="Day" divide="86400" localtitle="MySQL Uptime" remark="Running Time"></card-prometheus-diagram>
+            <card-prometheus-diagram url="/metric/point/{{key}}/" name='mysql_global_status_uptime{instance="$host"}' unit="Day" divide="86400" localtitle="MySQL Uptime" remark="Running Time"></card-prometheus-diagram>
         </div>
 
         <div class="col-lg-3">
-            <card-prometheus-diagram url="/metric/point/{{key}}/" names='irate(mysql_global_status_queries{instance="$host"}[5m])' unit="" divide="1" localtitle="Current QPS" remark="QPS"></card-prometheus-diagram>
+            <card-prometheus-diagram url="/metric/point/{{key}}/" name='irate(mysql_global_status_queries{instance="$host"}[5m])' unit="" divide="1" localtitle="Current QPS" remark="QPS"></card-prometheus-diagram>
         </div>
 
         <div class="col-lg-3">
-            <card-prometheus-diagram url="/metric/point/{{key}}/" names='mysql_global_variables_innodb_buffer_pool_size{instance="$host"}' unit="MiB" divide="1048576" localtitle="InnoDb Buffer Pool Size" remark="InnoDB Buffer"></card-prometheus-diagram>
+            <card-prometheus-diagram url="/metric/point/{{key}}/" name='mysql_global_variables_innodb_buffer_pool_size{instance="$host"}' unit="MiB" divide="1048576" localtitle="InnoDb Buffer Pool Size" remark="InnoDB Buffer"></card-prometheus-diagram>
         </div>
 
         <div class="col-lg-3">
-            <card-prometheus-diagram url="/metric/point/{{key}}/" names='mysql_global_status_threads_connected{instance="$host"}' unit="" divide="1" localtitle="MySQL Connections" remark="Connection Count"></card-prometheus-diagram>
+            <card-prometheus-diagram url="/metric/point/{{key}}/" name='mysql_global_status_threads_connected{instance="$host"}' unit="" divide="1" localtitle="MySQL Connections" remark="Connection Count"></card-prometheus-diagram>
         </div>
 
     </div>
