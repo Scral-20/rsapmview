@@ -51,6 +51,10 @@
             <card-prometheus-diagram url="/metric/point/{{key}}/" name='mysql_global_status_threads_connected{instance="$host"}' unit="" divide="1" localtitle="MySQL Connections" remark="Connection Count"></card-prometheus-diagram>
         </div>
 
+        <!--<div class="col-lg-3">-->
+            <!--<line-diagram url="/metric//{{key}}/" names='qbs:rate(mysql_global_status_queries{instance="$host"}[5m])&up:up{instance="$host"}' divide="1" localtitle="testing"></line-diagram>-->
+        <!--</div>-->
+
     </div>
 
 </div>
