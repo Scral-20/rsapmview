@@ -11,9 +11,9 @@
         .controller( 'TomcatoverviewCtrl', ['$scope', '$http', '$state', '$stateParams', '$window', 'AuthService',
             function ($scope, $http, $state, $stateParams, $window, authService) {
                 // alert($stateParams.key);
+                $scope.key = $stateParams.key;
                 $scope.pageTitle = $state.current.data.pageTitle;
                 $scope.routeName = $state.current.data.routeName;
-                $scope.key = $stateParams.key;
             }
         ]);
 })();

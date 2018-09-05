@@ -21,6 +21,7 @@
                     $scope.situation = $attrs.situation;
                     $scope.totaltype = $attrs.totaltype;
                     $scope.localtitle = $attrs.localtitle;
+                    $scope.divide = $attrs.divide;
                     $scope.unit = "";
                     $scope.number = "";
                     $scope.cardData = {
@@ -47,7 +48,9 @@
                     };
 
                     $scope.getClass = function (situation) {
-
+                        if (typeof(situation) === "undefined"){
+                            return 'label label-default pull-right';
+                        }
                         switch (situation) {
                             case 'accept':
                                 return 'label label-success pull-right';
@@ -58,12 +61,14 @@
                                 break;
 
                             default:
-                                return 'label label-success pull-right';
+                                return 'label label-default pull-right';
                         }
-
                     };
 
                     $scope.selectData = function (cardData, totaltype) {
+                        if (typeof(totaltype) === "undefined"){
+                            $scope.number = 'No Data Available'
+                        }
                         switch (totaltype) {
                             case 'count':
                                 $scope.number = cardData['total count'];
@@ -76,7 +81,7 @@
                                 break;
 
                             default:
-                                $scope.number = ''
+                                $scope.number = 'No Data Available'
                         }
                     };
                 },

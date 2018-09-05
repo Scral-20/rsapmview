@@ -29,6 +29,7 @@ angular.module('inspinia')
 
                     // Gauge Translate
                     '峰值': 'Peak Value',
+                    '均值': 'Mean Value',
                     '谷值': 'Valley value',
                     '总资源值':'Total Resources',
                     '资源占用峰值百分比': 'Max Used Percentage',
