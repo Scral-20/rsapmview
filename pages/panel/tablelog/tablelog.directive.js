@@ -22,15 +22,13 @@
                     $scope.localtitle =  $attrs.localtitle;
                     $scope.tableData = {
                         title: "",
-                        rpcs:[
+                        hinge: [
                             {
-                                name: "",
-                                duration: '',
-                                count: ''
+                                timestamp: "",
+                                content: "",
+                                level: ""
                             }
-                        ],
-                        'total count': '',
-                        'total duration': ''
+                        ]
                     };
 
                     console.log("URL: " + AuthService.getURL() + $attrs.url);
