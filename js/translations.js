@@ -9,9 +9,6 @@ function config($translateProvider) {
 
             // Navigation Translate
             '全景视图': 'Top View',
-            '探针管理': 'Probe Management',
-            '探针添加': 'Probe Add',
-            '探针概览': 'Probes Overview',
             '配置': 'Config',
             '报表': 'Report',
 
