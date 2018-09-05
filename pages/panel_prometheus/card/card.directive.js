@@ -25,7 +25,7 @@
                     // alert($attrs.names);
 
                     $scope.getData = function (period) {
-                        var getUrl = AuthService.getURL() + $attrs.url + $attrs.names;
+                        var getUrl = AuthService.getURL() + $attrs.url + $attrs.name;
                         console.log(getUrl);
                         $http.get(
                             getUrl

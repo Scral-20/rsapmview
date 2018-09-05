@@ -41,7 +41,7 @@
                             console.log(response.data);
                             $scope.tableData = response.data;
                             
-                            if (typeof($scope.title) != "undefined"){
+                            if (typeof($scope.title) !== "undefined"){
                                 $scope._id = '_' + Math.random().toString(36).substr(2, 9);
                                 $scope.title = $scope.tableData.title;
                             }
@@ -51,7 +51,17 @@
                     };
 
                     $scope.date = function (timestamp) {
+                        if (typeof(timestamp) === "undefined"){
+                            return 'No Date Info'
+                        }
                         return $filter("date")(timestamp, "HH:mm:ss yyyy-MM-dd ");
+                    };
+
+                    $scope.getLevel = function (level) {
+                        if (typeof(level) === "undefined" || level === null){
+                            return '------'
+                        }
+                        return level;
                     };
 
                     $scope.dtOptions = DTOptionsBuilder.newOptions()

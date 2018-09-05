@@ -39,6 +39,25 @@ angular.module('inspinia')
 
                 .translations('zh', {
 
+                    //basicinfo
+                    'Application Name': '应用名称',
+                    'Basic Info': '基本信息',
+                    'Server Info': '服务器信息',
+                    'Startup Time': '启动时间',
+                    'Agent Version': 'Agent 版本',
+                    'Service Type': '服务器类型',
+                    'Running State': '运行状态',
+                    'JVM (GC type)': 'JVM (GC 类型)',
+                    'JVM Parameters': 'JVM 参数',
+
+
+
+                    'CPU Load':'CPU负载',
+                    'Transaction':'业务',
+                    'Application Info':'应用信息',
+                    'NonHeap Memory Used':'非堆内存使用率',
+                    'Heap Memory Used':'堆内存使用率',
+
                     //report
                     'Logger Trend': '日志趋势信息',
                     'Active Trace': '探针响应时间与数量变化',
