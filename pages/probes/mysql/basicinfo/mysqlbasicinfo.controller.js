@@ -16,7 +16,6 @@
 
                 $scope.setPeriod = function ( period ) {
                     $scope.currentPeriod = period;
-                    alert($scope.currentPeriod)
                 };
 
             }

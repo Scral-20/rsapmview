@@ -20,9 +20,7 @@
                     $scope.divide = $attrs.divide;
                     $scope.unit = $attrs.unit;
 
-                    $scope.cardData = {};
-                    $scope.value = "";
-                    // alert($attrs.names);
+                    $scope.value = 0;
 
                     $scope.getData = function (period) {
                         var getUrl = AuthService.getURL() + $attrs.url + $attrs.name;
@@ -32,22 +30,17 @@
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
                             console.log(response.data);
-                            var data = response.data;
-                            if (typeof ($scope.columnsSelected) === "undefined") {
+                            $scope.value = response.data;
+                            if (typeof ($scope.divide) !== "undefined") {
                                 $scope.divide = parseFloat($scope.divide);
                             } else {
                                 $scope.divide = 1.0;
-                            }
-                            if (data.length > 0) {
-                                $scope.value = data[0].value;
                             }
                         }, function () {
                             console.log("cardDiagram no data");
                         });
                     };
                 },
-
-
                 link: function(scope, element, attrs) {
                     scope.getData();
                 }
