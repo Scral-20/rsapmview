@@ -5,10 +5,14 @@
 function config($translateProvider) {
 
     $translateProvider
+        .translations('zh', {
+            'Summary of monitoring reports' : '监控报告总结',
+            'resource consumption and startup parameters': '资源消耗以及启动参数',
+            'Analysis of function execution time and method stack': '分析函数执行时间及方法栈',
+            'Alarm information': '告警信息'
+        })
         .translations('en', {
-
             // Navigation Translate
-            '全景视图': 'Top View',
             '配置': 'Config',
             '报表': 'Report',
 
@@ -20,7 +24,6 @@ function config($translateProvider) {
             '指标预测': 'Index Prediction',
             '告警管理': 'Alarm Management',
             '报告': 'Report',
-
 
             // Define all menu elements
             DASHBOARD: 'Dashboard',

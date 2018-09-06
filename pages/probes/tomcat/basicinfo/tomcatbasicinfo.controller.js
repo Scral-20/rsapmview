@@ -8,8 +8,8 @@
      * @class
      */
     angular.module('inspinia')
-        .controller( 'TomcatbasicinfoCtrl', ['$scope', '$http', '$state', '$stateParams', '$window', 'AuthService',
-            function ($scope, $http, $state, $stateParams, $window, authService) {
+        .controller( 'TomcatbasicinfoCtrl', ['$scope', '$http', '$state', '$stateParams', '$window', '$filter', 'AuthService',
+            function ($scope, $http, $state, $stateParams, $window, $filter, authService) {
                 $scope.title = $stateParams.title;
                 $scope.route = $stateParams.route;
                 $scope.key = $stateParams.key;
@@ -56,6 +56,11 @@
                 $scope.setPeriod = function ( period ) {
                     $scope.currentPeriod = period;
                 };
+
+                $scope.date = function (timestamp) {
+                    return $filter("date")(timestamp, "HH:mm:ss yyyy-MM-dd ");
+                };
+
                 $scope.getData();
 
             }

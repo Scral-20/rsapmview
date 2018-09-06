@@ -24,6 +24,13 @@
                     console.log($scope.nodes);
                 };
 
+                $scope.getPort = function (port) {
+                    if (typeof(port) === "undefined" || port === ""){
+                        return '-------';
+                    }
+                    return port;
+                };
+
                 $scope.remove=function(index){
                     if(confirm('确定移除此项吗？')){
                         $scope.topviewData.nodes.splice(index,1);

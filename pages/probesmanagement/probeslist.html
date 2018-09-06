@@ -41,7 +41,7 @@
                     <tr ng-repeat="Nodes in topviewData.nodes">
                         <td>{{Nodes.name}}</td>
                         <td>{{Nodes.ip}}</td>
-                        <td>{{Nodes.port}}</td>
+                        <td>{{getPort(Nodes.port)}}</td>
                         <td>{{Nodes.type}}</td>
                         <td>{{Nodes.status}}</td>
                         <td><button class="fc-button" ng-click="remove($index)">删除</button></td>
