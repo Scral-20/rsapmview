@@ -28,7 +28,8 @@
                     $scope.groups = $attrs.groups;
 
                     $scope.names = $attrs.names;
-                    if (typeof($scope.localtitle) === "undefined") $scope.localtitle = "";
+                    console.log("names");
+                    console.log(JSON.parse($scope.names));
 
                     $scope.c3Axis = {};
                     $scope.c3Data = {
@@ -36,10 +37,11 @@
                     };
 
                     $scope.getData = function (period) {
-                        var getUrl = AuthService.getURL() + $attrs.url + $scope.names + "/" + period;
+                        var getUrl = AuthService.getURL() + $attrs.url + period;
                         console.log(getUrl);
-                        $http.get(
-                            getUrl
+                        $http.post(
+                            getUrl,
+                            JSON.parse($scope.names)
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
                             console.log(response.data);

@@ -17,25 +17,21 @@
                 controller: function ($scope,$http, $filter, $element, $attrs, AuthService) {
                     $scope.localtitle = $attrs.localtitle;
                     $scope.remark = $attrs.remark;
-                    $scope.divide = $attrs.divide;
                     $scope.unit = $attrs.unit;
+                    $scope.name = $attrs.name;
 
                     $scope.value = 0;
 
                     $scope.getData = function (period) {
-                        var getUrl = AuthService.getURL() + $attrs.url + $attrs.name;
+                        var getUrl = AuthService.getURL() + $attrs.url;
                         console.log(getUrl);
-                        $http.get(
-                            getUrl
+                        $http.post(
+                            getUrl,
+                            JSON.parse($scope.name)
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
                             console.log(response.data);
                             $scope.value = response.data;
-                            if (typeof ($scope.divide) !== "undefined") {
-                                $scope.divide = parseFloat($scope.divide);
-                            } else {
-                                $scope.divide = 1.0;
-                            }
                         }, function () {
                             console.log("cardDiagram no data");
                         });
