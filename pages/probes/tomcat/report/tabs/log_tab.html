@@ -15,24 +15,49 @@
         </div>
 
         <div class="col-lg-6">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                    <h5>日志信息监测</h5>
+            <ul class="notes">
+                <li>
+                    <div>
+                        <h4>日志信息监测</h4>
+                        <p>RealSight APM</p>
+                        <p>1. 日志展示、关键日志过滤
+                            <br>2. 近期日志数量和关键日志数量的变化趋势
+                            <br>3. 日志等级</p>
+                        <a href=""><i class="fa fa-trash-o "></i></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
 
-                    <div ibox-tools></div>
-                </div>
-                <div class="ibox-content">
-                    <h3>本页的监测内容: <strong>日志信息</strong>. </h3>
+                        <h4>相关链接</h4>
 
-                    <p>1.提供常规日志展示、关键日志过滤的功能.日志信息包括日志等级、日志内容以及日志时间等.</p>
-
-                    <p>2.柱状图用于显示近期<strong>日志数量</strong>和<strong>关键日志数量</strong>的变化趋势.</p>
-
-                    <p>3.常规日志列在日志模板中,关键日志被过滤出来单独显示.</p>
-                </div>
-            </div>
+                        <p>地址：http://10.0.67.38:8000</p>
+                        <p>地址：http://10.0.67.28:8000</p>
+                        <a href=""><i class="fa fa-trash-o "></i></a>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </div>
+
+        <!--<div class="col-lg-6">-->
+            <!--<div class="ibox float-e-margins">-->
+                <!--<div class="ibox-title">-->
+                    <!--<h5>日志信息监测</h5>-->
+
+                    <!--<div ibox-tools></div>-->
+                <!--</div>-->
+                <!--<div class="ibox-content">-->
+                    <!--<h3>本页的监测内容: <strong>日志信息</strong>. </h3>-->
+
+                    <!--<p>1.提供常规日志展示、关键日志过滤的功能.日志信息包括日志等级、日志内容以及日志时间等.</p>-->
+
+                    <!--<p>2.柱状图用于显示近期<strong>日志数量</strong>和<strong>关键日志数量</strong>的变化趋势.</p>-->
+
+                    <!--<p>3.常规日志列在日志模板中,关键日志被过滤出来单独显示.</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <div class="col-lg-12">
         <line2yaxis-diagram url="/report/trend/{{key}}/" localtitle="" current-period="{{currentPeriod}}"></line2yaxis-diagram>
@@ -51,4 +76,5 @@
         <tablelog-diagram url="/report/hinge/{{key}}/" localtitle="" current-period="{{currentPeriod}}"></tablelog-diagram>
     </div>
 
+    </div>
 </div>

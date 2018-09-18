@@ -13,6 +13,6 @@ angular.module('inspinia')
                     //Probes
                     'Probe list': '探针列表',
                     'Probe Management': '探针管理',
-                    'Probe Add': '探针添加',
+                    'Probe Add': '探针添加'
                 });
         });

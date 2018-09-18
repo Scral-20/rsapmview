@@ -20,7 +20,7 @@
                     $scope._id ='_id';
                     $scope.title = "";
                     $scope.chartData = {};
-                    $scope.DonutData = {
+                    $scope.donutData = {
                         columns: []
                     };
 
@@ -34,7 +34,7 @@
                             console.log(response.data);
                             $scope.chartData = response.data;
                             var data=$scope.chartData;
-                            $scope.DonutData=transData(data);
+                            $scope.donutData=transData(data);
                             if (typeof($scope.chartData.title) != "undefined"){
                                 $scope._id = '_' + Math.random().toString(36).substr(2, 9);
                                 $scope.title = $scope.chartData.title;
@@ -56,12 +56,18 @@
                             //     [chartData.columns[4].key, chartData.columns[4].value],
                             //     ['data3', 5]
                             // ],
+
                             columns: [
-                                ['min_margin', chartData.min_margin],
-                                ['max_margin', chartData.max_margin]
+                                ["data1",40],
+                                ["data2",70],
+                                ["data3",20]
                             ],
-                            type:'donut',
-                            onclick: function (d, i) { console.log("onclick", d, i); },
+                            empty: {
+                                label: {
+                                    text: "No Data "
+                                }
+                            },
+                            type:'donut'
                         };
                         return res;
                     }
@@ -75,17 +81,13 @@
                         scope.getData(scope.currentPeriod);
                     });
 
-                    // 监 听,  修改数据放在controller
                     scope.$watch('_id', function () {
                         console.log("data");
                         c3.generate({
                             bindto: '#'+ scope._id,
-                            data: scope.DonutData,
-                            donut:{
-                                title: "Iris Petal Width",
-                            },
+                            data: scope.donutData,
                             color: {
-                                pattern: ['#1ab394','#a7b1af','#76a6df'] // the three color levels for the percentage values.
+                                pattern: ['#1ab394','#a7b1af','#A4CEE8'] // the three color levels for the percentage values.
                             }
                         });
                     });

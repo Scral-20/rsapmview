@@ -81,7 +81,12 @@
                             x: 'x',
                             columns: [],
                             types: {},
-                            groups: []
+                            groups: [],
+                            empty: {
+                                label: {
+                                    text: "No Data "
+                                }
+                            }
                         };
                         if (typeof(chartData.columns) === "undefined") {
                             return res;

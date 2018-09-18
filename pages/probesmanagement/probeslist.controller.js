@@ -8,7 +8,7 @@
      * @class
      */
     angular.module('inspinia')
-        .controller('ProbeslistCtrl', ['$scope', '$http', '$state', 'AuthService', 'DTOptionsBuilder',
+        .controller('ProbeslistCtrl', ['$scope','$http', '$state', 'AuthService', 'DTOptionsBuilder',
             function ($scope, $http, $state, authService, DTOptionsBuilder) {
                 $scope.pageTitle ="Probe list";
                 $scope.title ="Probe list";
@@ -31,14 +31,45 @@
                     return port;
                 };
 
-                $scope.remove=function(index){
-                    if(confirm('确定移除此项吗？')){
-                        $scope.topviewData.nodes.splice(index,1);
+
+                $scope.remove=function (index) {
+                    // sweetAlert({
+                    //         title: "Are you sure?",
+                    //         text: "Your will not be able to recover this imaginary file!",
+                    //         type: "warning",
+                    //         showCancelButton: true,
+                    //         confirmButtonColor: "#DD6B55",
+                    //         confirmButtonText: "Yes, delete it!",
+                    //         cancelButtonText: "No, cancel plx!",
+                    //         closeOnConfirm: false,
+                    //         closeOnCancel: false },
+                    //     function (isConfirm) {
+                    //         if (isConfirm) {
+                    //             $scope.topviewData.nodes.splice(index,1);
+                    //             sweetAlert("Deleted!", "Your imaginary file has been deleted.", "success");
+                    //         } else {
+                    //             sweetAlert("Cancelled", "Your imaginary file is safe :)", "error");
+                    //         }
+                    //     });
+
+                    if (confirm('Are u sure')) {
+                        $scope.topviewData.nodes.splice(index, 1);
+                        sweetAlert("Deleted!", "Your imaginary file has been deleted.", "success");
+                    } else {
+                        sweetAlert("Cancelled", "Your imaginary file is safe :)", "error");
                     }
-                    if($scope.topviewData.nodes.length===0){
-                        alert('探针列表为空');
-                    }
+
                 };
+
+                //
+                // $scope.remove=function(index){
+                //     if(confirm('确定移除此项吗？')){
+                //         $scope.topviewData.nodes.splice(index,1);
+                //     }
+                //     if($scope.topviewData.nodes.length===0){
+                //         alert('探针列表为空');
+                //     }
+                // };
 
                 $scope.dtOptions = DTOptionsBuilder.newOptions()
                     .withDOM('<"html5buttons"B>lTfgitp')

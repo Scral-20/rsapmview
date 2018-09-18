@@ -8,35 +8,35 @@
         <div class="col-lg-6" style="text-align: center">
             <div id="{{_id}}"></div>
             <div class="m-t-sm small">{{'谷值'|translate}}:{{min_margin|number:2}}&nbsp &nbsp {{'峰值'|translate}}:{{max_margin|number:2}}</div>
+            <div><br><br><br></div>
         </div>
         <div class="col-lg-6">
-            <div class="ibox-content">
+            <div>
                 <div>
-                    <div>
-                        <span>{{'资源占用峰值百分比'|translate}}</span>
-                        <small class="pull-right">{{maxpercent}}</small>
-                    </div>
-                    <div class="progress progress-small">
-                        <div ng-style="getMaxStyle()" class="progress-bar"></div>
-                    </div>
+                    <span>{{'资源占用峰值百分比'|translate}}</span>
+                    <small class="pull-right">{{maxpercent}}</small>
+                </div>
+                <div class="progress progress-small">
+                    <div ng-style="getMaxStyle()" class="progress-bar"></div>
+                </div>
 
-                    <div>
-                        <span>{{'资源占用谷值百分比'|translate}}</span>
-                        <small class="pull-right">{{minpercent}}</small>
-                    </div>
-                    <div class="progress progress-small">
-                        <div ng-style="getMinStyle()" class="progress-bar progress-bar-danger"></div>
-                    </div>
+                <div>
+                    <span>{{'资源占用谷值百分比'|translate}}</span>
+                    <small class="pull-right">{{minpercent}}</small>
+                </div>
+                <div class="progress progress-small">
+                    <div ng-style="getMinStyle()" class="progress-bar progress-bar-danger"></div>
+                </div>
 
-                    <div>
-                        <h1 class="no-margins label label-important">{{'均值'|translate}}:{{avg}}</h1><br>
-                    </div>
-                    <div><br></div>
-                    <div>
-                        <h1 class="no-margins label label-important">{{'总资源值'|translate}}:{{max}}{{unit}}</h1><br>
-                    </div>
+                <div>
+                    <h1 class="no-margins label label-important">{{'均值'|translate}}:{{avg}}</h1><br>
+                </div>
+                <div><br></div>
+                <div>
+                    <h1 class="no-margins label label-important">{{'总资源值'|translate}}:{{max}}{{unit}}</h1><br>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
