@@ -28,7 +28,7 @@
                     $scope.groups = $attrs.groups;
 
                     $scope.names = $attrs.names;
-                    console.log("names");
+                    if (typeof($scope.names) === "undefined") $scope.names ="{}";
                     console.log(JSON.parse($scope.names));
 
                     $scope.c3Axis = {};
