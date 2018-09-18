@@ -27,7 +27,12 @@
                     <li>
                         <div>
                             <div class="btn-group btn-group-sm" style="margin-top:0px;width:340px;float:left;">
-                                <button type="button" class="btn" ng-class="currentPeriod == period ? 'btn btn-primary' : 'btn'" ng-click="setPeriod( period )" ng-repeat="period in ['5m', '30m', '1h', '3h', '6h', '12h', '1d', '2d']">{{period == "5m" ? "Last " + period : period}}</button>
+                                <button type="button" class="btn"
+                                        ng-class="currentPeriod == period ? 'btn btn-primary' : 'btn'"
+                                        ng-click="setPeriod( period )"
+                                        ng-repeat="period in ['5m', '30m', '1h', '3h', '6h', '12h', '1d', '2d']">
+                                    {{period == "5m" ? "Last " + period : period}}
+                                </button>
                             </div>
                         </div>
                     </li>
@@ -36,24 +41,107 @@
         </div>
 
         <div class="col-lg-3">
-            <card-prometheus-diagram url="/metric/point/{{key}}/" name='mysql_global_status_uptime{instance="$host"}' unit="Day" divide="86400" localtitle="MySQL Uptime" remark="Running Time"></card-prometheus-diagram>
+            <card-prometheus-diagram
+                    url="/metric/point/{{key}}/MYSQL/"
+                    name='{"name" : "mysql_global_status_uptime{instance=\"$host\"}/86400"}'
+                    unit="Day"
+                    localtitle="MySQL Uptime"
+                    remark="Running Time">
+            </card-prometheus-diagram>
         </div>
 
         <div class="col-lg-3">
-            <card-prometheus-diagram url="/metric/point/{{key}}/" name='irate(mysql_global_status_queries{instance="$host"}[5m])' unit="" divide="1" localtitle="Current QPS" remark="QPS"></card-prometheus-diagram>
+            <card-prometheus-diagram
+                    url="/metric/point/{{key}}/MYSQL/"
+                    name='{"name" : "irate(mysql_global_status_queries{instance=\"$host\"}[5m])"}'
+                    unit=""
+                    localtitle="Current QPS"
+                    remark="QPS">
+            </card-prometheus-diagram>
         </div>
 
         <div class="col-lg-3">
-            <card-prometheus-diagram url="/metric/point/{{key}}/" name='mysql_global_variables_innodb_buffer_pool_size{instance="$host"}' unit="MiB" divide="1048576" localtitle="InnoDb Buffer Pool Size" remark="InnoDB Buffer"></card-prometheus-diagram>
+            <card-prometheus-diagram
+                    url="/metric/point/{{key}}/MYSQL/"
+                    name='{"name" : "mysql_global_variables_innodb_buffer_pool_size{instance=\"$host\"}/1048576"}'
+                    unit="MiB"
+                    localtitle="InnoDb Buffer Pool Size"
+                    remark="InnoDB Buffer">
+
+            </card-prometheus-diagram>
         </div>
 
         <div class="col-lg-3">
-            <card-prometheus-diagram url="/metric/point/{{key}}/" name='mysql_global_status_threads_connected{instance="$host"}' unit="" divide="1" localtitle="MySQL Connections" remark="Connection Count"></card-prometheus-diagram>
+            <card-prometheus-diagram
+                    url="/metric/point/{{key}}/MYSQL/"
+                    name='{"name" : "up{instance=\"$host\"}"}'
+                    unit=""
+                    localtitle="Status"
+                    remark="1.00: up; 0.00: down">
+            </card-prometheus-diagram>
         </div>
 
-        <!--<div class="col-lg-3">-->
-            <!--<line-diagram url="/metric//{{key}}/" names='qbs:rate(mysql_global_status_queries{instance="$host"}[5m])&up:up{instance="$host"}' divide="1" localtitle="testing"></line-diagram>-->
-        <!--</div>-->
+        <div class="col-lg-6">
+            <line-prometheus-diagram
+                    url="/metric/range/{{key}}/MYSQL/"
+                    names=
+                            '{
+                            "Connections" : "mysql_global_status_threads_connected{instance=\"$host\"}",
+                            "Max Used Connections" : "mysql_global_status_max_used_connections{instance=\"$host\"}",
+                            "Max Connections" : "mysql_global_variables_max_connections{instance=\"$host\"}"
+                          }'
+                    localtitle="MySQL Connections"
+                    types='{"Max Used Connections":"area","Connections":"area"}'
+                    ymin="0"
+                    current-period="{{currentPeriod}}"
+            ></line-prometheus-diagram>
+        </div>
+
+        <div class="col-lg-6">
+            <line-prometheus-diagram
+                    url="/metric/range/{{key}}/MYSQL/"
+                    names=
+                    '{
+                    "Peak Threads Connected" : "max_over_time(mysql_global_status_threads_connected{instance=\"$host\"}[5m])",
+                    "Peak Threads Running" : "max_over_time(mysql_global_status_threads_running{instance=\"$host\"}[5m])",
+                    "Avg Threads Running" : "avg_over_time(mysql_global_status_threads_running{instance=\"$host\"}[5m])"
+                   }'
+                    localtitle="MySQL Connections"
+                    types='{}'
+                    ymin="0"
+                    current-period="{{currentPeriod}}"
+            ></line-prometheus-diagram>
+        </div>
+
+        <div class="col-lg-6">
+            <line-prometheus-diagram
+                    url="/metric/range/{{key}}/MYSQL/"
+                    names=
+                            '{
+                    "qbs" : "rate(mysql_global_status_queries{instance=\"$host\"}[5m])",
+                    "up" : "up{instance=\"$host\"}"
+                   }'
+                    localtitle="MySQL Connections"
+                    types='{"qbs":"area","up":"area"}'
+                    groups='[["qbs","up"]]'
+                    current-period="{{currentPeriod}}"
+            ></line-prometheus-diagram>
+        </div>
+
+        <div class="col-lg-6">
+            <line-prometheus-diagram
+                    url="/metric/range/{{key}}/MYSQL/"
+                    names=
+                            '{
+                    "qbs" : "rate(mysql_global_status_queries{instance=\"$host\"}[5m])",
+                    "up" : "up{instance=\"$host\"}"
+                   }'
+                    localtitle="MySQL Connections"
+                    types='{"qbs":"area","up":"area"}'
+                    groups='[["qbs","up"]]'
+                    current-period="{{currentPeriod}}"
+            ></line-prometheus-diagram>
+        </div>
 
     </div>
 

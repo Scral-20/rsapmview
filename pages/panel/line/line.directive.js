@@ -153,8 +153,7 @@
                 link: function(scope, element, attrs) {
                     // console.log(scope._id);
                     scope.$watch('currentPeriod', function () {
-                        // alert(scope.currentPeriod === "");
-                        if (scope.currentPeriod === "") return;
+                        if (typeof(scope.currentPeriod) ==="undefined" || scope.currentPeriod === "") return;
                         console.log("currentPeriod = " + scope.currentPeriod);
                         scope.getData(scope.currentPeriod);
                     });

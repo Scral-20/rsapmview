@@ -17,37 +17,26 @@
                 controller: function ($scope,$http, $filter, $element, $attrs, AuthService) {
                     $scope.localtitle = $attrs.localtitle;
                     $scope.remark = $attrs.remark;
-                    $scope.divide = $attrs.divide;
                     $scope.unit = $attrs.unit;
+                    $scope.name = $attrs.name;
 
-                    $scope.cardData = {};
-                    $scope.value = "";
-                    // alert($attrs.names);
+                    $scope.value = 0;
 
                     $scope.getData = function (period) {
-                        var getUrl = AuthService.getURL() + $attrs.url + $attrs.name;
+                        var getUrl = AuthService.getURL() + $attrs.url;
                         console.log(getUrl);
-                        $http.get(
-                            getUrl
+                        $http.post(
+                            getUrl,
+                            JSON.parse($scope.name)
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
                             console.log(response.data);
-                            var data = response.data;
-                            if (typeof ($scope.columnsSelected) === "undefined") {
-                                $scope.divide = parseFloat($scope.divide);
-                            } else {
-                                $scope.divide = 1.0;
-                            }
-                            if (data.length > 0) {
-                                $scope.value = data[0].value;
-                            }
+                            $scope.value = response.data;
                         }, function () {
                             console.log("cardDiagram no data");
                         });
                     };
                 },
-
-
                 link: function(scope, element, attrs) {
                     scope.getData();
                 }
