@@ -33,17 +33,17 @@
         </a>
 
         <a ui-sref="rs.TOMCATcalltree({key: '{{key}}', title: '{{pageTitle}}', route: '{{routeName}}'})">
-        <div class="col-lg-3">
-            <div class="ibox">
-                <div class="ibox-content ">
-                    <h5 class="m-b-md">{{'代码定位'|translate}}</h5>
-                    <h2 class="text-danger">
-                        <i class="fa fa-sitemap fa-rotate-270"></i> Code
-                    </h2>
-                    <small>{{'Analysis of function execution time and method stack'|translate}}</small>
+            <div class="col-lg-3">
+                <div class="ibox">
+                    <div class="ibox-content ">
+                        <h5 class="m-b-md">{{'代码定位'|translate}}</h5>
+                        <h2 class="text-danger">
+                            <i class="fa fa-sitemap fa-rotate-270"></i> Code
+                        </h2>
+                        <small>{{'Analysis of function execution time and method stack'|translate}}</small>
+                    </div>
                 </div>
             </div>
-        </div>
         </a>
 
         <div class="col-lg-3">
@@ -72,7 +72,7 @@
     </div>
 
     <div class="row">
-        <!--<a ui-sref="rs.TOMCATalertmanagement">-->
+        <a ui-sref="rs.TOMCATalertmanagement({key: '{{key}}', title: '{{pageTitle}}', route: '{{routeName}}'})">
             <div class="col-lg-3">
                 <div class="ibox">
                     <div class="ibox-content">
@@ -84,19 +84,19 @@
                     </div>
                 </div>
             </div>
-        <!--</a>-->
+        </a>
         <a ui-sref="rs.TOMCATreport({key: '{{key}}', title: '{{pageTitle}}', route: '{{routeName}}'})">
-        <div class="col-lg-3">
-            <div class="ibox">
-                <div class="ibox-content">
-                    <h5 class="m-b-md">{{'报告'|translate}}</h5>
-                    <h2 class="text-navy">
-                        <i class="fa fa-file"></i> Report
-                    </h2>
-                    <small>{{'Summary of monitoring reports'|translate}}</small>
+            <div class="col-lg-3">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <h5 class="m-b-md">{{'报表'|translate}}</h5>
+                        <h2 class="text-navy">
+                            <i class="fa fa-file"></i> Report
+                        </h2>
+                        <small>{{'Summary of monitoring reports'|translate}}</small>
+                    </div>
                 </div>
             </div>
-        </div>
         </a>
     </div>
 

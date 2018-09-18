@@ -2737,6 +2737,14 @@ function sweetAlertCtrl($scope, SweetAlert) {
             });
     }
 
+    $scope.alarmdemo = function () {
+        SweetAlert.swal({
+            title: "Completed",
+            text: "Alarm configuration has been uploaded.",
+            type: "success"
+        });
+    }
+
 }
 
 function selectCtrl($scope) {

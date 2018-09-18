@@ -130,11 +130,49 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
+        /*** Alertmanagement ***/
         .state('rs.TOMCATalertmanagement', {
-            url: "/TOMCATalertmanagement",
+            url: "/TOMCATalertmanagement/:key/:title/:route",
             templateUrl: "pages/probes/tomcat/alertmanagement/tomcatalertmanagement.html",
-            data: { pageTitle: 'Alertmanagement' }
-
+            data: { pageTitle: 'Alertmanagement' },
+            controller:'TomcatalertmanagementCtrl',
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        //calendar
+                        {
+                            insertBefore: '#loadBefore',
+                            files: ['css/plugins/fullcalendar/fullcalendar.css','js/plugins/fullcalendar/fullcalendar.min.js']
+                        },
+                        {
+                            name: 'ui.calendar',
+                            files: ['js/plugins/fullcalendar/calendar.js']
+                        },
+                        //forms
+                        {
+                            name: 'ui.knob',
+                            files: ['js/plugins/jsKnob/jquery.knob.js','js/plugins/jsKnob/angular-knob.js']
+                        },
+                        {
+                            name: 'ui.select',
+                            files: ['js/plugins/ui-select/select.min.js', 'css/plugins/ui-select/select.min.css']
+                        },
+                        //submit button
+                        {
+                            files: ['js/plugins/sweetalert/sweetalert.min.js', 'css/plugins/sweetalert/sweetalert.css']
+                        },
+                        {
+                            name: 'oitozero.ngSweetAlert',
+                            files: ['js/plugins/sweetalert/angular-sweetalert.min.js']
+                        }
+                        // {
+                        //     insertBefore: '#loadBefore',
+                        //     name: 'localytics.directives',
+                        //     files: ['css/plugins/chosen/bootstrap-chosen.css','js/plugins/chosen/chosen.jquery.js','js/plugins/chosen/chosen.js']
+                        // }
+                    ]);
+                }
+            }
         })
         /*** Report ***/
         .state('rs.TOMCATreport', {
@@ -196,7 +234,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('rs.ProbesList', {
             url: "/Probes/",
             templateUrl: "pages/probesmanagement/probeslist.html",
-            data: { pageTitle: 'Probeslist'},
+            data: { pageTitle: 'Probes List'},
             controller: 'ProbeslistCtrl',
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
@@ -214,6 +252,14 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                             serie: true,
                             name: 'datatables.buttons',
                             files: ['js/plugins/dataTables/angular-datatables.buttons.min.js']
+                        },
+                        //sweetAlert
+                        {
+                            files: ['js/plugins/sweetalert/sweetalert.min.js', 'css/plugins/sweetalert/sweetalert.css']
+                        },
+                        {
+                            name: 'oitozero.ngSweetAlert',
+                            files: ['js/plugins/sweetalert/angular-sweetalert.min.js']
                         }
                     ]);
                 }
@@ -222,7 +268,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('rs.ProbesAdd', {
             url: "/Probes/:key",
             templateUrl: "pages/probesmanagement/probeslist.html",
-            data: { pageTitle: 'Probeslist'},
+            data: { pageTitle: 'Probes Add'},
             controller: 'ProbeslistCtrl',
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
@@ -240,6 +286,14 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                             serie: true,
                             name: 'datatables.buttons',
                             files: ['js/plugins/dataTables/angular-datatables.buttons.min.js']
+                        },
+                        //sweetAlert
+                        {
+                            files: ['js/plugins/sweetalert/sweetalert.min.js', 'css/plugins/sweetalert/sweetalert.css']
+                        },
+                        {
+                            name: 'oitozero.ngSweetAlert',
+                            files: ['js/plugins/sweetalert/angular-sweetalert.min.js']
                         }
                     ]);
                 }
@@ -877,7 +931,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         })
         .state('app.calendar', {
             url: "/calendar",
-            templateUrl: "views/calendar.html",
+            templateUrl: "pages/probes/tomcat/alertmanagement/tomcatalertmanagement.html",
             data: { pageTitle: 'Calendar' },
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {

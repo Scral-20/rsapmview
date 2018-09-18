@@ -1,0 +1,57 @@
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInDown">
+        <div class="col-lg-3">
+            <br>
+            <div class="ibox float-e-margins">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                    <i class="fa fa-info-circle">告警策略</i>
+                    </div>
+                    <div id='external-events'>
+                        <br>
+                        <ul>
+                            <li>服务响应时间阈值为：800ms</li>
+                            <li>实际服务响应时间超过800ms，持续时间1h</li>
+                            <li>具体的http响应时间变化趋势如下</li>
+                            <li>更多信息及指标参见 URL://</li>
+                        </ul>
+
+                        <br>
+
+                        <h3 style="text-align: center"><strong>事件详细信息:</strong></h3>
+
+                        <div class="alert alert-warning" >
+                            {{alertMessage}}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <h2>告警事件</h2> 按日期展示告警事件，根据重要程度，将不同种类的告警事件以不同颜色区分显示，标记在日历.
+                    <p>
+                        <a href="http://arshaw.com/fullcalendar/" target="_blank">FullCalendar documentation</a>
+                    </p>
+
+                    <h2>日期</h2> is a complete AngularJS directive for the Arshaw FullCalendar
+                    <p>
+                        <a href="http://angular-ui.github.io/ui-calendar/" target="_blank">Ui Calendar documentation</a>
+                    </p>
+                </div>
+            </div>
+            </div>
+        <div class="col-lg-9">
+            <h2 class="text-center"><strong><i class="fa fa-bell"></i> 告警(Warning-Message)</strong></h2>
+            <div class="ibox" style="border: groove">
+                <!--<div ibox-tools></div>-->
+                <div class="ibox-content float-e-margins">
+
+                    <div class="ui-calendar">
+                        <div ui-calendar="uiConfig.calendar" style="font-style: oblique;" calendar="myCalendar1" class="calendar" ng-model="eventSources"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

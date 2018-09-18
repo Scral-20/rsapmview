@@ -10,13 +10,12 @@
                    class="table table-striped table-bordered table-hover dataTables-example">
                 <thead>
                 <tr>
-                    <!--<th style="width: 1%">NO.</th>-->
-                    <th>链接URL</th>
+                    <th style="width: 76%">链接URL</th>
                     <th>请求时间 (ms)</th>
                     <th>请求次数 (times)</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody style="white-space:normal; word-break:break-all;">
                 <tr ng-repeat="rpc in tableData.rpcs">
                     <!--<td ng-bind="$index+1"></td>-->
                     <td>{{rpc.name}}</td>

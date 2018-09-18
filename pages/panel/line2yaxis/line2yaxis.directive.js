@@ -62,7 +62,9 @@
                             },
                             padding: {left:0, right:0}
                         };
-
+                        if (typeof(chartData.columns) === "undefined") {
+                            return res;
+                        }
                         var y = {}, y2 = {};
                         if (typeof(chartData.yLabel) !== "undefined") {
                             y['label'] = $scope.chartData.yLabel;
@@ -102,7 +104,6 @@
                         if (typeof(chartData.columns) === "undefined") {
                             return res;
                         }
-
                         for (var i = 0; i < chartData.columns.length; i++) {
                             if( !ifItemInList(chartData.columns[i].key,List)){
                                 continue;
@@ -133,6 +134,7 @@
                         return res;
                     }
 
+
                     //list列的即为所选的数据key值
                     function ifItemInList(item,list) {
                         for(var i = 0; i < list.length; i++){
@@ -146,6 +148,9 @@
                     //若标签columns属性未写，则默认获取全部key与value,否则按columns属性获取数据
                     function getList(chartData) {
                         var List=[];
+                        if (typeof(chartData.columns) === "undefined") {
+                            return;
+                        }
                         if (typeof ($scope.columnsSelected)==="undefined" || $scope.columnsSelected===""){
                             for(var i =0; i< chartData.columns.length; i++){
                                 List[i]= chartData.columns[i].key;
