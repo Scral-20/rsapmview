@@ -128,7 +128,7 @@
         </div>
 
         <div class="col-lg-6">
-            <line-prometheus-diagram
+            <line2axes-prometheus-diagram
                     url="/ranges/{{key}}/MYSQL/"
                     names=
                             '{
@@ -137,9 +137,13 @@
                    }'
                     localtitle="MySQL Connections"
                     types='{"qbs":"area","up":"area"}'
-                    groups='[["qbs","up"]]'
+                    axes='{"qbs" : "y2"}'
+                    ylabel="mb"
+                    ymin="-1"
+                    y2label="s"
+                    y2max="10"
                     current-period="{{currentPeriod}}"
-            ></line-prometheus-diagram>
+            ></line2axes-prometheus-diagram>
         </div>
 
     </div>
