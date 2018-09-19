@@ -87,7 +87,7 @@
                                 $(go.Picture,  // the icon showing the logo
                                     // You should set the desiredSize (or width and height)
                                     // whenever you know what size the Picture should be.
-                                    { desiredSize: new go.Size(80, 80) },
+                                    { desiredSize: new go.Size(100, 100) },
                                     new go.Binding("source", "type", convertKeyImage)
                                 ),
                                 $(go.Shape, "Circle",
@@ -98,7 +98,7 @@
                             )
                         ),
                         $(go.TextBlock,  // the text label
-                            { font: "bold 10pt helvetica, bold arial, sans-serif", textAlign: "center", maxSize: new go.Size(100, NaN) },
+                            { font: "bold 12pt helvetica, bold arial, sans-serif", textAlign: "center", maxSize: new go.Size(100, NaN) },
                             new go.Binding("text", "name")
                             // new go.Binding("stroke","strokeColor")
                         ),
@@ -125,7 +125,7 @@
                             $(go.TextBlock, "transition",  // the label text
                                 {
                                     textAlign: "center",
-                                    font: "10pt helvetica, arial, sans-serif",
+                                    font: "13pt helvetica, arial, sans-serif",
                                     margin: 4,
                                     editable: true  // enable in-place editing
                                 },

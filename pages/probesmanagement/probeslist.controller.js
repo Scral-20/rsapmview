@@ -33,31 +33,31 @@
 
 
                 $scope.remove=function (index) {
-                    // sweetAlert({
-                    //         title: "Are you sure?",
-                    //         text: "Your will not be able to recover this imaginary file!",
-                    //         type: "warning",
-                    //         showCancelButton: true,
-                    //         confirmButtonColor: "#DD6B55",
-                    //         confirmButtonText: "Yes, delete it!",
-                    //         cancelButtonText: "No, cancel plx!",
-                    //         closeOnConfirm: false,
-                    //         closeOnCancel: false },
-                    //     function (isConfirm) {
-                    //         if (isConfirm) {
-                    //             $scope.topviewData.nodes.splice(index,1);
-                    //             sweetAlert("Deleted!", "Your imaginary file has been deleted.", "success");
-                    //         } else {
-                    //             sweetAlert("Cancelled", "Your imaginary file is safe :)", "error");
-                    //         }
-                    //     });
+                    sweetAlert({
+                            title: "Are you sure?",
+                            text: "Your will not be able to recover this imaginary file!",
+                            type: "warning",
+                            showCancelButton: true,
+                            confirmButtonColor: "#DD6B55",
+                            confirmButtonText: "Yes, delete it!",
+                            cancelButtonText: "No, cancel plx!",
+                            closeOnConfirm: true,
+                            closeOnCancel: false},
+                        function (isConfirm) {
+                            if (isConfirm) {
+                                $scope.topviewData.nodes.splice(index,1);
+                                //sweetAlert("Deleted!", "Your imaginary file has been deleted.", "success");
+                            } else {
+                                sweetAlert("Cancelled", "Your imaginary file is safe :)", "error");
+                            }
+                        });
 
-                    if (confirm('Are u sure')) {
-                        $scope.topviewData.nodes.splice(index, 1);
-                        sweetAlert("Deleted!", "Your imaginary file has been deleted.", "success");
-                    } else {
-                        sweetAlert("Cancelled", "Your imaginary file is safe :)", "error");
-                    }
+                    // if (confirm('Are u sure')) {
+                    //     $scope.topviewData.nodes.splice(index, 1);
+                    //     sweetAlert("Deleted!", "Your imaginary file has been deleted.", "success");
+                    // } else {
+                    //     sweetAlert("Cancelled", "Your imaginary file is safe :)", "error");
+                    // }
 
                 };
 

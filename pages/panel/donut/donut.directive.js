@@ -18,10 +18,30 @@
                 },
                 controller: function ($scope, $http, $element, $attrs, AuthService) {
                     $scope._id ='_id';
+                    $scope._id = '_' + Math.random().toString(36).substr(2, 9);
                     $scope.title = "";
                     $scope.chartData = {};
                     $scope.donutData = {
                         columns: []
+                    };
+                    $scope.donutData2 = {
+                        // columns: [
+                        //     [chartData.columns[3].key, chartData.columns[3].value],
+                        //     [chartData.columns[4].key, chartData.columns[4].value],
+                        //     ['data3', 5]
+                        // ],
+
+                        columns: [
+                            ["data1",40],
+                            ["data2",70],
+                            ["data3",20]
+                        ],
+                        empty: {
+                            label: {
+                                text: "No Data "
+                            }
+                        },
+                        type:'donut'
                     };
 
                     console.log("URL: " + AuthService.getURL() + $attrs.url);
@@ -85,7 +105,7 @@
                         console.log("data");
                         c3.generate({
                             bindto: '#'+ scope._id,
-                            data: scope.donutData,
+                            data: scope.donutData2,
                             color: {
                                 pattern: ['#1ab394','#a7b1af','#A4CEE8'] // the three color levels for the percentage values.
                             }

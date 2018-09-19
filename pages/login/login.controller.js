@@ -21,7 +21,7 @@
                     $http.post(authService.getURL() + "/auth/login", data).then(
                         function(response) {
                             authService.setJwtToken(response.data.access_token);
-                            // $state.go('topview');
+                            // $state.go('rs.TOMCATalertmanagement');
                             // $state.reload();
                             $state.go('rs.topview').then(
                                 // function() {

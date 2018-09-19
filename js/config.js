@@ -47,7 +47,21 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             url: "/topview",
             templateUrl: "pages/topview/topview.html",
             data: { pageTitle: 'Topview' },
-            controller: 'TopviewCtrl'
+            controller: 'TopviewCtrl',
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['js/plugins/sweetalert/sweetalert.min.js', 'css/plugins/sweetalert/sweetalert.css']
+                        },
+                        {
+                            name: 'oitozero.ngSweetAlert',
+                            files: ['js/plugins/sweetalert/angular-sweetalert.min.js']
+                        }
+                    ]);
+                }
+            }
+
         })
         .state('rs.UNDEFINED', {
             url: "/UNDEFINED",
@@ -931,7 +945,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         })
         .state('app.calendar', {
             url: "/calendar",
-            templateUrl: "pages/probes/tomcat/alertmanagement/tomcatalertmanagement.html",
+            templateUrl: "views/calendar.html",
             data: { pageTitle: 'Calendar' },
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
