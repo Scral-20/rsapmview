@@ -13,6 +13,7 @@
                 $scope.title = $stateParams.title;
                 $scope.route = $stateParams.route;
                 $scope.key = $stateParams.key;
+                $scope.currentPeriod = '1h';
                 $scope.getData = function () {
                     $http.get(
                         authService.getURL() + "/basicinfo/" + $stateParams.key,
@@ -33,7 +34,6 @@
                         $scope.serverMetaData = data.serverMetaData;
                         $scope.status = data.status;
                         $scope.currentServiceInfo = [];
-                        $scope.currentPeriod = '1h';
                         for (var i = 0; i < data.serverMetaData.serviceInfos.length; i++) {
                             if (data.serverMetaData.serviceInfos[i].serviceLibs.length > 0) {
                                 $scope.currentServiceInfo = data.serverMetaData.serviceInfos[i];

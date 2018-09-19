@@ -87,7 +87,7 @@
                                 $(go.Picture,  // the icon showing the logo
                                     // You should set the desiredSize (or width and height)
                                     // whenever you know what size the Picture should be.
-                                    { desiredSize: new go.Size(100, 100) },
+                                    { desiredSize: new go.Size(80, 80) },
                                     new go.Binding("source", "type", convertKeyImage)
                                 ),
                                 $(go.Shape, "Circle",
