@@ -30,8 +30,8 @@
                             JSON.parse($scope.name)
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
-                            console.log(response.data);
-                            $scope.value = response.data;
+                            console.log(response.data.message);
+                            $scope.value = response.data.message[0].value;
                         }, function () {
                             console.log("cardDiagram no data");
                         });

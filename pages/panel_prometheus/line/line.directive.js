@@ -29,7 +29,7 @@
 
                     $scope.names = $attrs.names;
                     if (typeof($scope.names) === "undefined") $scope.names ="{}";
-                    console.log(JSON.parse($scope.names));
+                    // console.log(JSON.parse($scope.names));
 
                     $scope.c3Axis = {};
                     $scope.c3Data = {
@@ -44,9 +44,9 @@
                             JSON.parse($scope.names)
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
-                            console.log(response.data);
+                            console.log(response.data.message);
                             $scope.c3Axis = transAxis();
-                            $scope.c3Data = transData(response.data);
+                            $scope.c3Data = transData(response.data.message);
                             $scope._id = $scope.localtitle.replace(/ /g, "_")+$scope._id;
                         }, function () {
                             console.log("lineDiagram no data");
@@ -80,7 +80,7 @@
 
                     function transData(chartData) {
                         var res = {
-                            x: 'x',
+                            x: 'timeaxis',
                             columns: [],
                             types: {},
                             groups: []
@@ -93,7 +93,7 @@
                             var tmp = [];
                             tmp.push(chartData[i].key);
                             for (var j = 0; j < chartData[i].value.length; j++) {
-                                if(chartData[i].key === 'x'){
+                                if(chartData[i].key === 'timeaxis'){
                                     tmp.push(chartData[i].value[j]);
                                 }else {
                                     tmp.push(Number(chartData[i].value[j]).toFixed(2));
