@@ -28,7 +28,7 @@
                         $scope.model = new go.GraphLinksModel(nodes, links);
                         $scope.model.selectedNodeData = null;
                     } else {
-                        sweetAlert('code:' + response.data.code + ' \nPlease check code');
+                        sweetAlert('Warning','code:' + response.data.code + ' \nPlease check code','warning');
                     }
                 }, function () {
                     console.log("topview no data");
