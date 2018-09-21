@@ -45,33 +45,39 @@
                     <tbody>
                         <tr>
                             <td class="text-right">{{'Application Name'|translate}}</td>
-                            <td>{{applicationName}}</td>
+                            <td style="width: 30%">{{ApplicationName}}</td>
                             <td class="text-right">{{'Agent Version'|translate}}</td>
-                            <td>{{agentVersion}}</td>
+                            <td style="width: 30%">{{AgentVersion}}</td>
                         </tr>
                         <tr>
                             <td class="text-right">Agent Id</td>
                             <td>{{agentType}}</td>
                             <td class="text-right">PID</td>
-                            <td>{{pid}}</td>
+                            <td>{{Pid}}</td>
                         </tr>
                         <tr>
                             <td class="text-right">Host Name</td>
-                            <td>{{hostName}}</td>
+                            <td>{{HostName}}</td>
                             <td class="text-right">{{'JVM (GC type)'|translate}}</td>
-                            <td>{{jvmInfo.jvmVersion}} ({{jvmInfo.gcTypeName}})</td>
+                            <td>{{JvmInfo.jvmVersion}} ({{JvmInfo.gcTypeName}})</td>
                         </tr>
                         <tr>
                             <td class="text-right">IP</td>
-                            <td>{{ip}}</td>
+                            <td>{{Ip}}</td>
                             <td class="text-right">{{'Startup Time'|translate}}</td>
                             <td>{{date(startTimestamp)}}</td>
                         </tr>
                         <tr>
                             <td class="text-right">{{'Service Type'|translate}}</td>
-                            <td>{{serverMetaData.serverInfo}}</td>
+                            <td>{{ServerMetaData.serverInfo}}</td>
                             <td class="text-right">{{'Running State'|translate}}</td>
-                            <td>{{status.state}} ({{status.eventTimestamp}})</td>
+                            <td>{{Status}} </td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">{{'VmVersion'|translate}}</td>
+                            <td>{{VmVersion}}</td>
+                            <td class="text-right">{{'Ports'|translate}}</td>
+                            <td>{{Ports}} </td>
                         </tr>
                     </tbody>
                 </table>
@@ -88,13 +94,13 @@
                         <tbody>
                         <tr>
                             <td class="col-lg-1 text-right" style="width: 10%">{{'Server Info'|translate}}</td>
-                            <td>{{serverMetaData.serverInfo}}</td>
+                            <td>{{ServerMetaData.serverInfo}}</td>
                         </tr>
                         <tr>
                             <td class="col-lg-1 text-right">{{'JVM Parameters'|translate}}</td>
                             <td>
                                 <div slim-scroll box-height="200px">
-                                    <p ng-repeat="vmArg in serverMetaData.vmArgs">
+                                    <p ng-repeat="vmArg in ServerMetaData.vmArgs">
                                         {{vmArg}}
                                     </p>
                                 </div>
@@ -106,7 +112,7 @@
                                 <div class="col">
                                     <div class="col-md-4 list-group">
                                         <a href="" class="list-group-item clearfix" ng-class="{active: currentServiceInfo == serviceInfo, disabled: serviceInfo.serviceLibs.length == 0}"
-                                           ng-repeat="serviceInfo in serverMetaData.serviceInfos" style="padding:4px 10px" ng-click="selectServiceInfo(serviceInfo)">
+                                           ng-repeat="serviceInfo in ServerMetaData.serviceInfos" style="padding:4px 10px" ng-click="selectServiceInfo(serviceInfo)">
                                             {{serviceInfo.serviceName}}
                                             <span class="pull-right" ng-show="serviceInfo.serviceLibs.length > 0">&gt;</span>
                                         </a>
@@ -125,25 +131,94 @@
             </div>
         </div>
         <div class="col-lg-14">
-            <div class="col-lg-12">
-                <line-diagram url="/cpuload/{{key}}/"  current-period="{{currentPeriod}}"></line-diagram>
+
+            <!--<div class="col-lg-12">-->
+                <!--<line-diagram url="/cpuload/{{key}}/"  current-period="{{currentPeriod}}"></line-diagram>-->
+            <!--</div>-->
+
+            <!--<div class="col-lg-6">-->
+                <!--<line2yaxis-diagram url="/jvmgc/{{key}}/" localtitle="NonHeap "  columns-selected="x,GC time,NonHeap Used,NonHeap Max" current-period="{{currentPeriod}}"></line2yaxis-diagram>-->
+            <!--</div>-->
+
+
+            <!--<div class="col-lg-6">-->
+                <!--<line2yaxis-diagram url="/jvmgc/{{key}}/" localtitle="Heap " columns-selected="x,GC time,Heap Used,Heap Max" current-period="{{currentPeriod}}"></line2yaxis-diagram>-->
+            <!--</div>-->
+
+            <!--<div class="col-lg-6">-->
+                <!--<line-diagram url="/transaction/{{key}}/" current-period="{{currentPeriod}}"></line-diagram>-->
+            <!--</div>-->
+
+            <!--<div class="col-lg-6">-->
+                <!--<line2yaxis-diagram url="/applicationresponsetime/{{key}}/" localtitle="" current-period="{{currentPeriod}}"></line2yaxis-diagram>-->
+            <!--</div>-->
+            <div class="col-lg-6">
+                <line-prometheus-diagram
+                        url="/ranges/{{key}}/pinpoint/"
+                        names=
+                                '{
+                            "SystemCpuLoad":"SystemCpuLoad",
+                            "JVMCpuLoad":"JVMCpuLoad"
+                        }'
+                        localtitle="CPU Load"
+                        types='{"SystemCpuLoad":"area","JVMCpuLoad":"area"}'
+                        ymin="0"
+                        current-period="{{currentPeriod}}"
+                ></line-prometheus-diagram>
             </div>
 
             <div class="col-lg-6">
-                <line2yaxis-diagram url="/jvmgc/{{key}}/" localtitle="NonHeap "  columns-selected="x,GC time,NonHeap Used,NonHeap Max" current-period="{{currentPeriod}}"></line2yaxis-diagram>
+                <line-prometheus-diagram
+                        url="/ranges/{{key}}/pinpoint/"
+                        names=
+                                '{
+                            "NonHeapMax":"NonHeapMax",
+                            "HeapMax":"HeapMax",
+                            "NonHeapUsed":"NonHeapUsed",
+                            "HeapUsed":"HeapUsed",
+                            "GcOldCount":"GcOldCount",
+                            "GcOldTime":"GcOldTime"
+                          }'
+                        localtitle="JVM "
+                        types='{"NonHeapMax":"area","HeapMax":"area","NonHeapUsed":"area","HeapUsed":"area","GcOldCount":"area","GcOldTime":"area"}'
+                        ymin="0"
+                        current-period="{{currentPeriod}}"
+                ></line-prometheus-diagram>
+            </div>
+
+            <div class="col-lg-6">
+                <line-prometheus-diagram
+                        url="/ranges/{{key}}/pinpoint/"
+                        names=
+                                '{
+                            "SampledNewCount":"SampledNewCount",
+                            "SampledContinuationCount":"SampledContinuationCount",
+                            "UnsampledNewCount":"UnsampledNewCount",
+                            "UnsampledContinuationCount":"UnsampledContinuationCount"
+                          }'
+                        localtitle="Transaction"
+                        types='{"SampledNewCount":"area","SampledContinuationCount":"area","UnsampledNewCount":"area","UnsampledContinuationCount":"area"}'
+                        ymin="0"
+                        current-period="{{currentPeriod}}"
+                ></line-prometheus-diagram>
             </div>
 
 
             <div class="col-lg-6">
-                <line2yaxis-diagram url="/jvmgc/{{key}}/" localtitle="Heap " columns-selected="x,GC time,Heap Used,Heap Max" current-period="{{currentPeriod}}"></line2yaxis-diagram>
-            </div>
-
-            <div class="col-lg-6">
-                <line-diagram url="/transaction/{{key}}/" current-period="{{currentPeriod}}"></line-diagram>
-            </div>
-
-            <div class="col-lg-6">
-                <line2yaxis-diagram url="/applicationresponsetime/{{key}}/" localtitle="" current-period="{{currentPeriod}}"></line2yaxis-diagram>
+                <line-prometheus-diagram
+                        url="/ranges/{{key}}/pinpoint/"
+                        names=
+                                '{
+                             "ApplicationAcceptResponseTime":"ApplicationAcceptResponseTime",
+                             "ApplicationAcceptResponseCount":"ApplicationAcceptResponseCount",
+                             "ApplicationExceptionResponseTime":"ApplicationExceptionResponseTime",
+                             "ApplicationExceptionResponseCount":"ApplicationExceptionResponseCount"
+                          }'
+                        localtitle="App Response Info"
+                        types='{"SampledNewCount":"area","SampledContinuationCount":"area","UnsampledNewCount":"area","UnsampledContinuationCount":"area"}'
+                        ymin="0"
+                        current-period="{{currentPeriod}}"
+                ></line-prometheus-diagram>
             </div>
 
         </div>

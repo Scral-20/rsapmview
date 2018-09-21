@@ -9,7 +9,8 @@ function config($translateProvider) {
             'Summary of monitoring reports' : '监控报告总结',
             'resource consumption and startup parameters': '资源消耗以及启动参数',
             'Analysis of function execution time and method stack': '分析函数执行时间及方法栈',
-            'Alarm information': '告警信息'
+            'Alarm information': '告警信息',
+            'Slow response event tracking': '慢响应事件追踪'
         })
         .translations('en', {
             // Navigation Translate

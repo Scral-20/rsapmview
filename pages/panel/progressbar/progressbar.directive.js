@@ -17,7 +17,7 @@
                     currentPeriod: "@"
                 },
                 controller: function ($scope, $http, $filter, $element, $attrs, AuthService) {
-                    $scope._id = '_id';
+                    //$scope._id = '_id';
                     $scope.title = "";
                     $scope.progressbarData = {
                         title: "",

@@ -17,52 +17,61 @@
                     currentPeriod: "@"
                 },
                 controller: function ($scope, $http, $element, $attrs, AuthService) {
-                    $scope._id =  '_id';
-                    $scope.title = "";
-                    $scope.chartData = {};
+                    $scope.title = $attrs.localtitle;
+                    $scope.names= $attrs.names;
+                    $scope.remark= $attrs.remark;
+                    $scope.data = {
+                        HeapUsed:'',
+                        HeapMax:'',
+                        NonHeapUsed:'',
+                        NonHeapMax:''
+                    };
                     $scope.pieData = {
-                        columns: []
+                        columns: [],
+                        type:''
                     };
 
                     console.log("URL: " + AuthService.getURL() + $attrs.url);
 
                     $scope.getData = function (period) {
-                        $http.get(
-                            AuthService.getURL() + $attrs.url +period
+                        var getUrl=AuthService.getURL() + $attrs.url + period;
+                        $http.post(
+                            getUrl,
+                            JSON.parse($scope.names)
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
-                            console.log(response.data);
-                            $scope.chartData = response.data;
-                            var data=$scope.chartData;
-                            $scope.pieData=transData(data.columns);
-                            if (typeof($scope.chartData.title) !== "undefined"){
+                            console.log(response.data.message[0]);
+                            var data = response.data.message[0];
+                            if (typeof(data) !== "undefined"){
                                 $scope._id = '_' + Math.random().toString(36).substr(2, 9);
-                                $scope.title = $scope.chartData.title;
                             }
+
+                            switch($scope.remark) {
+                                case "Heap":
+                                    $scope.Used=data.HeapUsed;
+                                    $scope.unUsed=data.HeapMax-data.HeapUsed;
+                                    break;
+                                case "NoHeap":
+                                    $scope.Used=data.NonHeapUsed;
+                                    $scope.unUsed=data.NonHeapMax-data.NonHeapUsed;
+                                    break;
+                                default:
+                                    return
+                            }
+
+                            $scope.pieData=transData($scope.Used,$scope.unUsed);
 
                         }, function () {
                             console.log("pieDiagram no data");
                         });
                     };
 
-                    function transData(pieData) {
-                        var total=0;
-                        var hinge=0;
-
-
+                    function transData(Used,unUsed) {
                         var res={};
-                        for (var i=0; i<pieData.total.value.length;i++){
-                            total += pieData.total.value[i]
-                        }
-                        for (var j=0;i<pieData.hinge.value.length;j++){
-                            hinge += pieData.hinge.value[i];
-                            alert('长度'+ hinge);
-                        }
-
                         res = {
                             columns: [
-                                ['关键日志',hinge],
-                                ['常规日志',total]
+                                ['已使用',Used],
+                                ['未使用',unUsed]
                             ],
                             type:'pie'
                         };
@@ -79,12 +88,11 @@
                     });
 
                     scope.$watch('_id', function () {
-                        console.log("data");
                         c3.generate({
                             bindto: '#'+ scope._id,
                             data: scope.pieData,
                             color:{
-                                pattern: ['#1ab394','#90c0ff']
+                                pattern: ['#1ab394','#c7d1cf']
                             }
                     });
                     });

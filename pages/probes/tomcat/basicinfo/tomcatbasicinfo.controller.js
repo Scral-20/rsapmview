@@ -12,39 +12,74 @@
             function ($scope, $http, $state, $stateParams, $window, $filter, authService) {
                 $scope.title = $stateParams.title;
                 $scope.route = $stateParams.route;
+                console.log($scope.route);
                 $scope.key = $stateParams.key;
-                $scope.currentPeriod = '1h';
+                $scope.currentPeriod = '3h';
+                $scope.name = '{' +
+                    '    "ApplicationName":"ApplicationName",' +
+                    '    "Ip":"Ip",' +
+                    '    "HostName":"HostName",' +
+                    '    "AgentVersion":"AgentVersion",' +
+                    '    "JvmInfo":"JvmInfo",' +
+                    '    "Pid":"Pid",' +
+                    '    "Ports":"Ports",' +
+                    '    "ServerMetaData":"ServerMetaData",' +
+                    '    "Status":"Status",' +
+                    '    "VmVersion":"VmVersion"' +
+                    '}';
+
+                // $scope.name2 = '{"Pid":"Pid"}';
+
                 $scope.getData = function () {
-                    $http.get(
-                        authService.getURL() + "/basicinfo/" + $stateParams.key,
+                    $http.post(
+                        authService.getURL() + "/points/" + $stateParams.key +"/pinpoint/"+$scope.currentPeriod,
+                        JSON.parse($scope.name),
                         {headers : authService.createAuthorizationTokenHeader()}
                     ).then(function (response) {
                         // console.log("yes");
-                        console.log(response.data);
-                        var data = response.data;
+                        console.log(response.data.code);
+                        console.log(response.data.message);
+                        //console.log(response.data.message.ip);
+                        var data = response.data.message[0];
 
-                        $scope.applicationName = data.applicationName;
-                        $scope.agentVersion = data.agentVersion;
-                        $scope.agentType = data.agentId;
-                        $scope.pid = data.pid;
-                        $scope.hostName = data.hostName;
-                        $scope.jvmInfo = data.jvmInfo;
-                        $scope.ip = data.ip;
-                        $scope.startTimestamp = data.startTimestamp;
-                        $scope.serverMetaData = data.serverMetaData;
-                        $scope.status = data.status;
-                        $scope.currentServiceInfo = [];
-                        for (var i = 0; i < data.serverMetaData.serviceInfos.length; i++) {
-                            if (data.serverMetaData.serviceInfos[i].serviceLibs.length > 0) {
-                                $scope.currentServiceInfo = data.serverMetaData.serviceInfos[i];
-                                break;
-                            }
-                        }
+                        $scope.ApplicationName=data.ApplicationName;
+                        $scope.Ip = data.Ip;
+                        $scope.HostName = data.HostName;
+                        $scope.AgentVersion = data.AgentVersion;
+                        $scope.JvmInfo = data.JvmInfo;
+                        $scope.Pid = data.Pid;
+                        $scope.Ports = data.Ports;
+                        $scope.ServerMetaData = data.ServerMetaData;
+                        $scope.Status = data.Status;
+                        $scope.VmVersion = data.VmVersion;
+
                     }, function () {
                         console.log("basicinfo no data");
                     });
 
                 };
+
+                // $scope.getData1 = function () {
+                //     $http.post(
+                //         authService.getURL() + "/points/" + $stateParams.key +"/pinpoint/"+$scope.currentPeriod,
+                //         JSON.parse($scope.name2),
+                //         //authService.getURL() + "/points/" + "1685763560" +"/pinpoint/"+$scope.currentPeriod,
+                //         {headers : authService.createAuthorizationTokenHeader()}
+                //     ).then(function (response) {
+                //         // console.log("yes");
+                //         console.log(response.data.code);
+                //         console.log(response.data.message);
+                //         //console.log(response.data.message.ip);
+                //         var data = response.data.message[0];
+                //
+                //         $scope.Pid = data.Pid;
+                //
+                //
+                //     }, function () {
+                //         console.log("basicinfo no data");
+                //     });
+                //
+                // };
 
                 $scope.selectServiceInfo = function(serviceInfo) {
                     // alert(serviceInfo);
@@ -62,6 +97,7 @@
                 };
 
                 $scope.getData();
+                // $scope.getData1();
 
             }
         ]);

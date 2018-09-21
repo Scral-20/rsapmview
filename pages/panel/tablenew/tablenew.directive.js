@@ -17,7 +17,7 @@
                     currentPeriod: "@"
                 },
                 controller: function ($scope,$http, $filter, $element, $attrs, AuthService,DTOptionsBuilder) {
-                    $scope._id =  '_id';
+                    $scope.names= $attrs.names;
                     $scope.title = "";
                     $scope.localtitle =  $attrs.localtitle;
                     $scope.tableData = {
@@ -36,16 +36,19 @@
                     console.log("URL: " + AuthService.getURL() + $attrs.url);
 
                     $scope.getData = function (period) {
-                        $http.get(
-                            AuthService.getURL() + $attrs.url+ period
+                        var getUrl=AuthService.getURL() + $attrs.url + period;
+                        $http.post(
+                            getUrl,
+                            JSON.parse($scope.names)
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
-                            console.log(response.data);
-                            $scope.tableData = response.data;
+                            console.log(response.data.message[0]);
+                            $scope.tableData = response.data.message[0];
+                            $scope.url=$scope.tableData.url;
                             
-                            if (typeof($scope.title) != "undefined"){
+                            if (typeof($scope.tableData) !== "undefined"){
                                 $scope._id = '_' + Math.random().toString(36).substr(2, 9);
-                                $scope.title = $scope.tableData.title;
+
                             }
                         }, function () {
                             console.log("logDiagram no data");

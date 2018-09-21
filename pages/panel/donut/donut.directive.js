@@ -17,9 +17,7 @@
                     currentPeriod: "@"
                 },
                 controller: function ($scope, $http, $element, $attrs, AuthService) {
-                    $scope._id ='_id';
-                    $scope._id = '_' + Math.random().toString(36).substr(2, 9);
-                    $scope.title = "";
+                    $scope.names = $attrs.names;
                     $scope.chartData = {};
                     $scope.donutData = {
                         columns: []
@@ -47,17 +45,18 @@
                     console.log("URL: " + AuthService.getURL() + $attrs.url);
 
                     $scope.getData = function (period) {
-                        $http.get(
-                            AuthService.getURL() + $attrs.url + period
+                        var getUrl=AuthService.getURL() + $attrs.url + period;
+                        $http.post(
+                            getUrl,
+                            JSON.parse($scope.names)
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
-                            console.log(response.data);
-                            $scope.chartData = response.data;
+                            console.log(response.data.message[0]);
+                            $scope.chartData = response.data.message[0];
                             var data=$scope.chartData;
                             $scope.donutData=transData(data);
-                            if (typeof($scope.chartData.title) != "undefined"){
+                            if (typeof(data) !== "undefined"){
                                 $scope._id = '_' + Math.random().toString(36).substr(2, 9);
-                                $scope.title = $scope.chartData.title;
                             }
 
                         }, function () {
@@ -67,7 +66,7 @@
 
                     function transData(chartData) {
                         var res={};
-                        if (typeof(chartData) == "undefined") {
+                        if (typeof(chartData) === "undefined") {
                             return res;
                         }
                         var res = {

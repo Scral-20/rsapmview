@@ -6,7 +6,7 @@
                     <i class="fa fa-trophy fa-5x"></i>
                 </div>
                 <div class="col-xs-8 text-center">
-                    <h2 class="font-bold">{{applicationName}}</h2>
+                    <h2 class="font-bold">{{ApplicationName}}</h2>
                     <p>App应用以及相关统计信息</p>
                 </div>
                 <p><a class="btn btn-primary btn-lg " ng-click="reloadRoute()">{{'Reload Report'|translate}}</a></p>
@@ -27,27 +27,95 @@
     </div>
     <div class="jumbotron col-lg-12" style="padding-top: 20px ;padding-bottom: 5px; padding-left: 20px ; padding-right: 20px">
         <div class="col-lg-3">
-            <card-diagram url="/report/rpcstats/{{key}}/accept/" divide="1" situation="accept" totaltype="count" localtitle="Total Normal Count" current-period="{{currentPeriod}}"></card-diagram>
+            <card-prometheus-diagram
+                    url="/points/{{key}}/pinpoint/"
+                    name='{"ApplicationAcceptResponseCount":"ApplicationAcceptResponseCount.sum"}'
+                    unit="times"
+                    situation="Accept"
+                    localtitle="Total Normal Count"
+                    remark="count">
+            </card-prometheus-diagram>
         </div>
         <div class="col-lg-3">
-            <card-diagram url="/report/rpcstats/{{key}}/accept/" divide="1" situation="accept" totaltype="duration" localtitle="Total Normal Duration" current-period="{{currentPeriod}}"></card-diagram>
+            <card-prometheus-diagram
+                    url="/points/{{key}}/pinpoint/"
+                    name='{"ApplicationAcceptResponseTime":"ApplicationAcceptResponseTime.sum"}'
+                    unit="s"
+                    situation="Accept"
+                    localtitle="Total Normal Duration"
+                    remark="duration">
+            </card-prometheus-diagram>
         </div>
         <div class="col-lg-3">
-            <card-diagram url="/report/rpcstats/{{key}}/exception/" divide="1" situation="exception" totaltype="count" localtitle="Total Exception Count" current-period="{{currentPeriod}}"></card-diagram>
+            <card-prometheus-diagram
+                    url="/points/{{key}}/pinpoint/"
+                    name='{"ApplicationExceptionResponseCount":"ApplicationExceptionResponseCount.sum"}'
+                    unit="times"
+                    situation="Exception"
+                    localtitle="Total Normal Count"
+                    remark="count">
+            </card-prometheus-diagram>
         </div>
         <div class="col-lg-3">
-            <card-diagram url="/report/rpcstats/{{key}}/exception/" divide="1" situation="exception" totaltype="duration" localtitle="Total Exception Duration" current-period="{{currentPeriod}}"></card-diagram>
+            <card-prometheus-diagram
+                    url="/points/{{key}}/pinpoint/"
+                    name='{"ApplicationExceptionResponseTime":"ApplicationExceptionResponseTime.sum"}'
+                    unit="s"
+                    situation="Exception"
+                    localtitle="Total Normal Count"
+                    remark="duration">
+            </card-prometheus-diagram>
         </div>
+        <!--<div class="col-lg-3">-->
+            <!--<card-diagram url="/report/rpcstats/{{key}}/accept/" divide="1" situation="accept" totaltype="count" localtitle="Total Normal Count" current-period="{{currentPeriod}}"></card-diagram>-->
+        <!--</div>-->
+        <!--<div class="col-lg-3">-->
+            <!--<card-diagram url="/report/rpcstats/{{key}}/accept/" divide="1" situation="accept" totaltype="duration" localtitle="Total Normal Duration" current-period="{{currentPeriod}}"></card-diagram>-->
+        <!--</div>-->
+        <!--<div class="col-lg-3">-->
+            <!--<card-diagram url="/report/rpcstats/{{key}}/exception/" divide="1" situation="exception" totaltype="count" localtitle="Total Exception Count" current-period="{{currentPeriod}}"></card-diagram>-->
+        <!--</div>-->
+        <!--<div class="col-lg-3">-->
+            <!--<card-diagram url="/report/rpcstats/{{key}}/exception/" divide="1" situation="exception" totaltype="duration" localtitle="Total Exception Duration" current-period="{{currentPeriod}}"></card-diagram>-->
+        <!--</div>-->
     </div>
 
     <div class="row">
         <!--RPC-->
+        <!--<div class="col-lg-12">-->
+            <!--<line2yaxis-diagram url="/report/rpc/{{key}}/accept/" localtitle="" current-period="{{currentPeriod}}"></line2yaxis-diagram>-->
+        <!--</div>-->
         <div class="col-lg-12">
-            <line2yaxis-diagram url="/report/rpc/{{key}}/accept/" localtitle="" current-period="{{currentPeriod}}"></line2yaxis-diagram>
+            <line-prometheus-diagram
+                    url="/ranges/{{key}}/pinpoint/"
+                    names=
+                            '{
+                            "FastCount":"FastCount",
+                            "NormalCount":"NormalCount",
+                            "SlowCount":"SlowCount",
+                            "VerySlowCount":"VerySlowCount"
+                    }'
+                    localtitle="响应数"
+                    types='{"FastCount":"area","NormalCount":"area"}'
+                    axes='{"qbs" : "y2"}'
+                    ylabel="times"
+                    ymin="0"
+                    y2label="s"
+                    y2max="10"
+                    current-period="{{currentPeriod}}"
+            ></line-prometheus-diagram>
         </div>
 
         <div class="col-lg-12">
-            <tablenew-diagram url="/report/rpcstats/{{key}}/accept/" localtitle="正常" current-period="{{currentPeriod}}"></tablenew-diagram>
+            <tablenew-diagram
+                    url="/points/{{key}}/pinpoint/"
+                    localtitle="正常"
+                    names=   '{
+                            "url":"url.*"
+
+                    }'
+                    current-period="{{currentPeriod}}"
+            ></tablenew-diagram>
         </div>
 
         <div class="col-lg-12">

@@ -49,6 +49,7 @@ angular.module('inspinia')
                     'Running State': '运行状态',
                     'JVM (GC type)': 'JVM (GC 类型)',
                     'JVM Parameters': 'JVM 参数',
+                    'Ports': '端口',
 
 
 
@@ -64,9 +65,9 @@ angular.module('inspinia')
                     'Agent Response Time': '探针响应时间',
                     'Template info': '日志模板',
                     'Hinge Logger': '关键日志',
-                    'RPC Info Report': 'RPC请求信息',
-                    'accept': '正常',
-                    'exception': '异常',
+                    'App Response Info': '应用请求信息',
+                    'Accept': '正常',
+                    'Exception': '异常',
                     'Total Normal Count':'正常请求数统计',
                     'Total Normal Duration':'正常请求时间统计',
                     'Total Exception Count':'异常请求数统计',
@@ -79,9 +80,6 @@ angular.module('inspinia')
                     'CPU Used Report':'CPU资源使用报告',
                     'JVM HEAP Used Report':'JVM堆内存使用报告',
                     'JVM NonHEAP Used Report':'JVM非堆内存使用报告',
-
-
-
 
                 });
 

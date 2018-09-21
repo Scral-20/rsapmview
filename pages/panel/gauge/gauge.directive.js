@@ -18,9 +18,16 @@
                 },
                 controller: function ($scope,$http, $element, $attrs, AuthService) {
                     $scope.unit=$attrs.unittype;
-                    $scope._id =  '_id';
-                    $scope.title = "";
-                    $scope.chartData = {};
+                    $scope.title = $attrs.localtitle;
+                    $scope.names = $attrs.names;
+                    $scope.data =     {
+                        "SystemCpuLoadAvg": "",
+                        "SystemCpuLoadMin": "",
+                        "SystemCpuLoadMax": "",
+                        "SystemCpuLoadCount": "",
+                        "SystemCpuLoadSum": ""
+                    };
+
                     $scope.gaugeData = {
                         columns: [],
                         type:{}
@@ -29,27 +36,28 @@
                     console.log("URL: " + AuthService.getURL() + $attrs.url);
 
                     $scope.getData = function (period) {
-                        $http.get(
-                            AuthService.getURL() + $attrs.url+ period
-                            // {headers : authService.createAuthorizationTokenHeader()}
+                        var getUrl = AuthService.getURL() + $attrs.url + period;
+                        $http.post(
+                            getUrl,
+                            JSON.parse($scope.names),
+                            {headers : AuthService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
-                            console.log(response.data);
-                            $scope.chartData = response.data;
-                            var data=$scope.chartData;
-                            $scope.min_margin=data.min_margin.toFixed(2);
-                            $scope.max_margin=data.max_margin.toFixed(2);
-                            $scope.max=data.max;
-                            $scope.title=data.title;
+                            // console.log(response.data.code);
+                            // console.log(response.data.message[0]);
+                            var data = response.data.message[0];
 
-                            $scope.avg=ifnoAvg(data.avg);
-                            $scope.maxpercent=maxPercent(data);
-                            $scope.minpercent=minPercent(data);
+                             $scope.max_value=(100*data.SystemCpuLoadMax).toFixed(2);
+                             $scope.min_value=(100*data.SystemCpuLoadMin).toFixed(2);
+                            //$scope.max=data.max;
+                            $scope.avg=ifnoAvg(data.SystemCpuLoadAvg);
+                            $scope.maxpercent=maxPercent(data.SystemCpuLoadMax);
+                            $scope.minpercent=minPercent(data.SystemCpuLoadMin);
+
                             $scope.gaugeData=transData(data);
                             $scope.drawGauge=drawGauge(data);
 
-                            if (typeof($scope.chartData.title) != "undefined"){
+                            if (typeof(data) != "undefined"){
                                 $scope._id = '_' + Math.random().toString(36).substr(2, 9);
-                                $scope.title = $scope.chartData.title;
                             }
                         }, function () {
                             console.log("gaugeDiagram no data");
@@ -70,8 +78,8 @@
                         }
                         var res = {
                             columns: [
-                                ['max_margin',chartData.max_margin.toFixed(2)],
-                                ['min_margin',chartData.min_margin.toFixed(2)]
+                                ['峰值占比',100*chartData.SystemCpuLoadMax.toFixed(2)],
+                                ['谷值占比',100*chartData.SystemCpuLoadMin.toFixed(2)]
                             ],
                             type: 'gauge'
                         };
@@ -91,27 +99,27 @@
                                 height: 180
                             },
 
-                            min: chartData.min,
-                            max: chartData.max,
+                            min: 0,
+                            max: 100,
                             width: 39
                         };
                         return res;
                     }
 
-                    function maxPercent(chartData) {
-                        if (typeof(chartData) === "undefined") {
+                    function maxPercent(percent) {
+                        if (typeof(percent) === "undefined") {
                             return ;
                         }
-                        return (100 * parseFloat(chartData.max_margin/chartData.max).toFixed(4)).toFixed(2)+'%';
+                        return (100 * parseFloat(percent).toFixed(4)).toFixed(2)+'%';
 
                     }
 
 
-                    function minPercent(chartData) {
-                        if (typeof(chartData) === "undefined") {
+                    function minPercent(percent) {
+                        if (typeof(percent) === "undefined") {
                             return ;
                         }
-                        return (100 * parseFloat(chartData.min_margin/chartData.max).toFixed(4)).toFixed(2)+'%';
+                        return (100 * parseFloat(percent).toFixed(4)).toFixed(2)+'%';
                     }
 
                     $scope.getMinStyle=function () {

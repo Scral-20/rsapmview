@@ -17,6 +17,7 @@
                 controller: function ($scope,$http, $filter, $element, $attrs, AuthService) {
                     $scope.localtitle = $attrs.localtitle;
                     $scope.remark = $attrs.remark;
+                    $scope.situation = $attrs.situation;
                     $scope.unit = $attrs.unit;
                     $scope.name = $attrs.name;
 
@@ -35,6 +36,24 @@
                         }, function () {
                             console.log("cardDiagram no data");
                         });
+                    };
+
+                    $scope.getClass = function (situation) {
+                        if (typeof(situation) === "undefined"){
+                            return 'label label-default pull-right';
+                        }
+                        switch (situation) {
+                            case 'Accept':
+                                return 'label label-success pull-right';
+                                break;
+
+                            case 'Exception':
+                                return 'label label-danger pull-right';
+                                break;
+
+                            default:
+                                return 'label label-default pull-right';
+                        }
                     };
                 },
                 link: function(scope, element, attrs) {

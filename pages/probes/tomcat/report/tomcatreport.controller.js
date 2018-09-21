@@ -23,6 +23,20 @@
                     return $filter("date")(timestamp, "HH:mm:ss yyyy-MM-dd ");
                 };
 
+                $scope.name = '{' +
+
+                    '    "ApplicationName":"ApplicationName",' +
+                    '    "Ip":"Ip",' +
+                    '    "HostName":"HostName",' +
+                    '    "AgentVersion":"AgentVersion",' +
+                    '    "JvmInfo":"JvmInfo",' +
+                    '    "Pid":"Pid",' +
+                    '    "Ports":"Ports",' +
+                    '    "ServerMetaData":"ServerMetaData",' +
+                    '    "Status":"Status",' +
+                    '    "VmVersion":"VmVersion"' +
+                    '}';
+
                 //本地的说明文本
                 $scope.helpText_agent = [
                     {
@@ -79,33 +93,35 @@
                 };
 
                 $scope.getData = function () {
-                    $http.get(
-                        authService.getURL() + "/basicinfo/" + $stateParams.key,
+                    var getUrl = authService.getURL() + "/points/" + $stateParams.key + "/pinpoint/" + $scope.currentPeriod;
+                    console.log(getUrl);
+                    $http.post(
+                        getUrl,
+                        JSON.parse($scope.name),
                         {headers: authService.createAuthorizationTokenHeader()})
                         .then(function (response) {
-                            $scope.basicinfo = response.data;
-
-                            var data = response.data;
-                            $scope.applicationName = data.applicationName;
-                            $scope.agentVersion = data.agentVersion;
-                            $scope.agentType = data.agentId;
-                            $scope.pid = data.pid;
-                            $scope.hostName = data.hostName;
-                            $scope.jvmInfo = data.jvmInfo;
-                            $scope.ip = data.ip;
-                            $scope.startTimestamp = data.startTimestamp;
-                            $scope.serverMetaData = data.serverMetaData;
-                            $scope.status = data.status;
-                            $scope.currentServiceInfo = [];
-
-                            for (var i = 0; i < data.serverMetaData.serviceInfos.length; i++) {
-                                if (data.serverMetaData.serviceInfos[i].serviceLibs.length > 0) {
-                                    $scope.currentServiceInfo = data.serverMetaData.serviceInfos[i];
-                                    break;
-                                }
-                            }
+                            var data = response.data.message[0];
                             console.log(response.data);
-                            console.log('这里：' + authService.getURL() + "/report/trend/" + $stateParams.key);
+
+                            $scope.ApplicationName = data.ApplicationName;
+                            $scope.Ip = data.Ip;
+                            $scope.HostName = data.HostName;
+                            $scope.AgentVersion = data.AgentVersion;
+                            $scope.JvmInfo = data.JvmInfo;
+                            $scope.Pid = data.Pid;
+                            $scope.Ports = data.Ports;
+                            $scope.ServerMetaData = data.ServerMetaData;
+                            $scope.Status = data.Status;
+                            $scope.VmVersion = data.VmVersion;
+
+                            // for (var i = 0; i < data.serverMetaData.serviceInfos.length; i++) {
+                            //     if (data.serverMetaData.serviceInfos[i].serviceLibs.length > 0) {
+                            //         $scope.currentServiceInfo = data.serverMetaData.serviceInfos[i];
+                            //         break;
+                            //     }
+                            // }
+
+                            //console.log('这里：' + authService.getURL() + "/report/trend/" + $stateParams.key);
                         }), function () {
                         console.log("no data: basicinfo");
                         // $state.go('login');

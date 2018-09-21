@@ -1,9 +1,10 @@
 <div class="ibox float-e-margins">
     <div class="ibox-title">
-        <h5>{{localtitle}}</h5>
+        <span ng-class="getClass('{{situation}}')">{{situation|translate}}</span>
+        <h5>{{localtitle|translate}}</h5>
     </div>
     <div class="ibox-content">
-        <h1 class="no-margins">{{value| number:2}}{{unit}}</h1>
+        <h2 class="no-margins">{{value| number:2}}   {{unit}}</h2>
         <small>{{remark}}</small>
     </div>
 </div>
