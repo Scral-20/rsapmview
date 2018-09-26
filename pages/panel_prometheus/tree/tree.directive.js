@@ -4,26 +4,31 @@
      * chaizq-neu
      * 2018.08.07
      * @group directive
-     * @name  egaugeDiagram
+     * @name  treeDiagram
      * @class
      */
     angular.module('inspinia')
-        .directive('egaugeDiagram', [function() {
+        .directive('treeDiagram', [function() {
             return {
                 restrict: 'E',
-                templateUrl: 'pages/panel/newecharts/egauge.html',
+                templateUrl: 'pages/panel_prometheus/tree/tree.html',
                 replace: true,
                 scope: true,
                 controller: function ($scope, $http, $element, $attrs, AuthService) {
 
-                    $scope._id = "_id";
                     $scope.optionValues = $attrs.option;
-                    //id为随机数，与属性并列即可
+                    $scope.height = {
+                        height:$attrs.height
+                    };
+
+                    //id为随机数，与属性并列即可,本地测试，链接数据后请删去
                     $scope._id = '_' + Math.random().toString(36).substr(2, 9);
-                    $scope.getData=function (option) {
+
+                    $scope.getData=function (option,treeData,treeData2) {
+                        //option是选择树状图样式，option3为可树图用样式，本地测试
                         switch (option){
                             case 'option1':
-                                 option = {
+                                option = {
                                     tooltip : {
                                         formatter: "{a} <br/>{b} : {c}%"
                                     },
@@ -43,8 +48,8 @@
                                     ]
                                 };
                                 return option;
-                            default:
-                                 option = {
+                            case 'option2':
+                                option = {
                                     tooltip : {
                                         formatter: "{a} <br/>{b} : {c}%"
                                     },
@@ -63,88 +68,126 @@
                                         }
                                     ]
                                 };
+                            case 'option3':
+                                option = {
+                                    tooltip: {
+                                        trigger: 'item',
+                                        triggerOn: 'mousemove'
+                                    },
+                                    legend: {
+                                        top: '2%',
+                                        left: '3%',
+                                        orient: 'vertical',
+                                        data: [{
+                                            name: 'tree1',
+                                            icon: 'rectangle'
+                                        } ,
+                                            {
+                                                name: 'tree2',
+                                                icon: 'rectangle'
+                                            }],
+                                        borderColor: '#c23531'
+                                    },
+                                    series:[
+                                        {
+                                            type: 'tree',
+
+                                            name: 'tree1',
+
+                                            data: [treeData],
+
+                                            top: '5%',
+                                            left: '7%',
+                                            bottom: '2%',
+                                            right: '60%',
+
+                                            symbolSize: 7,
+
+                                            label: {
+                                                normal: {
+                                                    position: 'left',
+                                                    verticalAlign: 'middle',
+                                                    align: 'right'
+                                                }
+                                            },
+
+                                            leaves: {
+                                                label: {
+                                                    normal: {
+                                                        position: 'right',
+                                                        verticalAlign: 'middle',
+                                                        align: 'left'
+                                                    }
+                                                }
+                                            },
+
+                                            expandAndCollapse: true,
+
+                                            animationDuration: 550,
+                                            animationDurationUpdate: 750
+
+                                        },
+                                        {
+                                            type: 'tree',
+                                            name: 'tree2',
+                                            data: [treeData2],
+
+                                            top: '20%',
+                                            left: '60%',
+                                            bottom: '22%',
+                                            right: '18%',
+
+                                            symbolSize: 7,
+
+                                            label: {
+                                                normal: {
+                                                    position: 'left',
+                                                    verticalAlign: 'middle',
+                                                    align: 'right'
+                                                }
+                                            },
+
+                                            leaves: {
+                                                label: {
+                                                    normal: {
+                                                        position: 'right',
+                                                        verticalAlign: 'middle',
+                                                        align: 'left'
+                                                    }
+                                                }
+                                            },
+
+                                            expandAndCollapse: true,
+
+                                            animationDuration: 550,
+                                            animationDurationUpdate: 750
+                                        }
+                                    ]
+                                };
                                 return option;
                         }
-
+                        $http.get(
+                            AuthService.getURL() + $attrs.url
+                            // {headers : authService.createAuthorizationTokenHeader()}
+                        ).then(function (response) {
+                            console.log(response.data);
+                            $scope.chartData = response.data;
+                            if (typeof($scope.chartData) !== "undefined"){
+                                $scope._id = '_' + Math.random().toString(36).substr(2, 9);
+                                //$scope.title = $scope.chartData.title;
+                            }
+                        }, function () {
+                            console.log("treeDiagram no data");
+                        });
                     };
-                    //哈希表例子---
-                    // var my_s="title";
-                    // var my_t="paper";
-                    //
-                    // var isIsomorphic = function(s, t) {
-                    //     return helpMap(s, t) && helpMap(t, s);
-                    // };
-                    // const helpMap = function(s, t) {
-                    //     var mapS = new Map();
-                    //
-                    //     for(var i = 0; i < s.length; i++) {
-                    //         var sChar = s.charAt(i),
-                    //             tChar = t.charAt(i);
-                    //         if(!mapS.has(sChar)) {
-                    //             console.log(mapS.has(sChar));
-                    //             mapS.set(sChar, tChar);
-                    //         }else {
-                    //             if(mapS.get(sChar) !== tChar) {
-                    //                 return false;
-                    //             }
-                    //         }
-                    //     }
-                    //     return true;
-                    // };
-                    // console.log('boolean:' +isIsomorphic(my_s,my_t));
-
-                    //哈希表例子---
-
-                    // var option1 = {
-                    //     tooltip : {
-                    //         formatter: "{a} <br/>{b} : {c}%"
-                    //     },
-                    //     toolbox: {
-                    //         feature: {
-                    //             restore: {},
-                    //             saveAsImage: {}
-                    //         }
-                    //     },
-                    //     series: [
-                    //         {
-                    //             name: '速度',
-                    //             type: 'gauge',
-                    //             detail: {formatter:'{value}%'},
-                    //             data: [{value: 50, name: '时速'}]
-                    //         }
-                    //     ]
-                    // };
-                    // var option2 = {
-                    //     tooltip : {
-                    //         formatter: "{a} <br/>{b} : {c}%"
-                    //     },
-                    //     toolbox: {
-                    //         feature: {
-                    //             restore: {},
-                    //             saveAsImage: {}
-                    //         }
-                    //     },
-                    //     series: [
-                    //         {
-                    //             name: '业务指标',
-                    //             type: 'gauge',
-                    //             detail: {formatter:'{value}%'},
-                    //             data: [{value: 50, name: '完成率'}]
-                    //         }
-                    //     ]
-                    // };
-                    // var optionSelect=  function (option) {
-                    //     option.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0;
-                    //     myChart.setOption(option, true);
-                    // };
-
 
                 },
                 link: function (scope) {
                     scope.$watch('_id', function () {
                         var myChart = echarts.init(document.getElementById(scope._id));
-                        var optionUsed=scope.getData(scope.optionValues);
-                        myChart.setOption(optionUsed);
+                        myChart.hideLoading();
+                        var treeOption=scope.getData(scope.optionValues,scope.treeData,scope.treeData2);
+                        myChart.setOption(treeOption);
                     })
                 }
             };

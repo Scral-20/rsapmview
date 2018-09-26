@@ -63,7 +63,8 @@
                             type: 'timeseries',
                             height: 40,
                             tick: {
-                                format: '%H:%M:%S     %Y/%m/%d'
+                                format: '%H:%M:%S     %Y/%m/%d',
+                                count:20
                             },
                             padding: {left:0, right:0}
                         };

@@ -24,14 +24,14 @@
                     $scope.value = 0;
 
                     $scope.getData = function (period) {
-                        var getUrl = AuthService.getURL() + $attrs.url;
+                        var getUrl = AuthService.getURL() + $attrs.url +period;
                         console.log(getUrl);
                         $http.post(
                             getUrl,
                             JSON.parse($scope.name)
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
-                            console.log(response.data.message);
+                            console.log(response.data.message[0].value);
                             $scope.value = response.data.message[0].value;
                         }, function () {
                             console.log("cardDiagram no data");
@@ -57,7 +57,11 @@
                     };
                 },
                 link: function(scope, element, attrs) {
-                    scope.getData();
+                    scope.$watch('currentPeriod', function () {
+                        if (typeof(scope.currentPeriod) ==="undefined" || scope.currentPeriod === "") return;
+                        console.log("currentPeriod = " + scope.currentPeriod);
+                        scope.getData(scope.currentPeriod);
+                    });
                 }
             };
         }]);

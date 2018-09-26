@@ -16,11 +16,13 @@
                 </tr>
                 </thead>
                 <tbody style="white-space:normal; word-break:break-all;">
-                <tr ng-repeat="rpc in tableData.url">
+                <tr ng-repeat="url in tableData.url"
+                    ng-repeat="item1 in tableData.item1"
+                    ng-repeat="item2 in tableData.item2">
                     <!--<td ng-bind="$index+1"></td>-->
-                    <td>{{rpc}}</td>
-                    <td>{{rpc.duration}}</td>
-                    <td>{{rpc.count}}</td>
+                    <td>{{url}}</td>
+                    <td>{{item1}}</td>
+                    <td>{{item2}}</td>
                 </tr>
                 </tbody>
             </table>

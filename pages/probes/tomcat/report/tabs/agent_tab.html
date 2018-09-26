@@ -9,7 +9,7 @@
                     <h2 class="font-bold">{{ApplicationName}}</h2>
                     <p>探针监测以及相关统计信息</p>
                 </div>
-                <p><a class="btn btn-primary btn-lg " ng-click="reloadRoute()">{{'Reload Reports'|translate}}</a></p>
+                <p><a class="btn btn-primary btn-lg " ng-click="reloadRoute()">{{'Reload Report'|translate}}</a></p>
             </div>
         </div>
         <div class="col-lg-6">
@@ -29,13 +29,48 @@
 
     <!--Active Trace-->
     <div class="col-lg-9">
-        <line-diagram url="/report/activetrace/{{key}}/count/" tickcount="14" current-period="{{currentPeriod}}"></line-diagram>
+        <line2axes-prometheus-diagram
+                url="/ranges/{{key}}/pinpoint/"
+                names=
+                        '{
+                            "FastCount":"FastCount",
+                            "NormalCount":"NormalCount",
+                            "SlowCount":"SlowCount",
+                            "VerySlowCount":"VerySlowCount"
+                    }'
+                localtitle="Probe response quantity info"
+                types='{"FastCount":"area","NormalCount":"area","SlowCount":"area","VerySlowCount":"area"}'
+                axes='{"SlowCount" : "y2","VerySlowCount" : "y2"}'
+                ylabel="times"
+                ymin="0"
+                y2label="times"
+                y2max="10"
+                current-period="{{currentPeriod}}"
+        ></line2axes-prometheus-diagram>
     </div>
+    <!--<div class="col-lg-9">-->
+        <!--<line-diagram url="/report/activetrace/{{key}}/count/" tickcount="14" current-period="{{currentPeriod}}"></line-diagram>-->
+    <!--</div>-->
 
 
     <!--ProgressBar-->
     <div class="col-lg-3">
-        <progressbar-diagram url="/report/activetrace/{{key}}/stats/" current-period="{{currentPeriod}}"></progressbar-diagram>
+        <progressbar-diagram
+                url="/points/{{key}}/pinpoint/"
+                names=
+                        '{
+                    "FastCount":"FastCount.sum",
+                    "NormalCount":"NormalCount.sum",
+                    "SlowCount":"SlowCount.sum",
+                    "VerySlowCount":"VerySlowCount.sum"
+                    }'
+                local-title="Statistics of Probes' Counts"
+                itemTitle1="FastCount(<1s)"
+                itemTitle2="NormalCount(1s~3s)"
+                itemTitle3="SlowCount(3s~5s)"
+                itemTitle4="VerySlowCount(>5s)"
+                current-period="{{currentPeriod}}"
+        ></progressbar-diagram>
     </div>
 
 </div>

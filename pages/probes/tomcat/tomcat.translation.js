@@ -75,12 +75,22 @@ angular.module('inspinia')
                     //button
                     'Reload Report':'刷新报表',
 
+                    //agent_tab
+                    "Statistics of Probes' Counts":'各级别探针响应数量统计',
+                    "Probe response quantity info":'探针响应数量信息',
+
+                    "FastCount(<1s)":'快速响应(<1s)',
+                    "NormalCount(1s~3s)":'正常响应(1s~3s)',
+                    "SlowCount(3s~5s)":'缓慢响应(3s~5s)',
+                    "VerySlowCount(>5s)":'极慢响应(>5s)',
+
+                    "Total Counts":'总响应次数',
+
 
                     // Gauge Translate
-                    'CPU Used Report':'CPU资源使用报告',
-                    'JVM HEAP Used Report':'JVM堆内存使用报告',
-                    'JVM NonHEAP Used Report':'JVM非堆内存使用报告',
-
+                    'CPU Utilization':'CPU资源占用',
+                    'JVM Heap Used Proportion':'JVM堆内存使用报告',
+                    'JVM NonHeap Used Proportion':'JVM非堆内存使用报告',
                 });
 
 

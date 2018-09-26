@@ -13,27 +13,32 @@
                 $scope.title = $stateParams.title;
                 $scope.route = $stateParams.route;
                 console.log($scope.route);
+
                 $scope.key = $stateParams.key;
                 $scope.currentPeriod = '3h';
-                $scope.name = '{' +
-                    '    "ApplicationName":"ApplicationName",' +
-                    '    "Ip":"Ip",' +
-                    '    "HostName":"HostName",' +
-                    '    "AgentVersion":"AgentVersion",' +
-                    '    "JvmInfo":"JvmInfo",' +
-                    '    "Pid":"Pid",' +
-                    '    "Ports":"Ports",' +
-                    '    "ServerMetaData":"ServerMetaData",' +
-                    '    "Status":"Status",' +
-                    '    "VmVersion":"VmVersion"' +
-                    '}';
-
-                // $scope.name2 = '{"Pid":"Pid"}';
+                $scope.ServerMetaData={
+                    serviceInfos:"",
+                    serviceLibs:""
+                };
+                $scope.names =
+                {
+                    "ApplicationName":"ApplicationName",
+                    "Ip":"Ip",
+                    "HostName":"HostName",
+                    "AgentVersion":"AgentVersion",
+                    "JvmInfo":"JvmInfo",
+                    "Pid":"Pid",
+                    "Ports":"Ports",
+                    "ServerMetaData":"ServerMetaData",
+                    "Status":"Status",
+                    "VmVersion":"VmVersion"
+                };
 
                 $scope.getData = function () {
                     $http.post(
                         authService.getURL() + "/points/" + $stateParams.key +"/pinpoint/"+$scope.currentPeriod,
-                        JSON.parse($scope.name),
+                        JSON.stringify( $scope.names),
+                        // JSON.parse($scope.names),
                         {headers : authService.createAuthorizationTokenHeader()}
                     ).then(function (response) {
                         // console.log("yes");
@@ -51,35 +56,22 @@
                         $scope.Ports = data.Ports;
                         $scope.ServerMetaData = data.ServerMetaData;
                         $scope.Status = data.Status;
+                        $scope.currentServiceInfo = [];
                         $scope.VmVersion = data.VmVersion;
+
+                        //给列表赋初值
+                        for (var i = 0; i < data.ServerMetaData.serviceInfos.length; i++) {
+                            if (data.ServerMetaData.serviceInfos[i].serviceLibs.length > 0) {
+                                $scope.currentServiceInfo = data.ServerMetaData.serviceInfos[i];
+                                break;
+                            }
+                        }
 
                     }, function () {
                         console.log("basicinfo no data");
                     });
 
                 };
-
-                // $scope.getData1 = function () {
-                //     $http.post(
-                //         authService.getURL() + "/points/" + $stateParams.key +"/pinpoint/"+$scope.currentPeriod,
-                //         JSON.parse($scope.name2),
-                //         //authService.getURL() + "/points/" + "1685763560" +"/pinpoint/"+$scope.currentPeriod,
-                //         {headers : authService.createAuthorizationTokenHeader()}
-                //     ).then(function (response) {
-                //         // console.log("yes");
-                //         console.log(response.data.code);
-                //         console.log(response.data.message);
-                //         //console.log(response.data.message.ip);
-                //         var data = response.data.message[0];
-                //
-                //         $scope.Pid = data.Pid;
-                //
-                //
-                //     }, function () {
-                //         console.log("basicinfo no data");
-                //     });
-                //
-                // };
 
                 $scope.selectServiceInfo = function(serviceInfo) {
                     // alert(serviceInfo);
@@ -97,8 +89,6 @@
                 };
 
                 $scope.getData();
-                // $scope.getData1();
-
             }
         ]);
 })();

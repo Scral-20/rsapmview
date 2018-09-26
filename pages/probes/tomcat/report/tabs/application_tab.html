@@ -29,41 +29,45 @@
         <div class="col-lg-3">
             <card-prometheus-diagram
                     url="/points/{{key}}/pinpoint/"
-                    name='{"ApplicationAcceptResponseCount":"ApplicationAcceptResponseCount.sum"}'
+                    name='{"value":"ApplicationAcceptResponseCount./*"}'
                     unit="times"
                     situation="Accept"
                     localtitle="Total Normal Count"
-                    remark="count">
+                    remark="count"
+                    current-period="{{currentPeriod}}">
             </card-prometheus-diagram>
         </div>
         <div class="col-lg-3">
             <card-prometheus-diagram
                     url="/points/{{key}}/pinpoint/"
-                    name='{"ApplicationAcceptResponseTime":"ApplicationAcceptResponseTime.sum"}'
+                    name='{"value":"ApplicationAcceptResponseTime./*"}'
                     unit="s"
                     situation="Accept"
                     localtitle="Total Normal Duration"
-                    remark="duration">
+                    remark="duration"
+                    current-period="{{currentPeriod}}">
             </card-prometheus-diagram>
         </div>
         <div class="col-lg-3">
             <card-prometheus-diagram
                     url="/points/{{key}}/pinpoint/"
-                    name='{"ApplicationExceptionResponseCount":"ApplicationExceptionResponseCount.sum"}'
+                    name='{"value":"ApplicationExceptionResponseCount./*"}'
                     unit="times"
                     situation="Exception"
-                    localtitle="Total Normal Count"
-                    remark="count">
+                    localtitle="Total Exception Count"
+                    remark="count"
+                    current-period="{{currentPeriod}}">
             </card-prometheus-diagram>
         </div>
         <div class="col-lg-3">
             <card-prometheus-diagram
                     url="/points/{{key}}/pinpoint/"
-                    name='{"ApplicationExceptionResponseTime":"ApplicationExceptionResponseTime.sum"}'
+                    name='{"value":"ApplicationExceptionResponseTime./*"}'
                     unit="s"
                     situation="Exception"
-                    localtitle="Total Normal Count"
-                    remark="duration">
+                    localtitle="Total Exception Duration"
+                    remark="duration"
+                    current-period="{{currentPeriod}}">
             </card-prometheus-diagram>
         </div>
         <!--<div class="col-lg-3">-->
@@ -81,38 +85,39 @@
     </div>
 
     <div class="row">
-        <!--RPC-->
-        <!--<div class="col-lg-12">-->
-            <!--<line2yaxis-diagram url="/report/rpc/{{key}}/accept/" localtitle="" current-period="{{currentPeriod}}"></line2yaxis-diagram>-->
-        <!--</div>-->
+        <!--RPC双轴时间序列，对应y2轴的变量以如下方式设置
+         axes='{"SlowCount" : "y2","VerySlowCount" : "y2"}'-->
         <div class="col-lg-12">
-            <line-prometheus-diagram
+            <line2axes-prometheus-diagram
                     url="/ranges/{{key}}/pinpoint/"
                     names=
                             '{
-                            "FastCount":"FastCount",
-                            "NormalCount":"NormalCount",
-                            "SlowCount":"SlowCount",
-                            "VerySlowCount":"VerySlowCount"
+                        "AcceptResponseTime":"ApplicationAcceptResponseTime",
+                        "AcceptResponseCount":"ApplicationAcceptResponseCount",
+                        "ExceptionResponseTime":"ApplicationExceptionResponseTime",
+                        "ExceptionResponseCount":"ApplicationExceptionResponseCount"
                     }'
-                    localtitle="响应数"
-                    types='{"FastCount":"area","NormalCount":"area"}'
-                    axes='{"qbs" : "y2"}'
-                    ylabel="times"
+                    localtitle="各级别响应数量统计"
+                    types='{"AcceptResponseTime":"area","AcceptResponseCount":"area","ExceptionResponseTime":"area","ExceptionResponseCount":"area"}'
+                    axes='{"AcceptResponseCount" : "y2","ExceptionResponseCount" : "y2"}'
+                    ylabel="s"
                     ymin="0"
-                    y2label="s"
+                    y2label="times"
                     y2max="10"
                     current-period="{{currentPeriod}}"
-            ></line-prometheus-diagram>
+            ></line2axes-prometheus-diagram>
         </div>
 
         <div class="col-lg-12">
             <tablenew-diagram
                     url="/points/{{key}}/pinpoint/"
                     localtitle="正常"
-                    names=   '{
-                            "url":"url.*"
-
+                    names='{
+                            "url":"url.*",
+                            "item1":"ApplicationAcceptResponseTime.*",
+                            "item2":"ApplicationAcceptResponseCount.*",
+                            "item3":"ApplicationExceptionResponseTime.*",
+                            "item4":"ApplicationExceptionResponseCount.*"
                     }'
                     current-period="{{currentPeriod}}"
             ></tablenew-diagram>

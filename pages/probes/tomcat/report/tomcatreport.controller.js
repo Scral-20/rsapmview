@@ -114,13 +114,6 @@
                             $scope.Status = data.Status;
                             $scope.VmVersion = data.VmVersion;
 
-                            // for (var i = 0; i < data.serverMetaData.serviceInfos.length; i++) {
-                            //     if (data.serverMetaData.serviceInfos[i].serviceLibs.length > 0) {
-                            //         $scope.currentServiceInfo = data.serverMetaData.serviceInfos[i];
-                            //         break;
-                            //     }
-                            // }
-
                             //console.log('这里：' + authService.getURL() + "/report/trend/" + $stateParams.key);
                         }), function () {
                         console.log("no data: basicinfo");
