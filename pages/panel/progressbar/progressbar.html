@@ -1,6 +1,6 @@
 <div class="ibox">
     <div class="ibox-title">
-        <h5>探针响应数量统计
+        <h5>{{localTitle|translate}}
 
         </h5>
     </div>
@@ -8,7 +8,7 @@
         <ul class="stat-list">
             <li>
                 <h2 class="no-margins">{{progressbarData.FastCount}}</h2>
-                <small>快速响应(<1s)</small>
+                <small>{{itemTitle1|translate}}</small>
                 <div class="stat-percent">{{getPercentage(progressbarData.FastCount)}}<i class="fa fa-level-up text-navy"></i></div>
                 <div class="progress progress-mini">
                     <div ng-style="getStyle(progressbarData.FastCount)" class="progress-bar"></div>
@@ -16,7 +16,7 @@
             </li>
             <li>
                 <h2 class="no-margins">{{progressbarData.NormalCount}}</h2>
-                <small>正常响应(1s~3s)</small>
+                <small>{{itemTitle2|translate}}</small>
                 <div class="stat-percent">{{getPercentage(progressbarData.NormalCount)}}<i class="fa fa-level-up text-navy"></i></div>
                 <div class="progress progress-mini">
                     <div ng-style="getStyle(progressbarData.NormalCount)" class="progress-bar"></div>
@@ -24,7 +24,7 @@
             </li>
             <li>
                 <h2 class="no-margins">{{progressbarData.SlowCount}}</h2>
-                <small>缓慢响应(3s~5s)</small>
+                <small>{{itemTitle3|translate}}</small>
                 <div class="stat-percent">{{getPercentage(progressbarData.SlowCount)}}<i class="fa fa-level-down text-warning"></i></div>
                 <div class="progress progress-mini">
                     <div ng-style="getStyle(progressbarData.SlowCount)" class="progress-bar"></div>
@@ -32,7 +32,7 @@
             </li>
             <li>
                 <h2 class="no-margins">{{progressbarData.VerySlowCount}}</h2>
-                <small>极慢响应(>5s)</small>
+                <small>{{itemTitle4|translate}}</small>
                 <div class="stat-percent">{{getPercentage(progressbarData.VerySlowCount)}}<i class="fa fa-level-down text-danger"></i></div>
                 <div class="progress progress-mini">
                     <div ng-style="getStyle(progressbarData.VerySlowCount)" class="progress-bar"></div>
@@ -42,7 +42,7 @@
                 <br>
             </li>
             <li>
-                <h3 class="no-margins">Total Counts:{{progressbarData.Total}}</h3><br>
+                <h3 class="no-margins">{{'Total Counts'|translate}}:{{total}}</h3><br>
             </li>
         </ul>
     </div>

@@ -114,7 +114,7 @@
                                         <a href="" class="list-group-item clearfix" ng-class="{active: currentServiceInfo == serviceInfo, disabled: serviceInfo.serviceLibs.length == 0}"
                                            ng-repeat="serviceInfo in ServerMetaData.serviceInfos" style="padding:4px 10px" ng-click="selectServiceInfo(serviceInfo)">
                                             {{serviceInfo.serviceName}}
-                                            <span class="pull-right" ng-show="serviceInfo.serviceLibs.length > 0">&gt;</span>
+                                            <span class="pull-right" ng-show="serviceInfo.serviceLibs.length > 0">></span>
                                         </a>
                                     </div>
                                     <div style="overflow:auto;max-height:140px;margin-right:20px">
@@ -163,12 +163,13 @@
                         localtitle="CPU Load"
                         types='{"SystemCpuLoad":"area","JVMCpuLoad":"area"}'
                         ymin="0"
+                        ylabel="%"
                         current-period="{{currentPeriod}}"
                 ></line-prometheus-diagram>
             </div>
 
             <div class="col-lg-6">
-                <line-prometheus-diagram
+                <line2axes-prometheus-diagram
                         url="/ranges/{{key}}/pinpoint/"
                         names=
                                 '{
@@ -181,9 +182,13 @@
                           }'
                         localtitle="JVM "
                         types='{"NonHeapMax":"area","HeapMax":"area","NonHeapUsed":"area","HeapUsed":"area","GcOldCount":"area","GcOldTime":"area"}'
+                        axes='{"GcOldTime" : "y2"}'
+                        ylabel="MB"
                         ymin="0"
+                        y2label="sec"
+                        y2max="10"
                         current-period="{{currentPeriod}}"
-                ></line-prometheus-diagram>
+                ></line2axes-prometheus-diagram>
             </div>
 
             <div class="col-lg-6">
@@ -205,20 +210,28 @@
 
 
             <div class="col-lg-6">
-                <line-prometheus-diagram
+                <line2axes-prometheus-diagram
                         url="/ranges/{{key}}/pinpoint/"
                         names=
                                 '{
-                             "ApplicationAcceptResponseTime":"ApplicationAcceptResponseTime",
-                             "ApplicationAcceptResponseCount":"ApplicationAcceptResponseCount",
-                             "ApplicationExceptionResponseTime":"ApplicationExceptionResponseTime",
-                             "ApplicationExceptionResponseCount":"ApplicationExceptionResponseCount"
+                             "AcceptResponseTime":"ApplicationAcceptResponseTime",
+                             "AcceptResponseCount":"ApplicationAcceptResponseCount",
+                             "ExceptionResponseTime":"ApplicationExceptionResponseTime",
+                             "ExceptionResponseCount":"ApplicationExceptionResponseCount"
                           }'
                         localtitle="App Response Info"
-                        types='{"SampledNewCount":"area","SampledContinuationCount":"area","UnsampledNewCount":"area","UnsampledContinuationCount":"area"}'
+                        types='{"AcceptResponseTime":"area",
+                                "AcceptResponseCount":"area",
+                                "ExceptionResponseTime":"area",
+                                "ExceptionResponseCount":"area"}'
+                        axes='{"ApplicationAcceptResponseCount" : "y2","ApplicationExceptionResponseCount" : "y2"}'
+                        ylabel="sec"
+                        ymin="0"
+                        y2label="times"
+                        y2max="10"
                         ymin="0"
                         current-period="{{currentPeriod}}"
-                ></line-prometheus-diagram>
+                ></line2axes-prometheus-diagram>
             </div>
 
         </div>

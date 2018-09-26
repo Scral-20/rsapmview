@@ -17,50 +17,59 @@
                     currentPeriod: "@"
                 },
                 controller: function ($scope, $http, $filter, $element, $attrs, AuthService) {
-                    //$scope._id = '_id';
-                    $scope.title = "";
-                    $scope.progressbarData = {
-                        title: "",
-                        FastCount: '',
-                        NormalCount: '',
-                        SlowCount: '',
-                        VerySlowCount: '',
-                        Total: ''
+                    $scope.localTitle = $attrs.localTitle;
+                    $scope.itemTitle1 = $attrs.itemTitle1;
+                    $scope.itemTitle2 = $attrs.itemTitle2;
+                    $scope.itemTitle3 = $attrs.itemTitle3;
+                    $scope.itemTitle4 = $attrs.itemTitle4;
+                    $scope.progressbarData={
+                        FastCount:"",
+                        NormalCount:"",
+                        VerySlowCount:"",
+                        SlowCount:""
                     };
+
+                    $scope.names = $attrs.names;
+
                     console.log("URL: " + AuthService.getURL() + $attrs.url);
 
                     $scope.getData = function (period) {
-                        $http.get(
-                            AuthService.getURL() + $attrs.url + period
+                        var getUrl = AuthService.getURL() + $attrs.url + period;
+                        console.log(getUrl);
+                        $http.post(
+                            getUrl,
+                            JSON.parse($scope.names)
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
-                            console.log(response.data);
-                            $scope.progressbarData = response.data;
-
-                            if (typeof($scope.title) != "undefined") {
+                            console.log(response.data.message[0]);
+                            $scope.progressbarData = response.data.message[0];
+                            var data = $scope.progressbarData;
+                            $scope.total = data.FastCount + data.NormalCount
+                                + data.VerySlowCount + data.SlowCount;
+                            if (typeof($scope.progressbarData) !== "undefined") {
                                 $scope._id = '_' + Math.random().toString(36).substr(2, 9);
-                                $scope.title = $scope.progressbarData.title;
+                                // alert($scope.progressbarData.FastCount);
                             }
                         }, function () {
                             console.log("progressbarDiagram no data");
                         });
                     };
 
-                    function Percentage(chartData, progressbarData) {
-                        if (typeof(chartData) == "undefined") {
+                    function Percentage(chartData) {
+                        if (typeof(chartData) === "undefined") {
                             return;
                         }
-                        return (100 * parseFloat(chartData / progressbarData.Total).toFixed(4)).toFixed(2) + '%';
+                        return (100 * parseFloat(chartData / $scope.total).toFixed(4)).toFixed(2) + '%';
                     }
 
-                    $scope.getStyle = function (i) {
+                    $scope.getStyle = function (value) {
                         return {
-                            width: Percentage(i, $scope.progressbarData)
+                            width: Percentage(value, $scope.progressbarData)
                         }
                     };
 
-                    $scope.getPercentage = function (i) {
-                        return Percentage(i, $scope.progressbarData);
+                    $scope.getPercentage = function (value) {
+                        return Percentage(value, $scope.progressbarData);
                     };
 
 

@@ -44,11 +44,8 @@
                         ).then(function (response) {
                             console.log(response.data.message[0]);
                             $scope.tableData = response.data.message[0];
-                            $scope.url=$scope.tableData.url;
-                            
                             if (typeof($scope.tableData) !== "undefined"){
                                 $scope._id = '_' + Math.random().toString(36).substr(2, 9);
-
                             }
                         }, function () {
                             console.log("logDiagram no data");
