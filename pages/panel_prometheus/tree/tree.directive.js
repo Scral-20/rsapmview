@@ -2,7 +2,7 @@
     'use strict';
     /**
      * chaizq-neu
-     * 2018.08.07
+     * 2018.09.20
      * @group directive
      * @name  treeDiagram
      * @class
@@ -25,50 +25,9 @@
                     $scope._id = '_' + Math.random().toString(36).substr(2, 9);
 
                     $scope.getData=function (option,treeData,treeData2) {
-                        //option是选择树状图样式，option3为可树图用样式，本地测试
+                        //option是选择树状图样式，option1为可树图用样式，option2,3不可用，本地测试
                         switch (option){
                             case 'option1':
-                                option = {
-                                    tooltip : {
-                                        formatter: "{a} <br/>{b} : {c}%"
-                                    },
-                                    toolbox: {
-                                        feature: {
-                                            restore: {},
-                                            saveAsImage: {}
-                                        }
-                                    },
-                                    series: [
-                                        {
-                                            name: '速度',
-                                            type: 'gauge',
-                                            detail: {formatter:'{value}%'},
-                                            data: [{value: 50, name: '时速'}]
-                                        }
-                                    ]
-                                };
-                                return option;
-                            case 'option2':
-                                option = {
-                                    tooltip : {
-                                        formatter: "{a} <br/>{b} : {c}%"
-                                    },
-                                    toolbox: {
-                                        feature: {
-                                            restore: {},
-                                            saveAsImage: {}
-                                        }
-                                    },
-                                    series: [
-                                        {
-                                            name: '业务完成率',
-                                            type: 'gauge',
-                                            detail: {formatter:'{value}%'},
-                                            data: [{value: 70, name: '业务完成率'}]
-                                        }
-                                    ]
-                                };
-                            case 'option3':
                                 option = {
                                     tooltip: {
                                         trigger: 'item',
@@ -165,6 +124,47 @@
                                     ]
                                 };
                                 return option;
+                            case 'option2':
+                                option = {
+                                    tooltip : {
+                                        formatter: "{a} <br/>{b} : {c}%"
+                                    },
+                                    toolbox: {
+                                        feature: {
+                                            restore: {},
+                                            saveAsImage: {}
+                                        }
+                                    },
+                                    series: [
+                                        {
+                                            name: '速度',
+                                            type: 'gauge',
+                                            detail: {formatter:'{value}%'},
+                                            data: [{value: 50, name: '时速'}]
+                                        }
+                                    ]
+                                };
+                                return option;
+                            case 'option3':
+                                option = {
+                                    tooltip : {
+                                        formatter: "{a} <br/>{b} : {c}%"
+                                    },
+                                    toolbox: {
+                                        feature: {
+                                            restore: {},
+                                            saveAsImage: {}
+                                        }
+                                    },
+                                    series: [
+                                        {
+                                            name: '业务完成率',
+                                            type: 'gauge',
+                                            detail: {formatter:'{value}%'},
+                                            data: [{value: 70, name: '业务完成率'}]
+                                        }
+                                    ]
+                                };
                         }
                         $http.get(
                             AuthService.getURL() + $attrs.url

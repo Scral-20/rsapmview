@@ -23,21 +23,20 @@
                     return $filter("date")(timestamp, "HH:mm:ss yyyy-MM-dd ");
                 };
 
-                $scope.name = '{' +
+                $scope.names = {
+                    "ApplicationName":"ApplicationName",
+                    "Ip":"Ip",
+                    "HostName":"HostName",
+                    "AgentVersion":"AgentVersion",
+                    "JvmInfo":"JvmInfo",
+                    "Pid":"Pid",
+                    "Ports":"Ports",
+                    "ServerMetaData":"ServerMetaData",
+                    "Status":"Status",
+                    "VmVersion":"VmVersion"
+                };
 
-                    '    "ApplicationName":"ApplicationName",' +
-                    '    "Ip":"Ip",' +
-                    '    "HostName":"HostName",' +
-                    '    "AgentVersion":"AgentVersion",' +
-                    '    "JvmInfo":"JvmInfo",' +
-                    '    "Pid":"Pid",' +
-                    '    "Ports":"Ports",' +
-                    '    "ServerMetaData":"ServerMetaData",' +
-                    '    "Status":"Status",' +
-                    '    "VmVersion":"VmVersion"' +
-                    '}';
-
-                //本地的说明文本
+                //报表页-->探针信息--说明文本
                 $scope.helpText_agent = [
                     {
                         content: '监测探针对CPU资源的消耗情况，量化探针对系统性能的影响',
@@ -56,7 +55,7 @@
                     }
                 ];
 
-
+                //报表页-->应用信息--说明文本
                 $scope.helpText_app = [
                     {
                         content: '监测RPC请求次数与请求时间',
@@ -84,8 +83,7 @@
                     $state.reload()
                 };
 
-
-                //表格中小型pie图的配色设置
+                //表格中小型pie图标的配色设置
                 $scope.piechartOptions = {
                     options: {
                         fill: ["#1ab394", "#d7d7d7", "#d71a60"]
@@ -97,7 +95,8 @@
                     console.log(getUrl);
                     $http.post(
                         getUrl,
-                        JSON.parse($scope.name),
+                        JSON.stringify($scope.names),
+                        //JSON.parse($scope.name),
                         {headers: authService.createAuthorizationTokenHeader()})
                         .then(function (response) {
                             var data = response.data.message[0];
@@ -113,11 +112,8 @@
                             $scope.ServerMetaData = data.ServerMetaData;
                             $scope.Status = data.Status;
                             $scope.VmVersion = data.VmVersion;
-
-                            //console.log('这里：' + authService.getURL() + "/report/trend/" + $stateParams.key);
                         }), function () {
                         console.log("no data: basicinfo");
-                        // $state.go('login');
                     };
                 };
 
