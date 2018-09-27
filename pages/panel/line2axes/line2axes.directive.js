@@ -4,14 +4,14 @@
      * wub-neu
      * 2018.09.04
      * @group directive
-     * @name linePrometheusDiagram
+     * @name line2axesDiagram
      * @class
      */
     angular.module('inspinia')
-        .directive('linePrometheusDiagram', [function() {
+        .directive('line2axesDiagram', [function() {
             return {
                 restrict: 'E',
-                templateUrl: 'pages/panel_prometheus/line/line.html',
+                templateUrl: 'pages/panel/line2axes/line2axes.html',
                 replace: true,
                 scope: {
                     currentPeriod: "@"
@@ -24,8 +24,12 @@
                     $scope.ylabel = $attrs.ylabel;
                     $scope.ymin = $attrs.ymin;
                     $scope.ymax = $attrs.ymax;
+                    $scope.y2label = $attrs.y2label;
+                    $scope.y2min = $attrs.y2min;
+                    $scope.y2max = $attrs.y2max;
                     $scope.types = $attrs.types;
                     $scope.groups = $attrs.groups;
+                    $scope.axes = $attrs.axes;
 
                     $scope.names = $attrs.names;
                     if (typeof($scope.names) === "undefined") $scope.names ="{}";
@@ -60,7 +64,7 @@
                             height: 40,
                             tick: {
                                 format: '%H:%M:%S     %Y/%m/%d',
-                                count:24
+                                count:20
                             },
                             padding: {left:0, right:0}
                         };
@@ -76,6 +80,21 @@
                         }
                         y['padding'] = {top:0, bottom:0};
                         res['y'] = y;
+
+                        var y2 = {};
+                        y2['show'] = true;
+                        if (typeof($scope.y2label) !== "undefined") {
+                            y2['label'] = $scope.y2label;
+                        }
+                        if (typeof($scope.y2min) !== "undefined") {
+                            y2['min'] = parseFloat($scope.y2min);
+                        }
+                        if (typeof($scope.y2max) !== "undefined") {
+                            y2['max'] = parseFloat($scope.y2max);
+                        }
+                        y2['padding'] = {top:0, bottom:0};
+                        res['y2'] = y2;
+
                         return res;
                     }
 
@@ -84,7 +103,8 @@
                             x: 'timeaxis',
                             columns: [],
                             types: {},
-                            groups: []
+                            groups: [],
+                            axes: {}
                         };
                         if (typeof(chartData) === "undefined") {
                             return res;
@@ -109,6 +129,10 @@
 
                         if (typeof($scope.groups) !== "undefined") {
                             res.groups = JSON.parse($scope.groups);
+                        }
+
+                        if (typeof($scope.axes) !== "undefined") {
+                            res.axes = JSON.parse($scope.axes);
                         }
                         return res;
                     }

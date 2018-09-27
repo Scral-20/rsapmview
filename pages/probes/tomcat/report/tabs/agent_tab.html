@@ -29,7 +29,7 @@
 
     <!--Active Trace-->
     <div class="col-lg-9">
-        <line2axes-prometheus-diagram
+        <line2axes-diagram
                 url="/ranges/{{key}}/pinpoint/"
                 names=
                         '{
@@ -46,7 +46,7 @@
                 y2label="times"
                 y2max="10"
                 current-period="{{currentPeriod}}"
-        ></line2axes-prometheus-diagram>
+        ></line2axes-diagram>
     </div>
     <!--<div class="col-lg-9">-->
         <!--<line-diagram url="/report/activetrace/{{key}}/count/" tickcount="14" current-period="{{currentPeriod}}"></line-diagram>-->

@@ -153,7 +153,7 @@
                 <!--<line2yaxis-diagram url="/applicationresponsetime/{{key}}/" localtitle="" current-period="{{currentPeriod}}"></line2yaxis-diagram>-->
             <!--</div>-->
             <div class="col-lg-6">
-                <line-prometheus-diagram
+                <line-diagram
                         url="/ranges/{{key}}/pinpoint/"
                         names=
                                 '{
@@ -165,11 +165,11 @@
                         ymin="0"
                         ylabel="%"
                         current-period="{{currentPeriod}}"
-                ></line-prometheus-diagram>
+                ></line-diagram>
             </div>
 
             <div class="col-lg-6">
-                <line2axes-prometheus-diagram
+                <line2axes-diagram
                         url="/ranges/{{key}}/pinpoint/"
                         names=
                                 '{
@@ -188,11 +188,11 @@
                         y2label="sec"
                         y2max="10"
                         current-period="{{currentPeriod}}"
-                ></line2axes-prometheus-diagram>
+                ></line2axes-diagram>
             </div>
 
             <div class="col-lg-6">
-                <line-prometheus-diagram
+                <line-diagram
                         url="/ranges/{{key}}/pinpoint/"
                         names=
                                 '{
@@ -205,12 +205,12 @@
                         types='{"SampledNewCount":"area","SampledContinuationCount":"area","UnsampledNewCount":"area","UnsampledContinuationCount":"area"}'
                         ymin="0"
                         current-period="{{currentPeriod}}"
-                ></line-prometheus-diagram>
+                ></line-diagram>
             </div>
 
 
             <div class="col-lg-6">
-                <line2axes-prometheus-diagram
+                <line2axes-diagram
                         url="/ranges/{{key}}/pinpoint/"
                         names=
                                 '{
@@ -231,7 +231,7 @@
                         y2max="10"
                         ymin="0"
                         current-period="{{currentPeriod}}"
-                ></line2axes-prometheus-diagram>
+                ></line2axes-diagram>
             </div>
 
         </div>

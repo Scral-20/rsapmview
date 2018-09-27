@@ -27,7 +27,7 @@
     </div>
     <div class="jumbotron col-lg-12" style="padding-top: 20px ;padding-bottom: 5px; padding-left: 20px ; padding-right: 20px">
         <div class="col-lg-3">
-            <card-prometheus-diagram
+            <card-diagram
                     url="/points/{{key}}/pinpoint/"
                     name='{"value":"ApplicationAcceptResponseCount./*"}'
                     unit="times"
@@ -35,10 +35,10 @@
                     localtitle="Total Normal Count"
                     remark="count"
                     current-period="{{currentPeriod}}">
-            </card-prometheus-diagram>
+            </card-diagram>
         </div>
         <div class="col-lg-3">
-            <card-prometheus-diagram
+            <card-diagram
                     url="/points/{{key}}/pinpoint/"
                     name='{"value":"ApplicationAcceptResponseTime./*"}'
                     unit="s"
@@ -46,10 +46,10 @@
                     localtitle="Total Normal Duration"
                     remark="duration"
                     current-period="{{currentPeriod}}">
-            </card-prometheus-diagram>
+            </card-diagram>
         </div>
         <div class="col-lg-3">
-            <card-prometheus-diagram
+            <card-diagram
                     url="/points/{{key}}/pinpoint/"
                     name='{"value":"ApplicationExceptionResponseCount./*"}'
                     unit="times"
@@ -57,10 +57,10 @@
                     localtitle="Total Exception Count"
                     remark="count"
                     current-period="{{currentPeriod}}">
-            </card-prometheus-diagram>
+            </card-diagram>
         </div>
         <div class="col-lg-3">
-            <card-prometheus-diagram
+            <card-diagram
                     url="/points/{{key}}/pinpoint/"
                     name='{"value":"ApplicationExceptionResponseTime./*"}'
                     unit="s"
@@ -68,7 +68,7 @@
                     localtitle="Total Exception Duration"
                     remark="duration"
                     current-period="{{currentPeriod}}">
-            </card-prometheus-diagram>
+            </card-diagram>
         </div>
         <!--<div class="col-lg-3">-->
             <!--<card-diagram url="/report/rpcstats/{{key}}/accept/" divide="1" situation="accept" totaltype="count" localtitle="Total Normal Count" current-period="{{currentPeriod}}"></card-diagram>-->
@@ -88,7 +88,7 @@
         <!--RPC双轴时间序列，对应y2轴的变量以如下方式设置
          axes='{"SlowCount" : "y2","VerySlowCount" : "y2"}'-->
         <div class="col-lg-12">
-            <line2axes-prometheus-diagram
+            <line2axes-diagram
                     url="/ranges/{{key}}/pinpoint/"
                     names=
                             '{
@@ -105,7 +105,7 @@
                     y2label="times"
                     y2max="10"
                     current-period="{{currentPeriod}}"
-            ></line2axes-prometheus-diagram>
+            ></line2axes-diagram>
         </div>
 
         <div class="col-lg-12">
