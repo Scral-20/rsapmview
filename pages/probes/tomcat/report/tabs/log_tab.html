@@ -62,25 +62,6 @@
     <div class="col-lg-12">
         <line2axes-diagram url="/report/trend/{{key}}/" localtitle="" current-period="{{currentPeriod}}"></line2axes-diagram>
     </div>
-        <!--<div class="col-lg-12">-->
-            <!--<line2axes-prometheus-diagram-->
-                    <!--url="/ranges/{{key}}/MYSQL/"-->
-                    <!--names=-->
-                            <!--'{-->
-                    <!--"qbs" : "rate(mysql_global_status_queries{instance=\"$host\"}[5m])",-->
-                    <!--"up" : "up{instance=\"$host\"}"-->
-                   <!--}'-->
-                    <!--localtitle="MySQL Connections"-->
-                    <!--types='{"qbs":"area","up":"area"}'-->
-                    <!--axes='{"qbs" : "y2"}'-->
-                    <!--ylabel="mb"-->
-                    <!--ymin="-1"-->
-                    <!--y2label="s"-->
-                    <!--y2max="10"-->
-                    <!--current-period="{{currentPeriod}}"-->
-            <!--&gt;</line2axes-prometheus-diagram>-->
-        <!--</div>-->
-
 
     <div class="col-lg-12">
         <table-diagram url="/report/template/{{key}}/" localtitle="" current-period="{{currentPeriod}}"></table-diagram>

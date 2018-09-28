@@ -31,14 +31,13 @@
     <div class="col-lg-9">
         <line2axes-diagram
                 url="/ranges/{{key}}/pinpoint/"
-                names=
-                        '{
-                            "FastCount":"FastCount",
-                            "NormalCount":"NormalCount",
-                            "SlowCount":"SlowCount",
-                            "VerySlowCount":"VerySlowCount"
-                    }'
-                localtitle="Probe response quantity info"
+                names='{
+                    "FastCount":"FastCount",
+                    "NormalCount":"NormalCount",
+                    "SlowCount":"SlowCount",
+                    "VerySlowCount":"VerySlowCount"
+                }'
+                localtitle="Probe response quantity"
                 types='{"FastCount":"area","NormalCount":"area","SlowCount":"area","VerySlowCount":"area"}'
                 axes='{"SlowCount" : "y2","VerySlowCount" : "y2"}'
                 ylabel="times"
@@ -48,22 +47,17 @@
                 current-period="{{currentPeriod}}"
         ></line2axes-diagram>
     </div>
-    <!--<div class="col-lg-9">-->
-        <!--<line-diagram url="/report/activetrace/{{key}}/count/" tickcount="14" current-period="{{currentPeriod}}"></line-diagram>-->
-    <!--</div>-->
-
 
     <!--ProgressBar-->
     <div class="col-lg-3">
         <progressbar-diagram
                 url="/points/{{key}}/pinpoint/"
-                names=
-                        '{
+                names='{
                     "FastCount":"FastCount.sum",
                     "NormalCount":"NormalCount.sum",
                     "SlowCount":"SlowCount.sum",
                     "VerySlowCount":"VerySlowCount.sum"
-                    }'
+                }'
                 local-title="Statistics of Probes' Counts"
                 item-title1="FastCount(<1s)"
                 item-title2="NormalCount(1s~3s)"
@@ -71,6 +65,44 @@
                 item-title4="VerySlowCount(>5s)"
                 current-period="{{currentPeriod}}"
         ></progressbar-diagram>
+    </div>
+
+    <!--Active Trace-->
+    <div class="col-lg-9">
+        <line-diagram
+                url="/ranges/{{key}}/pinpoint/"
+                names='{
+                    " AgentAvgResponseTime":"AgentAvgResponseTime",
+                    " AgentMaxResponseTime":"AgentMaxResponseTime"
+                }'
+                localtitle="Agent Response Time"
+                types='{"AgentAvgResponseTime":"area","AgentMaxResponseTime":"area"}'
+                ylabel="sec"
+                ymin="0"
+                current-period="{{currentPeriod}}"
+        ></line-diagram>
+    </div>
+    <div class="col-lg-3">
+        <card-diagram
+                url="/points/{{key}}/pinpoint/"
+                name='{"value":"AgentMaxResponseTime"}'
+                unit="sec"
+                situation="Max"
+                localtitle="Max Response Time"
+                remark="Max Duration"
+                current-period="{{currentPeriod}}">
+        </card-diagram>
+    </div>
+    <div class="col-lg-3">
+        <card-diagram
+                url="/points/{{key}}/pinpoint/"
+                name='{"value":"AgentAvgResponseTime"}'
+                unit="sec"
+                situation="Avg"
+                localtitle="Avg Response Time"
+                remark="Avg Duration"
+                current-period="{{currentPeriod}}">
+        </card-diagram>
     </div>
 
 </div>

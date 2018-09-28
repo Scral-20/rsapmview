@@ -70,18 +70,6 @@
                     current-period="{{currentPeriod}}">
             </card-diagram>
         </div>
-        <!--<div class="col-lg-3">-->
-            <!--<card-diagram url="/report/rpcstats/{{key}}/accept/" divide="1" situation="accept" totaltype="count" localtitle="Total Normal Count" current-period="{{currentPeriod}}"></card-diagram>-->
-        <!--</div>-->
-        <!--<div class="col-lg-3">-->
-            <!--<card-diagram url="/report/rpcstats/{{key}}/accept/" divide="1" situation="accept" totaltype="duration" localtitle="Total Normal Duration" current-period="{{currentPeriod}}"></card-diagram>-->
-        <!--</div>-->
-        <!--<div class="col-lg-3">-->
-            <!--<card-diagram url="/report/rpcstats/{{key}}/exception/" divide="1" situation="exception" totaltype="count" localtitle="Total Exception Count" current-period="{{currentPeriod}}"></card-diagram>-->
-        <!--</div>-->
-        <!--<div class="col-lg-3">-->
-            <!--<card-diagram url="/report/rpcstats/{{key}}/exception/" divide="1" situation="exception" totaltype="duration" localtitle="Total Exception Duration" current-period="{{currentPeriod}}"></card-diagram>-->
-        <!--</div>-->
     </div>
 
     <div class="row">
@@ -90,8 +78,7 @@
         <div class="col-lg-12">
             <line2axes-diagram
                     url="/ranges/{{key}}/pinpoint/"
-                    names=
-                            '{
+                    names='{
                         "AcceptResponseTime":"ApplicationAcceptResponseTime",
                         "AcceptResponseCount":"ApplicationAcceptResponseCount",
                         "ExceptionResponseTime":"ApplicationExceptionResponseTime",
@@ -113,11 +100,11 @@
                     url="/points/{{key}}/pinpoint/"
                     localtitle="正常"
                     names='{
-                            "url":"url.*",
-                            "item1":"ApplicationAcceptResponseTime.*",
-                            "item2":"ApplicationAcceptResponseCount.*",
-                            "item3":"ApplicationExceptionResponseTime.*",
-                            "item4":"ApplicationExceptionResponseCount.*"
+                        "url":"url.*",
+                        "item1":"ApplicationAcceptResponseTime.*",
+                        "item2":"ApplicationAcceptResponseCount.*",
+                        "item3":"ApplicationExceptionResponseTime.*",
+                        "item4":"ApplicationExceptionResponseCount.*"
                     }'
                     current-period="{{currentPeriod}}"
             ></tablenew-diagram>

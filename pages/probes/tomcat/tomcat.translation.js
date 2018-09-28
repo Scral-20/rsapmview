@@ -77,7 +77,7 @@ angular.module('inspinia')
 
                     //agent_tab
                     "Statistics of Probes' Counts":'各级别探针响应数量统计',
-                    "Probe response quantity info":'探针响应数量信息',
+                    "Probe response quantity":'探针响应数量',
 
                     "FastCount(<1s)":'快速响应(<1s)',
                     "NormalCount(1s~3s)":'正常响应(1s~3s)',
@@ -85,6 +85,9 @@ angular.module('inspinia')
                     "VerySlowCount(>5s)":'极慢响应(>5s)',
 
                     "Total Counts":'总响应次数',
+                    "Max Response Time":'最大响应时间',
+                    "Avg Response Time":'平均响应时间',
+
 
 
                     // Gauge Translate

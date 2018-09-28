@@ -16,7 +16,7 @@
                 scope: true,
                 controller: function ($scope, $http, $element, $attrs, AuthService) {
 
-                    $scope.optionValues = $attrs.option;
+                    $scope.names = $attrs.names;
                     $scope.height = {
                         height:$attrs.height
                     };
@@ -25,12 +25,14 @@
                     $scope._id = '_' + Math.random().toString(36).substr(2, 9);
 
                     $scope.getData=function () {
-                        $http.get(
-                            AuthService.getURL() + $attrs.url
+                        var getUrl= AuthService.getURL() + $attrs.url;
+                        $http.post(
+                            getUrl,
+                            JSON.parse($scope.names)
                             // {headers : authService.createAuthorizationTokenHeader()}
                         ).then(function (response) {
-                            console.log(response.data);
-                            $scope.chartData = response.data;
+                            console.log(response.data.message[0]);
+                            $scope.chartData = response.data.message[0];
                             if (typeof($scope.chartData) !== "undefined"){
                                 $scope._id = '_' + Math.random().toString(36).substr(2, 9);
                                 //$scope.title = $scope.chartData.title;
@@ -56,11 +58,12 @@
                                 data: [{
                                     name: 'tree1',
                                     icon: 'rectangle'
-                                } ,
-                                    {
-                                        name: 'tree2',
-                                        icon: 'rectangle'
-                                    }],
+                                }
+                                    // {
+                                    //     name: 'tree2',
+                                    //     icon: 'rectangle'
+                                    // }
+                                ],
                                 borderColor: '#c23531'
                             },
                             series:[
@@ -74,7 +77,7 @@
                                     top: '5%',
                                     left: '7%',
                                     bottom: '2%',
-                                    right: '60%',
+                                    right: '30%',
 
                                     symbolSize: 7,
 
@@ -102,45 +105,44 @@
                                     animationDurationUpdate: 750
 
                                 },
-                                {
-                                    type: 'tree',
-                                    name: 'tree2',
-                                    data: [scope.treeData2],
-
-                                    top: '20%',
-                                    left: '60%',
-                                    bottom: '22%',
-                                    right: '18%',
-
-                                    symbolSize: 7,
-
-                                    label: {
-                                        normal: {
-                                            position: 'left',
-                                            verticalAlign: 'middle',
-                                            align: 'right'
-                                        }
-                                    },
-
-                                    leaves: {
-                                        label: {
-                                            normal: {
-                                                position: 'right',
-                                                verticalAlign: 'middle',
-                                                align: 'left'
-                                            }
-                                        }
-                                    },
-
-                                    expandAndCollapse: true,
-
-                                    animationDuration: 550,
-                                    animationDurationUpdate: 750
-                                }
+                                // {
+                                //     type: 'tree',
+                                //     name: 'tree2',
+                                //     data: [scope.treeData2],
+                                //
+                                //     top: '20%',
+                                //     left: '60%',
+                                //     bottom: '22%',
+                                //     right: '18%',
+                                //
+                                //     symbolSize: 7,
+                                //
+                                //     label: {
+                                //         normal: {
+                                //             position: 'left',
+                                //             verticalAlign: 'middle',
+                                //             align: 'right'
+                                //         }
+                                //     },
+                                //
+                                //     leaves: {
+                                //         label: {
+                                //             normal: {
+                                //                 position: 'right',
+                                //                 verticalAlign: 'middle',
+                                //                 align: 'left'
+                                //             }
+                                //         }
+                                //     },
+                                //
+                                //     expandAndCollapse: true,
+                                //
+                                //     animationDuration: 550,
+                                //     animationDurationUpdate: 750
+                                // }
                             ]
                         };
                         myChart.hideLoading();
-                        //树状图
                         myChart.setOption(option);
                     })
                 }

@@ -83,12 +83,11 @@
         <div class="col-lg-6">
             <line-diagram
                     url="/ranges/{{key}}/MYSQL/"
-                    names=
-                            '{
+                    names='{
                             "Connections" : "mysql_global_status_threads_connected{instance=\"$host\"}",
                             "Max Used Connections" : "mysql_global_status_max_used_connections{instance=\"$host\"}",
                             "Max Connections" : "mysql_global_variables_max_connections{instance=\"$host\"}"
-                          }'
+                    }'
                     localtitle="MySQL Connections"
                     types='{"Max Used Connections":"area","Connections":"area"}'
                     ymin="0"
@@ -99,12 +98,11 @@
         <div class="col-lg-6">
             <line-diagram
                     url="/ranges/{{key}}/MYSQL/"
-                    names=
-                    '{
-                    "Peak Threads Connected" : "max_over_time(mysql_global_status_threads_connected{instance=\"$host\"}[5m])",
-                    "Peak Threads Running" : "max_over_time(mysql_global_status_threads_running{instance=\"$host\"}[5m])",
-                    "Avg Threads Running" : "avg_over_time(mysql_global_status_threads_running{instance=\"$host\"}[5m])"
-                   }'
+                    names='{
+                        "Peak Threads Connected" : "max_over_time(mysql_global_status_threads_connected{instance=\"$host\"}[5m])",
+                        "Peak Threads Running" : "max_over_time(mysql_global_status_threads_running{instance=\"$host\"}[5m])",
+                        "Avg Threads Running" : "avg_over_time(mysql_global_status_threads_running{instance=\"$host\"}[5m])"
+                    }'
                     localtitle="MySQL Connections"
                     types='{}'
                     ymin="0"
@@ -115,11 +113,10 @@
         <div class="col-lg-6">
             <line-diagram
                     url="/ranges/{{key}}/MYSQL/"
-                    names=
-                            '{
-                    "qbs" : "rate(mysql_global_status_queries{instance=\"$host\"}[5m])",
-                    "up" : "up{instance=\"$host\"}"
-                   }'
+                    names='{
+                        "qbs" : "rate(mysql_global_status_queries{instance=\"$host\"}[5m])",
+                        "up" : "up{instance=\"$host\"}"
+                    }'
                     localtitle="MySQL Connections"
                     types='{"qbs":"area","up":"area"}'
                     groups='[["qbs","up"]]'
@@ -130,11 +127,10 @@
         <div class="col-lg-6">
             <line2axes-diagram
                     url="/ranges/{{key}}/MYSQL/"
-                    names=
-                            '{
-                    "qbs" : "rate(mysql_global_status_queries{instance=\"$host\"}[5m])",
-                    "up" : "up{instance=\"$host\"}"
-                   }'
+                    names='{
+                        "qbs" : "rate(mysql_global_status_queries{instance=\"$host\"}[5m])",
+                        "up" : "up{instance=\"$host\"}"
+                    }'
                     localtitle="MySQL Connections"
                     types='{"qbs":"area","up":"area"}'
                     axes='{"qbs" : "y2"}'

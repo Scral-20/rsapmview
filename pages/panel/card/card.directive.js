@@ -24,7 +24,7 @@
                     $scope.value = 0;
 
                     $scope.getData = function (period) {
-                        var getUrl = AuthService.getURL() + $attrs.url +period;
+                        var getUrl = AuthService.getURL() + $attrs.url + period;
                         console.log(getUrl);
                         $http.post(
                             getUrl,
@@ -49,6 +49,14 @@
 
                             case 'Exception':
                                 return 'label label-danger pull-right';
+                                break;
+
+                            case 'Max':
+                                return 'label label-success pull-right';
+                                break;
+
+                            case 'Avg':
+                                return 'label label-success pull-right';
                                 break;
 
                             default:

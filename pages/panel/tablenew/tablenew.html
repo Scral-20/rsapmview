@@ -10,16 +10,13 @@
                    class="table table-striped table-bordered table-hover dataTables-example">
                 <thead>
                 <tr>
-                    <th style="width: 76%">链接URL</th>
-                    <th>请求时间 (ms)</th>
-                    <th>请求次数 (times)</th>
+                    <th style="width: 72%">链接URL</th>
+                    <th style="width: 14%">请求时间 (ms)</th>
+                    <th style="width: 14%">请求次数 (times)</th>
                 </tr>
                 </thead>
                 <tbody style="white-space:normal; word-break:break-all;">
-                <tr ng-repeat="url in tableData.url"
-                    ng-repeat="item1 in tableData.item1"
-                    ng-repeat="item2 in tableData.item2">
-                    <!--<td ng-bind="$index+1"></td>-->
+                <tr ng-repeat="url in tableData.url">
                     <td>{{url}}</td>
                     <td>{{item1}}</td>
                     <td>{{item2}}</td>
