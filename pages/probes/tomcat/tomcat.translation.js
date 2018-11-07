@@ -85,7 +85,7 @@ angular.module('inspinia')
                     'VerySlowCount(>5s)':'极慢响应(>5s)',
 
                     'Total Counts':'总响应次数',
-                    'Max Response Time':'最大响应时间',
+                    'Avg Of MaxResponse Time':'最大响应时间均值',
                     'Avg Response Time':'平均响应时间',
 
 

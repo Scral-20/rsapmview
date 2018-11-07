@@ -18,7 +18,7 @@
                 $scope.currentTab = "basic";
                 $scope.currentPeriod = '1w';
 
-                $scope.localtime = Date.parse(new Date());
+                $scope.localtime = Date.parse(new Date()); //获取当前timestamp
                 $scope.date = function (timestamp) {
                     return $filter("date")(timestamp, "HH:mm:ss yyyy-MM-dd ");
                 };

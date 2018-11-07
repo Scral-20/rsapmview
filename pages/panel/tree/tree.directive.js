@@ -58,11 +58,11 @@
                                 data: [{
                                     name: 'tree1',
                                     icon: 'rectangle'
-                                }
-                                    // {
-                                    //     name: 'tree2',
-                                    //     icon: 'rectangle'
-                                    // }
+                                },
+                                    {
+                                        name: 'tree2',
+                                        icon: 'rectangle'
+                                    }
                                 ],
                                 borderColor: '#c23531'
                             },
@@ -77,7 +77,7 @@
                                     top: '5%',
                                     left: '7%',
                                     bottom: '2%',
-                                    right: '30%',
+                                    right: '50%',
 
                                     symbolSize: 7,
 
@@ -105,41 +105,41 @@
                                     animationDurationUpdate: 750
 
                                 },
-                                // {
-                                //     type: 'tree',
-                                //     name: 'tree2',
-                                //     data: [scope.treeData2],
-                                //
-                                //     top: '20%',
-                                //     left: '60%',
-                                //     bottom: '22%',
-                                //     right: '18%',
-                                //
-                                //     symbolSize: 7,
-                                //
-                                //     label: {
-                                //         normal: {
-                                //             position: 'left',
-                                //             verticalAlign: 'middle',
-                                //             align: 'right'
-                                //         }
-                                //     },
-                                //
-                                //     leaves: {
-                                //         label: {
-                                //             normal: {
-                                //                 position: 'right',
-                                //                 verticalAlign: 'middle',
-                                //                 align: 'left'
-                                //             }
-                                //         }
-                                //     },
-                                //
-                                //     expandAndCollapse: true,
-                                //
-                                //     animationDuration: 550,
-                                //     animationDurationUpdate: 750
-                                // }
+                                {
+                                    type: 'tree',
+                                    name: 'tree2',
+                                    data: [scope.treeData2],
+
+                                    top: '20%',
+                                    left: '60%',
+                                    bottom: '22%',
+                                    right: '18%',
+
+                                    symbolSize: 7,
+
+                                    label: {
+                                        normal: {
+                                            position: 'left',
+                                            verticalAlign: 'middle',
+                                            align: 'right'
+                                        }
+                                    },
+
+                                    leaves: {
+                                        label: {
+                                            normal: {
+                                                position: 'right',
+                                                verticalAlign: 'middle',
+                                                align: 'left'
+                                            }
+                                        }
+                                    },
+
+                                    expandAndCollapse: true,
+
+                                    animationDuration: 550,
+                                    animationDurationUpdate: 750
+                                }
                             ]
                         };
                         myChart.hideLoading();

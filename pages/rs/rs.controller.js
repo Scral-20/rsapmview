@@ -10,28 +10,30 @@
     angular.module('inspinia')
         .controller( "RsCtrl", ["$scope", '$http', "$state", '$window', '$location', 'AuthService',
             function ($scope, $http, $state, $window, $location, authService) {
-                if ($location.url() !== "/landing" && $location.url() !== "/login") {
-                    // $state.go('rs.TOMCATreport');
-                    $http.get(
-                        authService.getURL() + "/api/whoami",
-                        {headers: authService.createAuthorizationTokenHeader()}
-                    ).then(function (response) {
-                        // alert(authService.getJwtToken());
-                        // console.log(response.data);
-                        $scope.username = response.data.username;
-                        $scope.role = "User";
-                        for (var i = 0; i < response.data.authorities.length; i++) {
-                            if (response.data.authorities[i].authority === "ROLE_ADMIN") {
-                                $scope.role = "Admin";
-                            }
-                        }
-                        console.log("已登录");
-                    }, function () {
-                        console.log("未登录");
-                        console.log($location.url());
-                        $state.go('login');
-                    });
-                }
+                // if ($location.url() !== "/landing" && $location.url() !== "/login") {
+                //    $state.go('rs.TOMCATreport');
+                      $state.go('rs.SPRING_BOOT');
+                //    $state.go('rs.TOMCATalertmanagement');
+                //     $http.get(
+                //         authService.getURL() + "/api/whoami",
+                //         {headers: authService.createAuthorizationTokenHeader()}
+                //     ).then(function (response) {
+                //         // alert(authService.getJwtToken());
+                //         // console.log(response.data);
+                //         $scope.username = response.data.username;
+                //         $scope.role = "User";
+                //         for (var i = 0; i < response.data.authorities.length; i++) {
+                //             if (response.data.authorities[i].authority === "ROLE_ADMIN") {
+                //                 $scope.role = "Admin";
+                //             }
+                //         }
+                //         console.log("已登录");
+                //     }, function () {
+                //         console.log("未登录");
+                //         console.log($location.url());
+                //         $state.go('login');
+                //     });
+                // }
 
                 $scope.logout = function () {
                     authService.removeJwtToken();
