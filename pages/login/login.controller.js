@@ -17,26 +17,24 @@
                     };
                     // alert(data);
                     console.log(data);
-                    // console.log(authService.getURL());
-                    //$state.go('rs.topview');
-                    // $http.post(authService.getURL() + "/auth/login", data).then(
-                    //     function(response) {
-                    //         authService.setJwtToken(response.data.access_token);
-                    //          //$state.go('rs.TOMCATalertmanagement');
-                    //         // $state.reload();
-                    //         $state.go('rs.topview').then(
-                    //             // function() {
-                    //             //     $window.location.reload();
-                    //             // }
-                    //         );
-                    //     },
-                    //     function() {
-                    //         alert("密码或用户名错误");
-                    //     }
-                    // );
+                    console.log(authService.getURL());
+                    $state.go('rs.topview');
+                    $http.post(authService.getURL() + "/auth/login", data).then(
+                        function(response) {
+                            authService.setJwtToken(response.data.access_token);
+                            $state.go('rs.TOMCATalertmanagement');
+                            $state.reload();
+                            $state.go('rs.topview').then(
+                                function() {
+                                    $window.location.reload();
+                                }
+                            );
+                        },
+                        function() {
+                            alert("密码或用户名错误");
+                        }
+                    );
                 };
-
-                //$state.go('rs.TOMCATreport');
 
                 $scope.backHome = function () {
                     $state.go('landing').then(
