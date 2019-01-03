@@ -17,7 +17,7 @@
                     currentPeriod: "@"
                 },
                 controller: function ($scope,$http, $element, $attrs, AuthService) {
-                    $scope.unit=$attrs.unittype;
+                    $scope.unit=$attrs.unit;
                     $scope.title = $attrs.localtitle;
                     $scope.names = $attrs.names;
                     $scope.data =     {
